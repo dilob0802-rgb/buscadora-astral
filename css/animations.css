@@ -1,0 +1,104 @@
+/* ============================================================
+   BUSCADORA ASTRAL - ANIMAÇÕES E EFEITOS ESOTÉRICOS
+   ============================================================ */
+
+/* Rotação suave do brilho celestial */
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulso Cósmico Dourado */
+@keyframes pulseGold {
+  0% {
+    box-shadow: 0 0 10px rgba(229, 195, 101, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(229, 195, 101, 0.5), 0 0 40px rgba(168, 85, 247, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(229, 195, 101, 0.2);
+  }
+}
+
+/* Pulso do Botão Flutuante do WhatsApp */
+@keyframes pulseWhatsApp {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Aparição Suave do Pergaminho / Modal */
+@keyframes fadeInParchment {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modalPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Flutuação Mística Suave */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.float-element {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+/* Brilho das Estrelas / Pontos de Luz */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.twinkle-star {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+/* Revelação com Scroll */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}

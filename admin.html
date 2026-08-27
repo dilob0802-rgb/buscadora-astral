@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caderno da Escritora | Buscadora Astral</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>">
+</head>
+<body class="admin-body">
+
+  <canvas id="stars-canvas"></canvas>
+
+  <!-- Header do Painel -->
+  <header class="admin-header">
+    <div class="container admin-header-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">✧</div>
+        <div class="logo-text">
+          <span class="logo-title">Buscadora Astral</span>
+          <span class="logo-subtitle">Caderno da Escritora</span>
+        </div>
+      </a>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="index.html" class="btn btn-outline" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">← Ver Site</a>
+        <button id="btn-logout" class="btn btn-outline" style="padding: 0.5rem 1.1rem; font-size: 0.85rem; border-color: rgba(255,111,89,0.4); color: #ff6f59;">Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-container">
+    
+    <!-- ==================== TELA DE LOGIN ==================== -->
+    <div id="login-section">
+      <div class="login-box">
+        <div class="icon">📜</div>
+        <div class="coral-badge">Portal Exclusivo</div>
+        <h2>Acesso da Escritora</h2>
+        <p>Digite a senha para entrar no seu caderno de publicações.</p>
+
+        <form id="login-form">
+          <div class="form-group">
+            <label for="admin-password">Sua Senha</label>
+            <input type="password" id="admin-password" class="form-control" placeholder="Digite sua senha..." required autofocus>
+          </div>
+          <div id="login-error" style="color: #ff6f59; font-size: 0.85rem; margin-bottom: 1rem; display: none;"></div>
+          <button type="submit" class="btn btn-gold" style="width: 100%;">
+            <span>✨</span> Entrar no Caderno
+          </button>
+        </form>
+        <small style="display: block; margin-top: 1.5rem; color: var(--text-muted); font-size: 0.8rem;">
+          Senha padrão: <code>astral2026</code>
+        </small>
+      </div>
+    </div>
+
+    <!-- ==================== ÁREA DA ESCRITORA ==================== -->
+    <div id="admin-dashboard" style="display: none;">
+      
+      <div class="alert-success" id="post-success-alert">
+        ✨ <strong>Maravilha!</strong> Sua crônica foi publicada no site com sucesso!
+      </div>
+
+      <div class="dashboard-grid">
+        
+        <!-- Formulário Super Amigável e Visual -->
+        <div class="admin-card">
+          <h3><span>✍️</span> Escrever Nova Crônica</h3>
+          
+          <form id="new-post-form">
+            
+            <div class="form-group">
+              <label for="post-title">1. Título do seu texto</label>
+              <input type="text" id="post-title" class="form-control" placeholder="Ex: O Céu de Hoje e os Sonhos de Revelação" required>
+            </div>
+
+            <div class="form-group">
+              <label for="post-category">2. Onde este texto deve aparecer?</label>
+              <select id="post-category" class="form-control" required style="background: rgba(13,4,20,0.95); color: #fff;">
+                <option value="ceu-do-dia">🌟 Céu do Dia (Astrologia & Fases da Lua)</option>
+                <option value="cartas">🃏 Aprenda Cartas (Significados do Tarô e Baralho Cigano)</option>
+                <option value="sonhos">🌙 Significado dos Sonhos (Interpretações Oníricas)</option>
+                <option value="cronicas">📜 Crônicas & Histórias Místicas</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="post-excerpt">3. Resumo breve (1 frase para chamar atenção)</label>
+              <input type="text" id="post-excerpt" class="form-control" placeholder="Ex: O que as cartas e as estrelas nos revelam para esta semana..." required>
+            </div>
+
+            <div class="form-group">
+              <label style="display: flex; justify-content: space-between; align-items: center;">
+                <span>4. Escreva seu texto aqui</span>
+                <small style="color: var(--gold-primary); font-weight: normal;">(Digite normalmente, sem códigos)</small>
+              </label>
+              
+              <!-- Barra de ferramentas visual (estilo Word) -->
+              <div class="visual-toolbar">
+                <button type="button" class="vtool-btn" data-command="bold" title="Negrito"><b>B</b> Negrito</button>
+                <button type="button" class="vtool-btn" data-command="italic" title="Itálico"><i>I</i> Itálico</button>
+                <button type="button" class="vtool-btn" data-command="formatBlock" data-value="H3" title="Subtítulo">📌 Subtítulo</button>
+                <button type="button" class="vtool-btn" data-command="formatBlock" data-value="BLOCKQUOTE" title="Destaque">✨ Destaque Especial</button>
+                <button type="button" class="vtool-btn" data-command="insertUnorderedList" title="Lista de Tópicos">• Lista</button>
+              </div>
+
+              <!-- Caixa de Texto Rica (WYSIWYG 100% Visual) -->
+              <div id="visual-editor" class="visual-editor-box" contenteditable="true" placeholder="Clique aqui e comece a escrever sua história ou ensinamento... Você pode usar a barra acima para destacar trechos!"></div>
+            </div>
+
+            <button type="submit" class="btn btn-coral" style="width: 100%; padding: 1.1rem; font-size: 1.1rem; font-weight: 700;">
+              <span>🚀</span> Publicar Crônica Agora
+            </button>
+          </form>
+        </div>
+
+        <!-- Coluna da Direita: Lista de Textos e Ajuda -->
+        <div>
+          <div class="admin-card">
+            <h3><span>📚</span> Suas Crônicas Ativas</h3>
+            <p style="font-size: 0.88rem; color: var(--white-muted); margin-bottom: 1.2rem;">
+              Textos que você já publicou. Você pode removê-los a qualquer momento:
+            </p>
+
+            <div class="posts-list" id="admin-posts-list">
+              <!-- Renderizado dinamicamente -->
+            </div>
+          </div>
+
+          <div class="admin-card" style="margin-top: 1.5rem; background: rgba(36, 10, 26, 0.4); border-color: rgba(229,195,101,0.2);">
+            <h4 style="color: var(--gold-light); font-size: 1rem; margin-bottom: 0.6rem;">💡 Como funciona:</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              Basta preencher os 4 campos e clicar no botão de publicar. O texto entra no ar instantaneamente, já com a formatação elegante de pergaminho antigo para todos os seus leitores!
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="js/stars.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

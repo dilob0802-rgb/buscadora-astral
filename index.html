@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscadora Astral | Oráculos, Cartas & Saberes Místicos</title>
+  <meta name="description" content="Portal da Buscadora Astral: Leitura de Cartas, Tarô, Baralho Cigano, Numerologia, Interpretação de Sonhos e Crônicas Esotéricas. Descubra as mensagens do céu para o seu caminho.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>">
+</head>
+<body>
+
+  <!-- Canvas Interativo de Constelações e Poeira Estelar -->
+  <canvas id="stars-canvas"></canvas>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-wrapper">
+      <a href="#inicio" class="logo" id="header-logo">
+        <div class="logo-icon">✧</div>
+        <div class="logo-text">
+          <span class="logo-title">Buscadora Astral</span>
+          <span class="logo-subtitle">Oráculos & Saberes</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link">Início</a></li>
+          <li><a href="#sobre" class="nav-link">A História</a></li>
+          <li><a href="#catalogo" class="nav-link">Leituras</a></li>
+          <li><a href="#oraculo" class="nav-link">Oráculo do Dia</a></li>
+          <li><a href="#diario" class="nav-link">Diário Astral</a></li>
+          <li><a href="#depoimentos" class="nav-link">Relatos</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#catalogo" class="btn btn-gold" id="btn-header-cta">Agendar Consulta</a>
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Abrir Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="inicio">
+      <div class="hero-overlay"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="coral-badge">
+            <span>✧</span> Frequência das Estrelas & Numerologia
+          </div>
+          <h1>Onde as Cartas e os Sonhos revelam seu <span class="gold-text">Destino</span></h1>
+          <p class="hero-description">
+            Um refúgio sagrado para quem busca clareza, autoconhecimento e alinhamento espiritual. Através da sabedoria ancestral dos oráculos e dos mapas celestes, deciframos os caminhos da sua alma.
+          </p>
+          <div class="hero-quote">
+            "Como um pergaminho antigo aberto sob a luz das velas, cada carta conta uma história viva sobre você."
+          </div>
+          <div class="hero-buttons">
+            <a href="#catalogo" class="btn btn-primary" id="hero-btn-catalogo">
+              <span>📜</span> Ver Catálogo de Leituras
+            </a>
+            <a href="#oraculo" class="btn btn-outline" id="hero-btn-oraculo">
+              <span>✨</span> Tirar Carta do Dia
+            </a>
+          </div>
+        </div>
+
+        <!-- Widget do Céu de Hoje -->
+        <div class="celestial-widget float-element">
+          <div class="widget-header">
+            <span class="widget-title">Céu de Hoje & Lua</span>
+            <span class="widget-date" id="current-celestial-date">Hoje</span>
+          </div>
+          <div class="moon-phase-display">
+            <div class="moon-visual"></div>
+            <div class="moon-info">
+              <h4 id="current-moon-phase">Lua Crescente Iluminada</h4>
+              <p id="current-moon-desc">Momento de magnetismo, abertura de caminhos e consagração de projetos da alma.</p>
+            </div>
+          </div>
+          <div class="daily-energy">
+            <h5><span>✦</span> Energia de Transmutação</h5>
+            <p>"Respire fundo e escute a sabedoria que chega pelo silêncio. As respostas já habitam seu coração."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SEÇÃO SOBRE (O SONHO DO PERGAMINHO) ==================== -->
+    <section class="about-section" id="sobre">
+      <div class="container">
+        <div class="coral-badge" style="display: block; width: fit-content; margin: 0 auto 0.5rem;">
+          Origens & Conexão
+        </div>
+        <h2>A Revelação do Pergaminho Sagrado</h2>
+        <p class="section-subtitle">A história do sonho que despertou o chamado com os oráculos</p>
+        <div class="mystic-divider"><span>✦</span></div>
+
+        <div class="about-grid">
+          <div class="about-image-wrapper">
+            <div class="about-image-frame">
+              <img src="assets/scroll_cards.jpg" alt="Pergaminho Antigo e Cartas de Tarô Iluminadas">
+            </div>
+            <div class="parchment-badge-float">
+              "Sonhei com folhas amareladas e mapas estelares... As cartas estavam contando a história viva do universo."
+            </div>
+          </div>
+
+          <div class="about-text-content">
+            <div class="parchment-card">
+              <h3>O Chamado das Cartas</h3>
+              <p>
+                Quando comecei a tocar as cartas pela primeira vez, algo profundo se moveu em meu ser. Durante semanas, sonhava intensamente com os símbolos sagrados. Mas houve um sonho em especial que selou para sempre o meu caminho:
+              </p>
+              <div class="quote-highlight">
+                "Eu segurava um pergaminho antigo, daquelas folhas rústicas amareladas pelo tempo, com mapas medievais traçados em ouro. Em volta, as cartas dançavam como se estivessem contando a história secreta da alma humana."
+              </div>
+              <p>
+                Aquele sonho não foi apenas uma visão: foi uma consagração. É com esse mesmo respeito e cuidado que leio cada lâmina para você — como quem abre um pergaminho sagrado para iluminar suas dúvidas e devolver a paz ao seu coração.
+              </p>
+
+              <div class="numerology-pills">
+                <span class="num-pill">🔮 Violeta Transmutador</span>
+                <span class="num-pill">🍷 Vinho Ancestral</span>
+                <span class="num-pill">🪸 Coral Vibracional</span>
+                <span class="num-pill">👑 Dourado Solar</span>
+                <span class="num-pill">🕊️ Branco Puro</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CATÁLOGO DE ATENDIMENTOS ==================== -->
+    <section class="services-section" id="catalogo">
+      <div class="container">
+        <div class="coral-badge" style="display: block; width: fit-content; margin: 0 auto 0.5rem;">
+          Atendimentos Personalizados
+        </div>
+        <h2>Catálogo de Leituras & Atendimentos</h2>
+        <p class="section-subtitle">Escolha a leitura ideal para o seu momento e fale diretamente comigo no WhatsApp</p>
+        <div class="mystic-divider"><span>✦</span></div>
+
+        <div class="services-grid">
+          <!-- Serviço 1 -->
+          <div class="service-card reveal-on-scroll">
+            <div>
+              <div class="service-icon">🃏</div>
+              <h3 class="service-title">Tiragem das Cartas & Tarô</h3>
+              <p class="service-desc">
+                Uma leitura profunda com o Tarô e o Baralho Cigano para clarear amor, finanças, caminhos profissionais e decisões cruciais.
+              </p>
+              <ul class="service-features">
+                <li>Panorama geral dos próximos meses</li>
+                <li>Perguntas diretas e objetivas</li>
+                <li>Conselho do oráculo e direcionamento</li>
+                <li>Envio em áudio gravado ou videochamada</li>
+              </ul>
+            </div>
+            <div class="service-action">
+              <a href="#" class="btn btn-whatsapp-service" data-service-name="Tiragem Completa de Cartas e Tarô">
+                <span>💬</span> Agendar no WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Serviço 2 -->
+          <div class="service-card reveal-on-scroll">
+            <div>
+              <div class="service-icon">✨</div>
+              <h3 class="service-title">Mapa Astral & Numerologia</h3>
+              <p class="service-desc">
+                Descubra sua assinatura cósmica: propósito de alma, números de poder, cores favoráveis e tendências do seu ciclo atual.
+              </p>
+              <ul class="service-features">
+                <li>Cálculo da numerologia pessoal</li>
+                <li>Identificação das suas cores de poder</li>
+                <li>Tendências astrais do ano</li>
+                <li>Relatório detalhado em formato pergaminho</li>
+              </ul>
+            </div>
+            <div class="service-action">
+              <a href="#" class="btn btn-whatsapp-service" data-service-name="Mapa Astral e Numerologia Pessoal">
+                <span>💬</span> Agendar no WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Serviço 3 -->
+          <div class="service-card reveal-on-scroll">
+            <div>
+              <div class="service-icon">🌙</div>
+              <h3 class="service-title">Interpretação de Sonhos</h3>
+              <p class="service-desc">
+                Decifre as mensagens ocultas que seu subconsciente e os planos astrais trazem durante a noite.
+              </p>
+              <ul class="service-features">
+                <li>Análise simbólica e arquetípica</li>
+                <li>Identificação de sonhos premonitórios</li>
+                <li>Conexão com os sinais do dia a dia</li>
+                <li>Orientações de ancoramento e proteção</li>
+              </ul>
+            </div>
+            <div class="service-action">
+              <a href="#" class="btn btn-whatsapp-service" data-service-name="Interpretação de Sonhos e Sinais Oníricos">
+                <span>💬</span> Agendar no WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Serviço 4 -->
+          <div class="service-card reveal-on-scroll">
+            <div>
+              <div class="service-icon">🕯️</div>
+              <h3 class="service-title">Alinhamento & Rituais</h3>
+              <p class="service-desc">
+                Orientação energética personalizada com banhos de ervas, consagração de velas e práticas de limpeza espiritual.
+              </p>
+              <ul class="service-features">
+                <li>Diagnóstico da sua aura e chakras</li>
+                <li>Receitas de banhos e defumações</li>
+                <li>Fortalecimento do campo magnético</li>
+                <li>Acompanhamento pós-ritual</li>
+              </ul>
+            </div>
+            <div class="service-action">
+              <a href="#" class="btn btn-whatsapp-service" data-service-name="Alinhamento Espiritual e Rituais">
+                <span>💬</span> Agendar no WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ORÁCULO INTERATIVO ==================== -->
+    <section class="oracle-section" id="oraculo">
+      <div class="container oracle-container">
+        <div class="coral-badge" style="display: inline-block;">
+          Momento Interativo
+        </div>
+        <h2>O Oráculo do Pergaminho</h2>
+        <p class="section-subtitle">Respire fundo, concentre-se na sua questão e toque em uma carta para revelar seu conselho de hoje</p>
+        <div class="mystic-divider"><span>✧</span></div>
+
+        <div class="oracle-deck-area">
+          <div class="cards-spread" id="oracle-spread">
+            <!-- Cartas inseridas dinamicamente via JS -->
+          </div>
+
+          <div style="margin-top: 1rem;">
+            <button class="btn btn-outline" id="btn-shuffle-oracle">
+              <span>🔄</span> Embaralhar Novamente
+            </button>
+          </div>
+
+          <!-- Caixa com o Resultado da Carta Revelada -->
+          <div class="oracle-result-box" id="oracle-result">
+            <div class="oracle-result-header">
+              <div class="oracle-card-badge" id="result-card-symbol">☀️</div>
+              <div class="oracle-card-titles">
+                <h3 id="result-card-name">O Sol Dourado</h3>
+                <span id="result-card-archetype">Clareza & Vitalidade Astral</span>
+              </div>
+            </div>
+            <p class="oracle-message" id="result-card-message">
+              Mensagem detalhada da carta...
+            </p>
+            <div class="oracle-advice" id="result-card-advice">
+              Conselho prático para o seu dia...
+            </div>
+            <div class="oracle-actions">
+              <a href="#" class="btn btn-whatsapp-service" id="btn-whatsapp-oracle" style="width: auto;">
+                <span>💬</span> Aprofundar esta Carta no WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DIÁRIO ASTRAL & CRÔNICAS (BLOG) ==================== -->
+    <section class="blog-section" id="diario">
+      <div class="container">
+        <div class="coral-badge" style="display: block; width: fit-content; margin: 0 auto 0.5rem;">
+          Saberes & Escritas
+        </div>
+        <h2>Diário Astral & Crônicas</h2>
+        <p class="section-subtitle">Conhecimento, interpretação de cartas, astrologia diária e mistérios oníricos</p>
+        <div class="mystic-divider"><span>✦</span></div>
+
+        <div class="blog-controls">
+          <div class="blog-categories">
+            <button class="category-btn active" data-category="all">Todas as Crônicas</button>
+            <button class="category-btn" data-category="ceu-do-dia">🌟 Céu do Dia</button>
+            <button class="category-btn" data-category="cartas">🃏 Aprenda Cartas</button>
+            <button class="category-btn" data-category="sonhos">🌙 Significado dos Sonhos</button>
+            <button class="category-btn" data-category="cronicas">📜 Crônicas & Saberes</button>
+          </div>
+
+          <div class="blog-search">
+            <input type="text" id="blog-search-input" placeholder="Buscar por tema ou símbolo...">
+          </div>
+        </div>
+
+        <div class="blog-grid" id="blog-grid">
+          <!-- Artigos inseridos via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DEPOIMENTOS ==================== -->
+    <section class="testimonials-section" id="depoimentos">
+      <div class="container">
+        <div class="coral-badge" style="display: block; width: fit-content; margin: 0 auto 0.5rem;">
+          Vozes dos Consulentes
+        </div>
+        <h2>Relatos de Luz e Clareza</h2>
+        <p class="section-subtitle">Histórias de quem encontrou respostas e alívio nas leituras</p>
+        <div class="mystic-divider"><span>✧</span></div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal-on-scroll">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "A leitura das cartas foi um divisor de águas. Ela descreveu coisas que ninguém sabia sobre mim e me deu a coragem que eu precisava para mudar de carreira."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">M</div>
+              <div class="author-info">
+                <h4>Mariana Ramos</h4>
+                <span>São Paulo, SP</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal-on-scroll">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "A interpretação do meu sonho do pergaminho fez todo o sentido! Saí da consulta com uma paz imensa e o coração aquecido. Um atendimento acolhedor e único."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">C</div>
+              <div class="author-info">
+                <h4>Camila Silveira</h4>
+                <span>Belo Horizonte, MG</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal-on-scroll">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "A consulta de numerologia e as cores que ela me indicou transformaram minha energia diária. É nítido o dom e o amor que ela coloca em cada palavra."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">R</div>
+              <div class="author-info">
+                <h4>Renata Albuquerque</h4>
+                <span>Rio de Janeiro, RJ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA FINAL ==================== -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box reveal-on-scroll">
+          <h2>Pronta para abrir o seu <span class="gold-text">Pergaminho</span>?</h2>
+          <p>
+            Permita que as cartas e os astros revelem o melhor caminho para o seu momento. Atendimento sigiloso, acolhedor e direto pelo WhatsApp.
+          </p>
+          <a href="#" class="btn btn-coral whatsapp-general-link" id="btn-cta-final" style="font-size: 1.1rem; padding: 1rem 2.2rem;">
+            <span>💬</span> Conversar no WhatsApp Agora
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon">✧</div>
+            <div class="logo-text">
+              <span class="logo-title">Buscadora Astral</span>
+              <span class="logo-subtitle">Oráculos & Saberes</span>
+            </div>
+          </div>
+          <p>
+            Conectando almas à sabedoria ancestral através das cartas, dos sonhos e dos mistérios celestes.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">A História do Sonho</a></li>
+            <li><a href="#catalogo">Catálogo de Leituras</a></li>
+            <li><a href="#oraculo">Carta do Dia</a></li>
+            <li><a href="#diario">Diário Astral</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atendimento</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="whatsapp-general-link">WhatsApp Direto</a></li>
+            <li><a href="#catalogo">Agendamentos</a></li>
+            <li><a href="#diario">Crônicas & Dúvidas</a></li>
+            <li><a href="admin.html" style="color: var(--gold-light); font-size: 0.85rem;">✦ Área da Escritora</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Buscadora Astral. Todos os direitos reservados. Feito com amor, luz e mistério.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL LEITOR DO ARTIGO (ESTILO PERGAMINHO) ==================== -->
+  <div class="article-modal" id="article-modal">
+    <div class="article-modal-content">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Fechar">✕</button>
+      <header class="article-header">
+        <div class="article-meta">
+          <span class="blog-tag" id="modal-article-tag">Céu do Dia</span>
+          <span class="blog-date" id="modal-article-date">Hoje</span>
+        </div>
+        <h2 class="article-title" id="modal-article-title">Título do Artigo</h2>
+      </header>
+      <div class="article-body" id="modal-article-body">
+        <!-- Conteúdo do artigo injetado dinamicamente -->
+      </div>
+      <div style="margin-top: 2rem; border-top: 1px dashed var(--parchment-border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <span style="font-family: var(--font-serif-sub); font-style: italic; color: #7a5c3d;">Gostou desta crônica? Fale comigo!</span>
+        <a href="#" class="btn btn-whatsapp-service whatsapp-general-link" style="width: auto; padding: 0.6rem 1.4rem; font-size: 0.9rem;">
+          <span>💬</span> Chamar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== BOTÃO FLUTUANTE DO WHATSAPP ==================== -->
+  <a href="#" class="floating-whatsapp whatsapp-general-link" aria-label="Fale conosco no WhatsApp" id="btn-floating-whatsapp">
+    <span>💬</span>
+  </a>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/stars.js"></script>
+  <script src="js/oracle.js"></script>
+  <script src="js/blog.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
