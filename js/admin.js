@@ -99,10 +99,12 @@ function initPostForm() {
 
     // Map de labels das categorias
     const categoryLabels = {
-      'ceu-do-dia': 'Céu do Dia',
-      'cartas': 'Aprenda Cartas',
-      'sonhos': 'Significado dos Sonhos',
-      'cronicas': 'Crônicas & Saberes'
+      'cartomancia': '🃏 Cartomancia',
+      'tarot': '🔮 Tarô',
+      'astrologia': '🌟 Astrologia',
+      'numerologia': '🔢 Numerologia',
+      'terapia-holistica': '🌿 Terapia Holística',
+      'espiritualidade': '🕯️ Espiritualidade'
     };
 
     // Data formatada

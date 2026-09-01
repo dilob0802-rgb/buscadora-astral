@@ -285,6 +285,132 @@ h2 {
   width: 100%;
 }
 
+/* Destaque do Oráculo do Dia na Navbar */
+.nav-link.nav-highlight {
+  color: var(--gold-light);
+  background: rgba(229, 195, 101, 0.12);
+  border: 1px solid rgba(229, 195, 101, 0.35);
+  padding: 0.35rem 0.95rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  box-shadow: 0 0 12px rgba(229, 195, 101, 0.15);
+}
+
+.nav-link.nav-highlight:hover {
+  background: rgba(229, 195, 101, 0.25);
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 20px rgba(229, 195, 101, 0.35);
+  transform: translateY(-1px);
+}
+
+.nav-link.nav-highlight::after {
+  display: none;
+}
+
+/* Menu Dropdown de Saberes & Terapias */
+.nav-item-dropdown {
+  position: relative;
+  list-style: none;
+}
+
+.dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  font-size: 0.75rem;
+  color: var(--gold-primary);
+  transition: transform var(--transition-fast);
+}
+
+.nav-item-dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.8rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(18, 5, 28, 0.96);
+  border: 1px solid rgba(229, 195, 101, 0.35);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(168, 85, 247, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-md);
+  padding: 0.6rem 0;
+  min-width: 220px;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1001;
+}
+
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: rgba(18, 5, 28, 0.96);
+  border-left: 1px solid rgba(229, 195, 101, 0.35);
+  border-top: 1px solid rgba(229, 195, 101, 0.35);
+}
+
+.nav-item-dropdown:hover .dropdown-menu,
+.nav-item-dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.65rem 1.25rem;
+  color: var(--white-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(229, 195, 101, 0.12);
+  color: var(--gold-light);
+  padding-left: 1.5rem;
+}
+
+.dropdown-menu li a.drop-featured {
+  color: #7ef5bd;
+}
+
+.dropdown-menu li a.drop-featured:hover {
+  background: rgba(46, 213, 115, 0.15);
+  color: #a8ffd5;
+}
+
+.drop-icon {
+  font-size: 1.05rem;
+  width: 20px;
+  text-align: center;
+}
+
 .header-actions {
   display: flex;
   align-items: center;
@@ -963,7 +1089,261 @@ h2 {
 }
 
 /* ============================================================
-   DIÁRIO ASTRAL & CRÔNICAS (BLOG)
+   BIBLIOTECA ASTRAL / E-BOOKS & INFOPRODUTOS
+   ============================================================ */
+.ebooks-section {
+  padding: 100px 0;
+  position: relative;
+  background: radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(229, 195, 101, 0.08) 0%, transparent 55%);
+}
+
+.ebook-showcase {
+  display: grid;
+  grid-template-columns: 0.95fr 1.35fr;
+  gap: 4rem;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(28, 9, 41, 0.9) 0%, rgba(14, 3, 22, 0.97) 100%);
+  border: 1px solid rgba(229, 195, 101, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(168, 85, 247, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.ebook-showcase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--violet-primary), var(--gold-primary), var(--coral-accent));
+}
+
+.ebook-visual-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.ebook-frame {
+  position: relative;
+  max-width: 360px;
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85), 0 0 25px rgba(229, 195, 101, 0.3);
+  border: 2px solid rgba(229, 195, 101, 0.4);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.ebook-frame:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(229, 195, 101, 0.5);
+}
+
+.ebook-cover-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.ebook-badge-tag {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(13, 4, 20, 0.9);
+  color: var(--gold-light);
+  border: 1px solid var(--gold-primary);
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.ebook-info-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.ebook-badge-stars {
+  color: var(--gold-primary);
+  font-size: 1.05rem;
+  margin-bottom: 0.8rem;
+}
+
+.ebook-badge-stars span {
+  color: var(--coral-light);
+  font-size: 0.85rem;
+  font-family: var(--font-sans);
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+.ebook-main-title {
+  font-size: 2.2rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  color: var(--white-pure);
+}
+
+.ebook-lead {
+  color: var(--white-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+}
+
+.ebook-highlights h4 {
+  font-size: 1.15rem;
+  color: var(--gold-light);
+  margin-bottom: 1rem;
+}
+
+.ebook-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.ebook-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--white-muted);
+  line-height: 1.55;
+}
+
+.check-icon {
+  color: var(--gold-primary);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.ebook-checklist strong {
+  color: var(--gold-light);
+}
+
+/* Box de Preço e Acesso Eduzz */
+.ebook-pricing-box {
+  background: rgba(13, 4, 20, 0.75);
+  border: 1px solid rgba(229, 195, 101, 0.35);
+  border-radius: var(--radius-md);
+  padding: 1.8rem 2.2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.pricing-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px dashed rgba(229, 195, 101, 0.25);
+}
+
+.price-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.old-price {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.current-price {
+  display: flex;
+  align-items: baseline;
+  color: var(--gold-light);
+  line-height: 1;
+}
+
+.current-price .currency {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-right: 0.2rem;
+}
+
+.current-price .amount {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: var(--font-serif-title);
+  color: var(--gold-primary);
+  text-shadow: 0 0 15px rgba(229, 195, 101, 0.3);
+}
+
+.current-price .cents {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.price-sub {
+  font-size: 0.78rem;
+  color: var(--coral-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.3rem;
+}
+
+.security-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--white-muted);
+}
+
+.security-badges span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pricing-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.btn-eduzz {
+  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.9rem 1.8rem;
+}
+
+.btn-eduzz:hover {
+  background: linear-gradient(135deg, #34d399 0%, #059669 100%);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.55);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+/* ============================================================
+   SABERES, ORÁCULOS & TERAPIAS (BLOG)
    ============================================================ */
 .blog-section {
   padding: 100px 0;
@@ -1062,10 +1442,50 @@ h2 {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px var(--violet-glow);
 }
 
+.blog-card-media {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(229, 195, 101, 0.2);
+}
+
+.blog-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: block;
+}
+
+.blog-card:hover .blog-card-img {
+  transform: scale(1.08);
+}
+
+.blog-card-media-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(13, 4, 20, 0.1) 0%, rgba(13, 4, 20, 0.8) 100%);
+  pointer-events: none;
+}
+
+.blog-card-media .blog-tag {
+  position: absolute;
+  bottom: 0.9rem;
+  left: 1.1rem;
+  z-index: 2;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
 .blog-card-header {
-  padding: 1.5rem 1.8rem 0;
+  padding: 1rem 1.8rem 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -1078,6 +1498,43 @@ h2 {
   background: rgba(255, 111, 89, 0.12);
   padding: 0.25rem 0.75rem;
   border-radius: var(--radius-full);
+  border: 1px solid transparent;
+}
+
+.blog-tag.tag-cartomancia {
+  background: rgba(255, 111, 89, 0.15);
+  color: var(--coral-light);
+  border-color: rgba(255, 111, 89, 0.35);
+}
+
+.blog-tag.tag-tarot {
+  background: rgba(168, 85, 247, 0.18);
+  color: #d8b4fe;
+  border-color: rgba(168, 85, 247, 0.35);
+}
+
+.blog-tag.tag-astrologia {
+  background: rgba(229, 195, 101, 0.15);
+  color: var(--gold-light);
+  border-color: rgba(229, 195, 101, 0.35);
+}
+
+.blog-tag.tag-numerologia {
+  background: rgba(56, 189, 248, 0.15);
+  color: #7dd3fc;
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.blog-tag.tag-terapia-holistica {
+  background: rgba(46, 213, 115, 0.15);
+  color: #7ef5bd;
+  border-color: rgba(46, 213, 115, 0.35);
+}
+
+.blog-tag.tag-espiritualidade {
+  background: rgba(244, 114, 182, 0.15);
+  color: #f472b6;
+  border-color: rgba(244, 114, 182, 0.35);
 }
 
 .blog-date {
@@ -1235,6 +1692,141 @@ h2 {
 }
 
 /* ============================================================
+   SEÇÃO DO CANAL DO YOUTUBE
+   ============================================================ */
+.youtube-section {
+  padding: 90px 0;
+  position: relative;
+  background: radial-gradient(circle at 80% 40%, rgba(255, 0, 0, 0.07) 0%, transparent 60%),
+              radial-gradient(circle at 20% 60%, rgba(168, 85, 247, 0.08) 0%, transparent 60%);
+}
+
+.youtube-wrapper {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(28, 9, 41, 0.9) 0%, rgba(15, 3, 23, 0.96) 100%);
+  border: 1px solid rgba(229, 195, 101, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(229, 195, 101, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.youtube-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff0000, #ff6f59, #e5c365);
+}
+
+.youtube-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 0, 0, 0.15);
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  color: #ff6b6b;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.yt-play-icon {
+  color: #ff0000;
+  font-size: 0.9rem;
+}
+
+.youtube-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.btn-youtube {
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.35);
+  font-weight: 600;
+}
+
+.btn-youtube:hover {
+  background: linear-gradient(135deg, #ff2a2a 0%, #e60000 100%);
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.5);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.youtube-player-frame {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(229, 195, 101, 0.35);
+  background: #000;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 60%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-placeholder-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgba(48, 10, 36, 0.92) 0%, rgba(10, 2, 16, 0.98) 100%);
+  color: #fff;
+  text-decoration: none;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.video-placeholder-card:hover {
+  background: radial-gradient(circle, rgba(65, 12, 49, 0.95) 0%, rgba(15, 3, 23, 1) 100%);
+}
+
+.video-play-btn-large {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff0000 0%, #b30000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2rem;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.6), 0 0 15px rgba(229, 195, 101, 0.4);
+  margin-bottom: 1.2rem;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.video-placeholder-card:hover .video-play-btn-large {
+  transform: scale(1.15);
+  box-shadow: 0 0 35px rgba(255, 0, 0, 0.8), 0 0 25px rgba(229, 195, 101, 0.6);
+}
+
+/* ============================================================
    DEPOIMENTOS & RELATOS
    ============================================================ */
 .testimonials-section {
@@ -1245,7 +1837,7 @@ h2 {
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
 
@@ -1257,6 +1849,21 @@ h2 {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-badge-service {
+  display: inline-block;
+  width: fit-content;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  background: rgba(229, 195, 101, 0.12);
+  border: 1px solid rgba(229, 195, 101, 0.3);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.9rem;
 }
 
 .testimonial-stars {
@@ -1272,6 +1879,7 @@ h2 {
   color: var(--white-muted);
   line-height: 1.7;
   margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
 .testimonial-author {
@@ -1291,6 +1899,7 @@ h2 {
   justify-content: center;
   font-weight: 700;
   color: #fff;
+  box-shadow: 0 0 10px rgba(229, 195, 101, 0.2);
 }
 
 .author-info h4 {
@@ -1302,6 +1911,46 @@ h2 {
 .author-info span {
   font-size: 0.8rem;
   color: var(--text-muted);
+}
+
+/* Banner para envio de novos relatos */
+.send-testimonial-banner {
+  margin-top: 3.5rem;
+  background: linear-gradient(135deg, rgba(38, 12, 54, 0.85) 0%, rgba(18, 4, 28, 0.95) 100%);
+  border: 1px solid rgba(229, 195, 101, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(229, 195, 101, 0.1);
+}
+
+.send-testimonial-banner .banner-icon {
+  font-size: 2.8rem;
+  background: rgba(229, 195, 101, 0.12);
+  border: 1px solid rgba(229, 195, 101, 0.35);
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.send-testimonial-banner .banner-text h3 {
+  font-size: 1.35rem;
+  color: var(--gold-light);
+  margin-bottom: 0.35rem;
+}
+
+.send-testimonial-banner .banner-text p {
+  color: var(--white-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 650px;
 }
 
 /* ============================================================
@@ -1420,9 +2069,31 @@ h2 {
    ============================================================ */
 @media (max-width: 992px) {
   .hero-grid,
-  .about-grid {
+  .about-grid,
+  .ebook-showcase {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+
+  .ebook-showcase {
+    padding: 2.5rem;
+  }
+
+  .youtube-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem;
+  }
+
+  .send-testimonial-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
+  .send-testimonial-banner .banner-text p {
+    margin: 0 auto;
   }
 
   .hero-content h1 {
@@ -1451,9 +2122,38 @@ h2 {
     left: 0;
     width: 100%;
     background: rgba(13, 4, 20, 0.98);
-    padding: 2rem;
-    gap: 1.5rem;
+    padding: 1.8rem 2rem;
+    gap: 1.2rem;
     border-bottom: 1px solid var(--gold-primary);
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+
+  .nav-item-dropdown {
+    width: 100%;
+  }
+
+  .nav-item-dropdown .dropdown-menu {
+    position: static;
+    transform: none !important;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    background: rgba(26, 8, 38, 0.95);
+    border: 1px solid rgba(229, 195, 101, 0.25);
+    box-shadow: none;
+    margin-top: 0.6rem;
+    padding: 0.4rem 0;
+    border-radius: var(--radius-sm);
+  }
+
+  .nav-item-dropdown .dropdown-menu::before {
+    display: none;
+  }
+
+  .nav-item-dropdown .dropdown-menu li a {
+    padding: 0.5rem 1rem;
+    font-size: 0.88rem;
   }
 
   .hero-content h1 {

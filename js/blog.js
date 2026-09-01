@@ -1,90 +1,138 @@
 /**
- * BUSCADORA ASTRAL - DIÁRIO ASTRAL & CRÔNICAS DO SABER
- * Sistema dinâmico de artigos com filtros, busca e leitor estilo pergaminho.
+ * BUSCADORA ASTRAL - SABERES, ORÁCULOS & TERAPIAS
+ * Sistema dinâmico de artigos com fotos místicas e filtros pelos 6 pilares:
+ * Cartomancia, Tarô, Astrologia, Numerologia, Terapia Holística e Espiritualidade.
  */
 
 const defaultBlogArticles = [
   {
     id: 1,
-    category: "ceu-do-dia",
-    categoryLabel: "Céu do Dia",
+    category: "cartomancia",
+    categoryLabel: "🃏 Cartomancia",
+    image: "assets/cartomancia.jpg",
     date: "Hoje",
-    title: "A Dança das Luas e o Despertar da Intuição Feminina",
-    excerpt: "Como sintonizar seu campo energético com as fases lunares e potencializar a clareza nas tomadas de decisão diárias.",
+    title: "A Sabedoria do Baralho Cigano: Clareza Prática para Decisões Cruciais",
+    excerpt: "Como as 36 lâminas do oráculo cigano atuam de forma direta e certeira para desatar nós em questões amorosas, financeiras e familiares.",
     content: `
-      <p>A Lua é o grande espelho cósmico das nossas emoções e águas internas. Quando aprendemos a observar em qual fase ela transita, deixamos de lutar contra a maré e passamos a fluir com os ventos astrais.</p>
+      <p>Diferente de sistemas puramente filosóficos, o Baralho Cigano (Petit Lenormand) é um oráculo da terra, do cotidiano e da verdade crua. Suas lâminas falam a linguagem da realidade: mostram caminhos abertos, alianças, cartas que chegam, obstáculos e trevos de sorte.</p>
       
-      <blockquote>"Assim como a maré obedece ao chamado da Lua, nossa psique responde aos ritmos silenciosos do céu noturno."</blockquote>
+      <blockquote>"O baralho não inventa destinos; ele desvela o que já está em movimento nos fios invisíveis da sua vida."</blockquote>
 
-      <h3>O Momento Presente no Céu</h3>
-      <p>Nos períodos de transição lunar, os véus da sensibilidade ficam mais tênues. É um momento propício para acender uma vela aromática, pegar o baralho ou caderno de anotações e permitir que a mente repouse. Não tenha pressa em tomar decisões definitivas; permita que o discernimento se assente com o cair da noite.</p>
+      <h3>O Diálogo com as Cartas</h3>
+      <p>Quando sentamos para uma tiragem de cartomancia, o objetivo não é criar dependência do futuro, mas resgatar a sua soberania de escolha. Saber antecipadamente a inclinação de uma energia permite que você se prepare, ajuste rotas ou acelere realizações com segurança.</p>
       
-      <p>Observe seus sentimentos sem julgá-los: eles são mensageiros sagrados do seu subconsciente.</p>
+      <h3>Conselho da Buscadora</h3>
+      <p>Antes de qualquer leitura, respire com calma e formule uma pergunta honesta. O oráculo sempre responde com a mesma clareza e franqueza com que é consultado.</p>
     `
   },
   {
     id: 2,
-    category: "cartas",
-    categoryLabel: "Aprenda Cartas",
-    date: "24 Ago",
-    title: "O Mistério das Lâminas: Como Consagrar e Conversar com seu Baralho",
-    excerpt: "Um guia sagrado para quem está iniciando no Tarô ou Baralho Cigano: criando intimidade com seus oráculos.",
+    category: "tarot",
+    categoryLabel: "🔮 Tarô",
+    image: "assets/tarot.jpg",
+    date: "26 Ago",
+    title: "Os Arcanos Maiores e o Espelho da Alma: A Jornada de Transformação",
+    excerpt: "Como as cartas do Tarô revelam os ciclos profundos da psique humana e auxiliam na superação de bloqueios emocionais.",
     content: `
-      <p>Antes de interpretar símbolos complexos, o leitor de cartas precisa desenvolver o que os antigos chamavam de <em>escuta intuitiva</em>. O baralho não é apenas um punhado de papel impresso; ele se torna um portal quando impregnado com a sua energia e reverência.</p>
+      <p>O Tarô é uma biblioteca sagrada em formato de imagens arquetípicas. Cada um dos 22 Arcanos Maiores representa uma etapa necessária do desenvolvimento humano — desde o passo de fé e inocência d’O Louco até a plenitude e integração total d’O Mundo.</p>
       
-      <h3>O Ritual Simples de Consagração</h3>
-      <p>Para criar conexão com um novo oráculo:</p>
-      <ul>
-        <li>Passe cada lâmina suavemente pela fumaça de um incenso de lavanda, mirra ou alecrim.</li>
-        <li>Durma uma noite com as cartas próximas à sua cabeceira ou sob o travesseiro.</li>
-        <li>Embaralhe em silêncio, sentindo o peso e a textura de cada carta, fazendo uma oração ou afirmação de intenção de luz.</li>
-      </ul>
+      <blockquote>"O Tarô é um espelho onde a alma se vê sem véus, com toda a sua beleza e seus mistérios a serem desvendados."</blockquote>
 
-      <blockquote>"As cartas não determinam o seu destino; elas iluminam as veredas para que você escolha com sabedoria por onde caminhar."</blockquote>
+      <h3>Ouvindo o Arcano da sua Fase</h3>
+      <p>Muitas vezes, quando uma fase difícil se instala, um único arcano pode trazer a chave de compreensão que faltava. Estar sob a regência da Torre, por exemplo, não é castigo: é a libertação necessária de velhas estruturas que já não comportam mais quem você se tornou.</p>
+      
+      <p>Nas nossas consultas, investigamos não apenas o 'o que vai acontecer', mas 'o que sua alma precisa aprender e curar neste momento'.</p>
     `
   },
   {
     id: 3,
-    category: "sonhos",
-    categoryLabel: "Significado dos Sonhos",
-    date: "20 Ago",
-    title: "Mapas Oníricos: O Sonho do Pergaminho e a Linguagem Oculta da Noite",
-    excerpt: "A história do sonho que revelou o caminho das cartas e como identificar sonhos premonitórios e arquetípicos.",
+    category: "terapia-holistica",
+    categoryLabel: "🌿 Terapia Holística",
+    image: "assets/terapia_holistica.jpg",
+    date: "23 Ago",
+    title: "Alinhamento dos Chakras & Terapia Holística: Restaurando seu Campo Vital",
+    excerpt: "Entenda como a atuação como terapeuta holística formada harmoniza seus centros de força e dissolve cansaço, estresse e dores emocionais.",
     content: `
-      <p>Há sonhos que são apenas o eco dos acontecimentos do dia. Mas existem sonhos que chegam como relâmpagos dourados — sonhos que marcam a alma para sempre e que carregam uma textura tão viva que parecemos ter viajado a outra dimensão.</p>
+      <p>O ser humano não é apenas matéria física: somos uma rede pulsante de corpos sutis, pensamentos, emoções e centros de energia chamados <strong>Chakras</strong>. Quando esses centros ficam desarmonizados por sobrecarga, estresse ou mágoas acumuladas, o corpo físico e a mente sentem imediatamente o peso.</p>
       
-      <h3>A Visão do Pergaminho Antigo</h3>
-      <p>Quando iniciei minha jornada com as cartas, fui presenteada em sonho com um pergaminho medieval de bordas amareladas. Ali estavam traçados mapas celestes, constelações e símbolos arcanos que pareciam narrar a história viva de cada lâmina. Aquele sonho não foi mero acaso: foi a confirmação de que os oráculos são mapas de navegação da nossa jornada terrena.</p>
+      <blockquote>"Cuidar da energia não é misticismo abstrato; é higiene da alma e restauração da vitalidade que mantém sua vida em movimento."</blockquote>
 
-      <h3>Como Decifrar Seus Sonhos</h3>
-      <p>Ao acordar de um sonho intenso, anote imediatamente antes de levantar:</p>
+      <h3>Como Atua a Sessão de Terapia Holística</h3>
+      <p>Em meus atendimentos integrativos com formação profissional em Terapia Holística, realizamos:</p>
       <ul>
-        <li><strong>A emoção predominante:</strong> você sentia paz, alerta, fascínio ou mistério?</li>
-        <li><strong>Os símbolos centrais:</strong> animais, chaves, águas, portas, pergaminhos ou cartas.</li>
-        <li><strong>As cores marcantes:</strong> violeta, vinho, dourado ou branco trazem mensagens específicas de cura e despertar.</li>
+        <li><strong>Diagnóstico Energético:</strong> Leitura vibracional dos 7 chakras principais para identificar onde há estagnação ou dispersão.</li>
+        <li><strong>Desobstrução e Limpeza:</strong> Técnicas integrativas para desatar nós energéticos acumulados no campo áurico.</li>
+        <li><strong>Harmonização & Alinhamento:</strong> Aplicação de frequências vibracionais, cristais terapêuticos e aromas consagrados.</li>
+        <li><strong>Prescrição Personalizada:</strong> Banhos de ervas medicinais, rituais de respiração e ancoramento para manter seu equilíbrio no dia a dia.</li>
       </ul>
+      <p>Você sai da sessão com uma sensação palpável de leveza, clareza mental e paz profunda.</p>
     `
   },
   {
     id: 4,
-    category: "cronicas",
-    categoryLabel: "Crônicas & Saberes",
-    date: "15 Ago",
-    title: "A Numerologia das Cores: Violeta, Vinho, Coral e a Chama Dourada",
-    excerpt: "Entenda a frequência vibracional das cores e como usá-las para proteção, expansão de consciência e magnetismo.",
+    category: "astrologia",
+    categoryLabel: "🌟 Astrologia",
+    image: "assets/astrologia.jpg",
+    date: "19 Ago",
+    title: "A Dança das Luas e os Trânsitos Celestes: Sintonizando seu Relógio Cósmico",
+    excerpt: "Descubra como os ciclos lunares e as movimentações planetárias influenciam suas marés internas e a tomada de decisões.",
     content: `
-      <p>Cada cor é uma nota musical no teclado do universo. Quando alinhamos nossa vestimenta, nossos altares e nossos espaços com a nossa assinatura vibracional, criamos uma barreira de proteção e uma antena de atração para energias nobres.</p>
+      <p>A Lua é o coração cósmico que rege nossas águas internas e marés psíquicas. Quem aprende a sincronizar seus projetos e emoções com as lunações deixa de lutar contra a correnteza e passa a navegar com os ventos astrais a seu favor.</p>
       
-      <h3>As Cores Sagradas da Buscadora</h3>
-      <p><strong>O Violeta:</strong> A mais alta frequência do espectro visível. Transmuta mágoas e abre a visão espiritual (Chakra Frontal e Coronário).</p>
-      <p><strong>O Vinho:</strong> Nobreza, ancoramento e conexão com o mistério primordial e a força ancestral.</p>
-      <p><strong>O Coral:</strong> Frequência numerológica de criatividade, vitalidade, acolhimento e calor humano.</p>
-      <p><strong>O Dourado & Branco:</strong> Pureza, iluminação solar e a presença da centelha divina em tudo o que tocamos.</p>
+      <h3>O Ciclo das 4 Luas</h3>
+      <ul>
+        <li><strong>Lua Nova:</strong> Plantio silencioso, recolhimento fértil e definição de novas intenções.</li>
+        <li><strong>Lua Crescente:</strong> Ação magnetizada, coragem e abertura de caminhos nos projetos.</li>
+        <li><strong>Lua Cheia:</strong> Ápice do magnetismo, iluminação de revelações e sensibilidade onírica.</li>
+        <li><strong>Lua Minguante:</strong> Limpeza, encerramento de ciclos nocivos e transmutação espiritual.</li>
+      </ul>
+      <p>Ao conhecer o seu mapa e o céu atual, você encontra o tempo certo de semear e o tempo certo de colher.</p>
+    `
+  },
+  {
+    id: 5,
+    category: "numerologia",
+    categoryLabel: "🔢 Numerologia",
+    image: "assets/numerologia.jpg",
+    date: "16 Ago",
+    title: "A Numerologia das Cores: Violeta, Vinho, Coral e sua Frequência Sagrada",
+    excerpt: "Como calcular sua vibração pessoal e utilizar as cores de poder para proteção, magnetismo e abertura de prosperidade.",
+    content: `
+      <p>No universo, tudo é número e vibração. Pitágoras e os sábios antigos já ensinavam que as cores que nos cercam são frequências luminosas equivalentes a notas musicais da alma.</p>
+      
+      <h3>A Frequência das Cores da Buscadora</h3>
+      <p><strong>🔮 Violeta Transmutador (Chakras Superiores):</strong> A frequência mais elevada do espectro. Quebra miasmas psíquicos e conecta à intuição superior.</p>
+      <p><strong>🍷 Vinho Ancestral:</strong> Nobreza, força de raízes, firmeza de propósito e proteção contra energias vampirizantes.</p>
+      <p><strong>🪸 Coral Vibracional:</strong> O número da alegria vital, da fertilidade criativa e da atração magnética de bons encontros.</p>
+      <p><strong>👑 Dourado Solar:</strong> Luz crística, prosperidade material e soberania espiritual.</p>
+    `
+  },
+  {
+    id: 6,
+    category: "espiritualidade",
+    categoryLabel: "🕯️ Espiritualidade",
+    image: "assets/espiritualidade.jpg",
+    date: "12 Ago",
+    title: "O Sagrado no Dia a Dia: Banhos de Ervas, Defumação e Proteção da Aura",
+    excerpt: "Rituais ancestrais e simples para limpar a atmosfera do seu lar, proteger o sono e manter seu campo áurico blindado.",
+    content: `
+      <p>Espiritualidade viva não exige rituais mirabolantes ou distantes da sua rotina. Ela floresce na intenção consciente com que você acende uma vela, prepara uma xícara de chá ou consagra um punhado de folhas verdes ao seu banho.</p>
+      
+      <blockquote>"Sua casa é o templo da sua mente; sua aura é o manto da sua alma. Cuide de ambos com amor diário."</blockquote>
+
+      <h3>O Poder do Banho de Alecrim com Lavanda</h3>
+      <p>Para noites de insônia, cansaço mental ou peso após interações densas:</p>
+      <ul>
+        <li>Ferva 1 litro de água pura e desligue o fogo.</li>
+        <li>Acrescente um ramo de alecrim fresco (clareza e alegria) e uma colher de lavanda (paz e relaxamento).</li>
+        <li>Abrafe por 10 minutos mentalizando luz violeta e dourada envolvendo seu corpo.</li>
+        <li>Tome o banho do pescoço para baixo após o seu banho de higiene, deixando a água secar suavemente na pele.</li>
+      </ul>
     `
   }
 ];
 
-// Obter todos os artigos (padrão + criados no painel)
+// Obter todos os artigos (padrão + criados no painel administrativo)
 function getAllArticles() {
   const custom = localStorage.getItem("buscadora_custom_articles");
   try {
@@ -100,7 +148,7 @@ function initBlog() {
   const categoryBtns = document.querySelectorAll('.category-btn');
   const searchInput = document.getElementById('blog-search-input');
   
-  // Elementos do Modal
+  // Elementos do Modal de Leitura
   const modal = document.getElementById('article-modal');
   const modalClose = document.getElementById('modal-close-btn');
   const modalTag = document.getElementById('modal-article-tag');
@@ -128,7 +176,9 @@ function initBlog() {
     if (filtered.length === 0) {
       blogGrid.innerHTML = `
         <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-muted);">
-          <p style="font-size: 1.2rem; font-family: var(--font-serif-sub); font-style: italic;">Nenhuma crônica encontrada para esta busca astral.</p>
+          <p style="font-size: 1.2rem; font-family: var(--font-serif-sub); font-style: italic;">
+            Nenhum conteúdo encontrado para esta busca astral. Escolha outro tema acima.
+          </p>
         </div>
       `;
       return;
@@ -136,11 +186,17 @@ function initBlog() {
 
     filtered.forEach(art => {
       const card = document.createElement('article');
-      card.className = 'blog-card reveal-on-scroll';
+      card.className = 'blog-card reveal-on-scroll revealed';
+      const imgSrc = art.image || 'assets/oracle_cards.jpg';
+      
       card.innerHTML = `
+        <div class="blog-card-media">
+          <img src="${imgSrc}" alt="${art.title}" class="blog-card-img" loading="lazy">
+          <div class="blog-card-media-overlay"></div>
+          <span class="blog-tag tag-${art.category}">${art.categoryLabel}</span>
+        </div>
         <div class="blog-card-header">
-          <span class="blog-tag">${art.categoryLabel}</span>
-          <span class="blog-date">${art.date}</span>
+          <span class="blog-date">📅 ${art.date}</span>
         </div>
         <div class="blog-card-body">
           <h3 class="blog-card-title">${art.title}</h3>
@@ -159,9 +215,17 @@ function initBlog() {
   function openArticleModal(art) {
     if (!modal) return;
     modalTag.textContent = art.categoryLabel;
+    modalTag.className = `blog-tag tag-${art.category}`;
     modalDate.textContent = art.date;
     modalTitle.textContent = art.title;
-    modalBody.innerHTML = art.content;
+    
+    const imgSrc = art.image || 'assets/oracle_cards.jpg';
+    modalBody.innerHTML = `
+      <div class="modal-featured-image">
+        <img src="${imgSrc}" alt="${art.title}" style="width: 100%; max-height: 320px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 1.8rem; border: 1px solid var(--parchment-border); box-shadow: 0 5px 20px rgba(0,0,0,0.15);">
+      </div>
+      ${art.content}
+    `;
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
@@ -182,6 +246,7 @@ function initBlog() {
     });
   }
 
+  // Filtragem por botões de categoria
   categoryBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       categoryBtns.forEach(b => b.classList.remove('active'));
@@ -191,12 +256,42 @@ function initBlog() {
     });
   });
 
+  // Campo de busca
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       searchTerm = e.target.value;
       renderArticles();
     });
   }
+
+  // Interação a partir do Dropdown da Navbar
+  window.filterBlogByCategory = function(category) {
+    currentCategory = category;
+    categoryBtns.forEach(b => {
+      if (b.getAttribute('data-category') === category) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+    renderArticles();
+
+    const saberesSection = document.getElementById('saberes') || document.getElementById('diario');
+    if (saberesSection) {
+      saberesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Escuta cliques nos links de dropdown da barra superior
+  const dropdownLinks = document.querySelectorAll('#nav-saberes-dropdown a[data-category]');
+  dropdownLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const category = link.getAttribute('data-category');
+      if (category) {
+        window.filterBlogByCategory(category);
+      }
+    });
+  });
 
   renderArticles();
 }

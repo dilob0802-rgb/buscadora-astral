@@ -36,10 +36,12 @@ function initMobileMenu() {
     body.classList.toggle('mobile-menu-active');
   });
 
-  const links = document.querySelectorAll('.nav-link');
+  const links = document.querySelectorAll('.nav-link, .dropdown-menu a');
   links.forEach(l => {
     l.addEventListener('click', () => {
-      body.classList.remove('mobile-menu-active');
+      if (!l.classList.contains('dropdown-toggle')) {
+        body.classList.remove('mobile-menu-active');
+      }
     });
   });
 }
