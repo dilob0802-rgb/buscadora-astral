@@ -1477,11 +1477,24 @@ h2 {
 }
 
 /* ============================================================
-   SABERES, ORÁCULOS & TERAPIAS (BLOG)
+   AUTOCONHECIMENTO (BLOG ESTILO PERSONARE)
    ============================================================ */
 .blog-section {
   padding: 100px 0;
   position: relative;
+}
+
+.areas-vida-wrapper {
+  margin-bottom: 2.8rem;
+}
+
+.areas-vida-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white-muted);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
 }
 
 .blog-controls {
@@ -1489,34 +1502,34 @@ h2 {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  gap: 1.2rem;
 }
 
 .blog-categories {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.55rem;
 }
 
 .category-btn {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(229, 195, 101, 0.2);
-  color: var(--white-muted);
-  padding: 0.5rem 1.2rem;
+  background: #1f1b3b;
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  color: #d8cde8;
+  padding: 0.45rem 1.1rem;
   border-radius: var(--radius-full);
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.84rem;
+  font-weight: 600;
   cursor: pointer;
   transition: var(--transition-smooth);
 }
 
 .category-btn:hover,
 .category-btn.active {
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.4), rgba(48, 10, 36, 0.6));
-  border-color: var(--gold-primary);
-  color: var(--gold-light);
-  box-shadow: 0 0 15px rgba(229, 195, 101, 0.2);
+  background: linear-gradient(135deg, #8a2be2 0%, #6b149b 100%);
+  border-color: #ba68c8;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(138, 43, 226, 0.35);
+  transform: translateY(-1px);
 }
 
 .blog-search {
@@ -1526,13 +1539,13 @@ h2 {
 
 .blog-search input {
   width: 100%;
-  background: rgba(20, 7, 33, 0.8);
+  background: rgba(20, 7, 33, 0.85);
   border: 1px solid rgba(229, 195, 101, 0.3);
   border-radius: var(--radius-full);
-  padding: 0.6rem 1.2rem 0.6rem 2.4rem;
+  padding: 0.55rem 1.2rem 0.55rem 2.4rem;
   color: var(--white-pure);
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   outline: none;
   transition: var(--transition-smooth);
 }
@@ -1552,171 +1565,146 @@ h2 {
   opacity: 0.6;
 }
 
-.blog-grid {
+/* Grid Harmonizado de Cards Estilo Personare */
+.personare-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 2rem;
 }
 
-.blog-card {
-  background: var(--card-bg-glass);
-  border: 1px solid rgba(229, 195, 101, 0.2);
-  border-radius: var(--radius-lg);
+.personare-card {
+  background: #ffffff;
+  border-radius: 18px;
   overflow: hidden;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition: var(--transition-smooth);
   display: flex;
   flex-direction: column;
-}
-
-.blog-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--gold-primary);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px var(--violet-glow);
-}
-
-.blog-card-media {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease;
+  cursor: pointer;
   position: relative;
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(229, 195, 101, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.blog-card-img {
+.personare-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(168, 85, 247, 0.25);
+}
+
+.personare-card-media {
+  width: 100%;
+  height: 185px;
+  overflow: hidden;
+  position: relative;
+  background: #190924;
+}
+
+.personare-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 0.6s ease;
   display: block;
 }
 
-.blog-card:hover .blog-card-img {
+.personare-card:hover .personare-card-img {
   transform: scale(1.08);
 }
 
-.blog-card-media-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(13, 4, 20, 0.1) 0%, rgba(13, 4, 20, 0.8) 100%);
-  pointer-events: none;
-}
-
-.blog-card-media .blog-tag {
-  position: absolute;
-  bottom: 0.9rem;
-  left: 1.1rem;
-  z-index: 2;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-.blog-card-header {
-  padding: 1rem 1.8rem 0;
+.personare-card-body {
+  padding: 1.35rem 1.4rem 1.4rem;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  background: #ffffff;
+  color: #1e1b2e;
 }
 
-.blog-tag {
-  font-size: 0.75rem;
+.personare-card-category {
+  font-size: 0.78rem;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-weight: 700;
-  color: var(--coral-light);
-  background: rgba(255, 111, 89, 0.12);
-  padding: 0.25rem 0.75rem;
-  border-radius: var(--radius-full);
-  border: 1px solid transparent;
+  color: #8a2be2;
+  margin-bottom: 0.6rem;
+  display: inline-block;
 }
 
-.blog-tag.tag-cartomancia {
-  background: rgba(255, 111, 89, 0.15);
-  color: var(--coral-light);
-  border-color: rgba(255, 111, 89, 0.35);
+.personare-card-title {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: #1a162b;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
 }
 
-.blog-tag.tag-tarot {
-  background: rgba(168, 85, 247, 0.18);
-  color: #d8b4fe;
-  border-color: rgba(168, 85, 247, 0.35);
+.personare-card-excerpt {
+  font-size: 0.88rem;
+  color: #5a556b;
+  line-height: 1.55;
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.blog-tag.tag-astrologia {
-  background: rgba(229, 195, 101, 0.15);
-  color: var(--gold-light);
-  border-color: rgba(229, 195, 101, 0.35);
+.personare-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid #f0edf5;
+  margin-top: auto;
 }
 
-.blog-tag.tag-numerologia {
-  background: rgba(56, 189, 248, 0.15);
-  color: #7dd3fc;
-  border-color: rgba(56, 189, 248, 0.35);
+.personare-author-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a855f7, #ff6f59);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(168, 85, 247, 0.3);
 }
 
-.blog-tag.tag-terapia-holistica {
-  background: rgba(46, 213, 115, 0.15);
-  color: #7ef5bd;
-  border-color: rgba(46, 213, 115, 0.35);
-}
-
-.blog-tag.tag-espiritualidade {
-  background: rgba(244, 114, 182, 0.15);
-  color: #f472b6;
-  border-color: rgba(244, 114, 182, 0.35);
-}
-
-.blog-date {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-.blog-card-body {
-  padding: 1.2rem 1.8rem 1.8rem;
+.personare-author-info {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.blog-card-title {
-  font-size: 1.35rem;
-  margin-bottom: 0.8rem;
-  color: var(--gold-light);
-  line-height: 1.3;
+.personare-author-name {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #1e1b2e;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
 }
 
-.blog-card-excerpt {
-  font-size: 0.95rem;
-  color: var(--white-muted);
-  line-height: 1.65;
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
+.personare-author-role {
+  font-size: 0.72rem;
+  color: #6b7280;
+  font-weight: 500;
 }
 
-.read-more-btn {
-  align-self: flex-start;
-  color: var(--gold-primary);
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: var(--transition-smooth);
-  cursor: pointer;
-  background: none;
-  border: none;
-  font-family: var(--font-sans);
+.personare-card-arrow {
+  color: #8a2be2;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: transform 0.3s ease;
 }
 
-.read-more-btn:hover {
-  color: var(--white-pure);
-  gap: 0.7rem;
+.personare-card:hover .personare-card-arrow {
+  transform: translateX(4px);
 }
 
 /* ============================================================
