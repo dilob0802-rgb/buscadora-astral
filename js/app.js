@@ -92,14 +92,14 @@ function initWhatsAppLinks() {
   const serviceButtons = document.querySelectorAll('[data-service-name]');
   serviceButtons.forEach(btn => {
     const serviceName = btn.getAttribute('data-service-name');
-    const msg = encodeURIComponent(`Olá, Buscadora Astral! Estive no seu site e gostaria de agendar um atendimento para: ${serviceName}. Como podemos prosseguir?`);
+    const msg = encodeURIComponent(`Olá, Patrícia! Estive no seu site e gostaria de agendar um atendimento para: ${serviceName}. Como funciona para marcarmos?`);
     btn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
     btn.target = "_blank";
   });
 
   const generalWhatsappBtns = document.querySelectorAll('.whatsapp-general-link');
   generalWhatsappBtns.forEach(btn => {
-    const msg = encodeURIComponent("Olá, Buscadora Astral! Gostaria de conhecer melhor seus atendimentos e oráculos.");
+    const msg = encodeURIComponent("Olá, Patrícia! Estive no seu site e gostaria de tirar algumas dúvidas sobre as consultas online.");
     btn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
     btn.target = "_blank";
   });

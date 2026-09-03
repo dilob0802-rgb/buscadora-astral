@@ -28,15 +28,15 @@
         <div class="logo-icon">✧</div>
         <div class="logo-text">
           <span class="logo-title">Buscadora Astral</span>
-          <span class="logo-subtitle">Oráculos & Saberes</span>
+          <span class="logo-subtitle">Patricia Tarô • Consulta Online</span>
         </div>
       </a>
 
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-links">
           <li><a href="#inicio" class="nav-link">Início</a></li>
-          <li><a href="#oraculo" class="nav-link nav-highlight">✨ Oráculo</a></li>
-          <li><a href="#catalogo" class="nav-link">Leituras</a></li>
+          <li><a href="#oraculo" class="nav-link nav-highlight">✨ Carta do Dia</a></li>
+          <li><a href="#catalogo" class="nav-link">Consulta Online</a></li>
           <li><a href="#ebooks" class="nav-link">E-books</a></li>
           <li class="nav-item-dropdown">
             <a href="#saberes" class="nav-link dropdown-toggle" id="nav-saberes-toggle">
@@ -52,8 +52,8 @@
             </ul>
           </li>
           <li><a href="#youtube" class="nav-link">YouTube</a></li>
-          <li><a href="#sobre" class="nav-link">História</a></li>
-          <li><a href="#depoimentos" class="nav-link">Relatos</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre Mim</a></li>
+          <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
         </ul>
       </nav>
 
@@ -71,59 +71,59 @@
       <div class="container hero-grid">
         <div class="hero-content">
           <div class="coral-badge">
-            <span>✧</span> Frequência das Estrelas & Numerologia
+            <span>✨</span> Patricia Tarô • Clareza, Autoconhecimento & Leveza
           </div>
-          <h1>Onde as Cartas e os Sonhos revelam seu <span class="gold-text">Destino</span></h1>
+          <h1>Clareza, Leveza e Direção para a sua <span class="gold-text">Vida</span></h1>
           <p class="hero-description">
-            Um refúgio sagrado para quem busca clareza, autoconhecimento e alinhamento espiritual. Através da sabedoria ancestral dos oráculos e dos mapas celestes, deciframos os caminhos da sua alma.
+            Seja muito bem-vinda! Aqui você encontra um espaço acolhedor e alegre para tirar suas dúvidas com Cartomancia, Numerologia e Astrologia. Conversas sinceras e direcionamentos práticos para você tomar as melhores decisões com confiança e paz no coração.
           </p>
           <div class="hero-quote">
-            "Como um pergaminho antigo aberto sob a luz das velas, cada carta conta uma história viva sobre você."
+            "Quando você entende a sua energia e o seu momento, tudo flui com muito mais leveza, harmonia e propósito."
           </div>
           <div class="hero-buttons">
             <a href="#catalogo" class="btn btn-primary" id="hero-btn-catalogo">
-              <span>📜</span> Ver Catálogo de Leituras
+              <span>🃏</span> Ver Consultas Online
             </a>
             <a href="#oraculo" class="btn btn-outline" id="hero-btn-oraculo">
-              <span>✨</span> Tirar Carta do Dia
+              <span>✨</span> Tirar Minha Carta do Dia
             </a>
           </div>
         </div>
 
-        <!-- Widget do Céu de Hoje -->
+        <!-- Widget de Energia do Dia -->
         <div class="celestial-widget float-element">
           <div class="widget-header">
-            <span class="widget-title">Céu de Hoje & Lua</span>
+            <span class="widget-title">Céu de Hoje & Energia</span>
             <span class="widget-date" id="current-celestial-date">Hoje</span>
           </div>
           <div class="moon-phase-display">
             <div class="moon-visual"></div>
             <div class="moon-info">
               <h4 id="current-moon-phase">Lua Crescente Iluminada</h4>
-              <p id="current-moon-desc">Momento de magnetismo, abertura de caminhos e consagração de projetos da alma.</p>
+              <p id="current-moon-desc">Momento favorável para iniciar bons projetos, clarear objetivos e cuidar do seu bem-estar.</p>
             </div>
           </div>
           <div class="daily-energy">
-            <h5><span>✦</span> Energia de Transmutação</h5>
-            <p>"Respire fundo e escute a sabedoria que chega pelo silêncio. As respostas já habitam seu coração."</p>
+            <h5><span>✦</span> Conselho do Dia</h5>
+            <p>"Confie nas suas escolhas, valorize sua alegria e dê um passo de cada vez com tranquilidade."</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== ORÁCULO INTERATIVO (DESTAQUE NO TOPO) ==================== -->
+    <!-- ==================== CARTA DO DIA / ORÁCULO INTERATIVO ==================== -->
     <section class="oracle-section" id="oraculo">
       <div class="container oracle-container">
         <div class="coral-badge" style="display: inline-block;">
-          ✦ Momento Interativo
+          ✨ Pausa de Bem-Estar
         </div>
-        <h2>O Oráculo do Pergaminho</h2>
-        <p class="section-subtitle">Respire fundo, sintonize com sua energia e toque em uma carta para receber a mensagem do seu dia</p>
+        <h2>Tire a sua Carta do Dia</h2>
+        <p class="section-subtitle">Respire fundo, conecte-se com um pensamento bom e toque em uma das cartas para receber um conselho leve e alegre!</p>
         <div class="mystic-divider"><span>✧</span></div>
 
         <div class="oracle-deck-area">
           <div class="cards-spread" id="oracle-spread">
-            <!-- Cartas inseridas dinamicamente via JS -->
+            <!-- Cartas com imagens dos arcanos inseridas dinamicamente via JS -->
           </div>
 
           <div style="margin-top: 1.2rem;">
@@ -132,126 +132,110 @@
             </button>
           </div>
 
-          <!-- Caixa com o Resultado da Carta Revelada -->
+          <!-- Caixa com o Resultado da Carta Revelada (Com Imagem do Arcano) -->
           <div class="oracle-result-box" id="oracle-result">
-            <div class="oracle-result-header">
-              <div class="oracle-card-badge" id="result-card-symbol">☀️</div>
-              <div class="oracle-card-titles">
-                <h3 id="result-card-name">O Sol Dourado</h3>
-                <span id="result-card-archetype">Clareza & Vitalidade Astral</span>
+            <div class="oracle-result-grid">
+              <div class="oracle-result-card-side">
+                <img id="result-card-image" src="assets/cards/o_sol.jpg" alt="Arcano Revelado" class="result-card-img" />
               </div>
-            </div>
-            <p class="oracle-message" id="result-card-message">
-              Mensagem detalhada da carta...
-            </p>
-            <div class="oracle-advice" id="result-card-advice">
-              Conselho prático para o seu dia...
-            </div>
-            <div class="oracle-actions">
-              <a href="#" class="btn btn-whatsapp-service" id="btn-whatsapp-oracle" style="width: auto;">
-                <span>💬</span> Aprofundar esta Carta no WhatsApp
-              </a>
+              <div class="oracle-result-content-side">
+                <div class="oracle-card-titles">
+                  <h3 id="result-card-name">O Sol (Arcano XIX)</h3>
+                  <span id="result-card-archetype">Alegria, Sucesso & Vitalidade</span>
+                </div>
+                <p class="oracle-message" id="result-card-message">
+                  Mensagem acolhedora da carta...
+                </p>
+                <div class="oracle-advice" id="result-card-advice">
+                  Conselho prático e positivo para o seu dia...
+                </div>
+                <div class="oracle-actions">
+                  <a href="#" class="btn btn-whatsapp-service" id="btn-whatsapp-oracle" style="width: auto;">
+                    <span>💬</span> Conversar com a Patrícia no WhatsApp
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== CATÁLOGO DE ATENDIMENTOS ==================== -->
+    <!-- ==================== CONSULTA ONLINE (SERVIÇOS OFICIAIS) ==================== -->
     <section class="services-section" id="catalogo">
       <div class="container">
         <div class="coral-badge" style="display: block; width: fit-content; margin: 0 auto 0.5rem;">
-          Atendimentos Personalizados
+          Atendimentos Individuais
         </div>
-        <h2>Catálogo de Leituras & Terapias</h2>
-        <p class="section-subtitle">Escolha a leitura ou terapia ideal para o seu momento e fale diretamente comigo no WhatsApp</p>
+        <h2>CONSULTA ONLINE</h2>
+        <p class="section-subtitle">Escolha o atendimento ideal para o seu momento e fale diretamente comigo no WhatsApp para agendarmos</p>
         <div class="mystic-divider"><span>✦</span></div>
 
-        <div class="services-grid">
-          <!-- Serviço 1 -->
+        <div class="services-grid services-three-col">
+          <!-- Serviço 1: CARTOMANCIA -->
           <div class="service-card reveal-on-scroll">
             <div>
               <div class="service-icon">🃏</div>
-              <h3 class="service-title">Tiragem de Cartomancia & Tarô</h3>
+              <h3 class="service-title">CARTOMANCIA</h3>
               <p class="service-desc">
-                Uma leitura profunda combinando a sabedoria do Tarô e a precisão do Baralho Cigano para clarear amor, finanças e caminhos de vida.
+                Leituras claras, objetivas e acolhedoras para trazer direcionamento prático às suas dúvidas e iluminar suas decisões.
               </p>
               <ul class="service-features">
-                <li>Panorama geral dos próximos ciclos</li>
-                <li>Perguntas diretas e respostas objetivas</li>
-                <li>Conselho do oráculo e direcionamento da alma</li>
-                <li>Envio em áudio gravado ou videochamada</li>
+                <li>Amor e relacionamentos afetivos</li>
+                <li>Carreira e vida profissional</li>
+                <li>Financeiro e oportunidades</li>
+                <li>Geral da vida e tomadas de decisões</li>
+                <li>Previsões futuras e análise da vida</li>
+                <li>Mandala mensal e anual, entre outros...</li>
               </ul>
             </div>
             <div class="service-action">
-              <a href="#" class="btn btn-whatsapp-service" data-service-name="Tiragem de Cartomancia e Tarô">
-                <span>💬</span> Agendar no WhatsApp
+              <a href="#" class="btn btn-whatsapp-service" data-service-name="Consulta Online de Cartomancia">
+                <span>💬</span> Agendar Cartomancia no WhatsApp
               </a>
             </div>
           </div>
 
-          <!-- Serviço 2 -->
+          <!-- Serviço 2: NUMEROLOGIA -->
           <div class="service-card reveal-on-scroll">
             <div>
-              <div class="service-icon">✨</div>
-              <h3 class="service-title">Astrologia & Numerologia Pessoal</h3>
+              <div class="service-icon">🔢</div>
+              <h3 class="service-title">NUMEROLOGIA</h3>
               <p class="service-desc">
-                Sua assinatura cósmica decifrada: missão de alma, regências planetárias, números de poder e frequências favoráveis ao seu momento.
+                Descubra a força dos seus números pessoais para alinhar seus talentos, sua vibração e abrir seus caminhos com assertividade.
               </p>
               <ul class="service-features">
-                <li>Cálculo da numerologia de vida e ano pessoal</li>
-                <li>Identificação das suas cores e vibrações de poder</li>
-                <li>Análise das tendências do céu atual</li>
-                <li>Relatório detalhado em formato pergaminho</li>
+                <li>Mapa vocacional</li>
+                <li>Correção do nome social e assinatura</li>
+                <li>Alinhamento de vibrações e talentos de vida</li>
+                <li>Clareza sobre seus ciclos e propósitos</li>
               </ul>
             </div>
             <div class="service-action">
-              <a href="#" class="btn btn-whatsapp-service" data-service-name="Astrologia e Numerologia Pessoal">
-                <span>💬</span> Agendar no WhatsApp
+              <a href="#" class="btn btn-whatsapp-service" data-service-name="Consulta Online de Numerologia">
+                <span>💬</span> Agendar Numerologia no WhatsApp
               </a>
             </div>
           </div>
 
-          <!-- Serviço 3 -->
+          <!-- Serviço 3: ASTROLOGIA -->
           <div class="service-card reveal-on-scroll">
             <div>
-              <div class="service-icon">🌿</div>
-              <h3 class="service-title">Terapia Holística & Alinhamento</h3>
+              <div class="service-icon">🌟</div>
+              <h3 class="service-title">ASTROLOGIA</h3>
               <p class="service-desc">
-                Atendimento integrativo com formação profissional em Terapia Holística: harmonização dos chakras, limpeza do campo áurico e ancoramento energético.
+                Um mergulho no seu mapa celeste para planejar seus passos, compreender suas fases e encontrar os melhores rumos.
               </p>
               <ul class="service-features">
-                <li>Diagnóstico vibracional dos centros de energia (chakras)</li>
-                <li>Alinhamento do campo áurico e corte de energias densas</li>
-                <li>Prescrição de banhos de ervas e cristais terapêuticos</li>
-                <li>Orientações práticas de autocuidado e bem-estar sutil</li>
+                <li>Mapa Astral</li>
+                <li>Revolução Solar</li>
+                <li>Astrocartografia</li>
+                <li>Tendências e ciclos astrológicos pessoais</li>
               </ul>
             </div>
             <div class="service-action">
-              <a href="#" class="btn btn-whatsapp-service" data-service-name="Sessão de Terapia Holística e Alinhamento Energético">
-                <span>💬</span> Agendar no WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <!-- Serviço 4 -->
-          <div class="service-card reveal-on-scroll">
-            <div>
-              <div class="service-icon">🌙</div>
-              <h3 class="service-title">Interpretação Onírica & Espiritualidade</h3>
-              <p class="service-desc">
-                Decifre as mensagens ocultas que o plano sutil traz através dos sonhos, sinais sincrônicos e intuições do dia a dia.
-              </p>
-              <ul class="service-features">
-                <li>Análise simbólica, arquetípica e intuitiva</li>
-                <li>Identificação de sonhos premonitórios e avisos da alma</li>
-                <li>Rituais de proteção espiritual e limpeza</li>
-                <li>Conexão com os guardiões e guias de luz</li>
-              </ul>
-            </div>
-            <div class="service-action">
-              <a href="#" class="btn btn-whatsapp-service" data-service-name="Interpretação Onírica e Orientação Espiritual">
-                <span>💬</span> Agendar no WhatsApp
+              <a href="#" class="btn btn-whatsapp-service" data-service-name="Consulta Online de Astrologia">
+                <span>💬</span> Agendar Astrologia no WhatsApp
               </a>
             </div>
           </div>
@@ -426,45 +410,45 @@
       </div>
     </section>
 
-    <!-- ==================== SEÇÃO SOBRE (O SONHO DO PERGAMINHO) ==================== -->
+    <!-- ==================== SEÇÃO SOBRE A PATRÍCIA ==================== -->
     <section class="about-section" id="sobre">
       <div class="container">
         <div class="coral-badge" style="display: block; width: fit-content; margin: 0 auto 0.5rem;">
-          Origens & Conexão
+          Sobre Mim
         </div>
-        <h2>A Revelação do Pergaminho Sagrado</h2>
-        <p class="section-subtitle">A história do sonho que despertou o chamado com os oráculos e saberes místicos</p>
+        <h2>Muito prazer, sou a Patrícia!</h2>
+        <p class="section-subtitle">Apaixonada por oráculos, desenvolvimento pessoal e acolhimento humano</p>
         <div class="mystic-divider"><span>✦</span></div>
 
         <div class="about-grid">
           <div class="about-image-wrapper">
             <div class="about-image-frame">
-              <img src="assets/scroll_cards.jpg" alt="Pergaminho Antigo e Cartas de Tarô Iluminadas">
+              <img src="assets/scroll_cards.jpg" alt="Cartas de Tarô e Cristais">
             </div>
             <div class="parchment-badge-float">
-              "Sonhei com folhas amareladas e mapas estelares... As cartas estavam contando a história viva do universo."
+              "Meu compromisso é acolher suas dúvidas e te ajudar a enxergar seus melhores caminhos com leveza e clareza."
             </div>
           </div>
 
           <div class="about-text-content">
             <div class="parchment-card">
-              <h3>O Chamado das Cartas & da Cura</h3>
+              <h3>Acolhimento de Verdade & Clareza Prática</h3>
               <p>
-                Quando comecei a tocar as cartas e sentir as frequências energéticas, algo sagrado se abriu em meu caminho. Ao longo do tempo, unindo a sabedoria oracular à formação em <strong>Terapia Holística</strong>, encontrei minha verdadeira missão: servir de ponte entre os mistérios celestes e a cura das dores humanas.
+                Trabalhar com a <strong>Cartomancia</strong>, a <strong>Numerologia</strong> e a <strong>Astrologia</strong> é, para mim, uma verdadeira vocação de vida. Meu propósito é muito simples: ser aquele ponto de apoio seguro, leve e sem julgamentos onde você pode desabafar, tirar suas dúvidas e encontrar direcionamento prático para os seus dias.
               </p>
               <div class="quote-highlight">
-                "Eu segurava um pergaminho antigo, de folhas rústicas amareladas pelo tempo, com mapas celestes traçados em ouro. Em volta, as cartas dançavam como se estivessem contando a história secreta da alma humana."
+                "Acredito que o tarô e os astros não servem para engessar o seu futuro, mas sim para te dar segurança e clareza para fazer as suas melhores escolhas."
               </div>
               <p>
-                Aquele sonho não foi apenas uma visão: foi uma consagração. É com esse mesmo respeito, amor e escuta amorosa que leio cada lâmina e cuido do seu campo energético — iluminando dúvidas e resgatando a paz interior.
+                Cada consulta é realizada com escuta carinhosa, respeito e empatia total pelo seu momento. Seja para desatar um nó nos relacionamentos, planejar a carreira ou entender sua missão pessoal, estou aqui para caminharmos juntas!
               </p>
 
               <div class="numerology-pills">
-                <span class="num-pill">🔮 Violeta Transmutador</span>
-                <span class="num-pill">🍷 Vinho Ancestral</span>
-                <span class="num-pill">🪸 Coral Vibracional</span>
-                <span class="num-pill">👑 Dourado Solar</span>
-                <span class="num-pill">🕊️ Branco Puro</span>
+                <span class="num-pill">🔮 Intuição & Sensibilidade</span>
+                <span class="num-pill">🍷 Clareza & Verdade</span>
+                <span class="num-pill">🪸 Alegria & Entusiasmo</span>
+                <span class="num-pill">👑 Direcionamento Prático</span>
+                <span class="num-pill">🕊️ Paz & Acolhimento</span>
               </div>
             </div>
           </div>
@@ -476,19 +460,19 @@
     <section class="testimonials-section" id="depoimentos">
       <div class="container">
         <div class="coral-badge" style="display: block; width: fit-content; margin: 0 auto 0.5rem;">
-          Vozes dos Consulentes
+          Depoimentos Reais
         </div>
-        <h2>Relatos de Luz e Clareza</h2>
-        <p class="section-subtitle">Histórias de quem encontrou respostas e alívio nas leituras</p>
+        <h2>Relatos de Quem Já Se Consultou</h2>
+        <p class="section-subtitle">Mensagens de carinho e transformação de pessoas que encontraram clareza em nossas conversas</p>
         <div class="mystic-divider"><span>✧</span></div>
 
         <div class="testimonials-grid">
           <!-- Relato 1 -->
           <div class="testimonial-card reveal-on-scroll">
-            <div class="testimonial-badge-service">🃏 Cartomancia & Baralho Cigano</div>
+            <div class="testimonial-badge-service">🃏 Cartomancia</div>
             <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
-              "A leitura das cartas foi um divisor de águas na minha vida. Ela descreveu com precisão situações que ninguém sabia e me deu a clareza e coragem que eu precisava para tomar a decisão mais importante da minha carreira."
+              "A leitura com a Patrícia foi um verdadeiro divisor de águas! Ela descreveu com exatidão momentos que eu estava vivendo e me deu a clareza e coragem que eu precisava para tomar a decisão mais importante da minha carreira."
             </p>
             <div class="testimonial-author">
               <div class="author-avatar" style="background: radial-gradient(circle, #ff6f59, #4a0d2a);">M</div>
@@ -501,10 +485,10 @@
 
           <!-- Relato 2 -->
           <div class="testimonial-card reveal-on-scroll">
-            <div class="testimonial-badge-service">🌿 Terapia Holística & Chakras</div>
+            <div class="testimonial-badge-service">🔢 Numerologia</div>
             <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
-              "A sessão de alinhamento com a Buscadora tirou um peso enorme do meu peito. A sensação de leveza nos chakras e a indicação dos banhos de ervas restauraram minha paz e o sono que eu não tinha há meses."
+              "A análise do meu mapa vocacional e a correção de assinatura me ajudaram a entender meus ciclos e destravaram projetos profissionais. O atendimento dela é leve, simpático e super detalhado!"
             </p>
             <div class="testimonial-author">
               <div class="author-avatar" style="background: radial-gradient(circle, #2ed573, #134629);">F</div>
@@ -517,10 +501,10 @@
 
           <!-- Relato 3 -->
           <div class="testimonial-card reveal-on-scroll">
-            <div class="testimonial-badge-service">🔮 Leitura de Tarô</div>
+            <div class="testimonial-badge-service">🌟 Astrologia</div>
             <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
-              "Fiquei arrepiada com o acolhimento e a profundidade dos arcanos. Não é só previsão de futuro, é um verdadeiro abraço na alma que nos reconecta com o que realmente importa. Atendimento impecável!"
+              "Fiz minha Revolução Solar com a Patrícia e amei demais! A forma como ela explica é muito natural, didática e gostosa de ouvir. Saí da consulta com o coração leve e cheia de boas expectativas!"
             </p>
             <div class="testimonial-author">
               <div class="author-avatar" style="background: radial-gradient(circle, #a855f7, #3b092b);">B</div>
@@ -533,10 +517,10 @@
 
           <!-- Relato 4 -->
           <div class="testimonial-card reveal-on-scroll">
-            <div class="testimonial-badge-service">🔢 Numerologia & Cores de Poder</div>
+            <div class="testimonial-badge-service">🃏 Cartomancia • Amor</div>
             <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
-              "A consulta de numerologia e as cores que ela me indicou transformaram minha rotina e o meu ambiente de trabalho. Entendi meus ciclos e parei de me cobrar tanto. Recomendo de olhos fechados!"
+              "Estava muito confusa sobre uma relação e a tiragem abriu meus olhos de uma maneira tão acolhedora! Não tem julgamento, só carinho, verdade e bom senso. Recomendo de olhos fechados!"
             </p>
             <div class="testimonial-author">
               <div class="author-avatar" style="background: radial-gradient(circle, #38bdf8, #163654);">C</div>
@@ -549,10 +533,10 @@
 
           <!-- Relato 5 -->
           <div class="testimonial-card reveal-on-scroll">
-            <div class="testimonial-badge-service">🌙 Interpretação de Sonhos</div>
+            <div class="testimonial-badge-service">🌟 Mapa Astral</div>
             <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
-              "A interpretação do meu sonho recorrente fez todo o sentido! Ela conseguiu enxergar os símbolos da minha infância e me orientou com rituais de proteção que trouxeram muita tranquilidade."
+              "A leitura do Mapa Astral me deu um autoconhecimento gigante. A Patrícia conversa de um jeito muito próximo e compreensivo, parece uma amiga de longa data orientando a gente."
             </p>
             <div class="testimonial-author">
               <div class="author-avatar" style="background: radial-gradient(circle, #e5c365, #5a4014);">L</div>
@@ -565,10 +549,10 @@
 
           <!-- Relato 6 -->
           <div class="testimonial-card reveal-on-scroll">
-            <div class="testimonial-badge-service">🕯️ Espiritualidade & Proteção</div>
+            <div class="testimonial-badge-service">🃏 Mandala Anual</div>
             <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">
-              "A Buscadora é um anjo de luz. O carinho, a verdade e o respeito com que ela conduz a consulta me deram rumo e serenidade num dos momentos mais difíceis da minha vida. Gratidão eterna!"
+              "Faço a mandala anual com ela todo ano e as orientações sempre me guiam com muita precisão e paz. Ela tem uma energia incrível que acalma qualquer aflição. Gratidão imensa!"
             </p>
             <div class="testimonial-author">
               <div class="author-avatar" style="background: radial-gradient(circle, #f472b6, #480f2d);">P</div>
@@ -584,8 +568,8 @@
         <div class="send-testimonial-banner reveal-on-scroll">
           <div class="banner-icon">💌</div>
           <div class="banner-text">
-            <h3>Já realizou uma consulta ou terapia comigo?</h3>
-            <p>Seu depoimento é uma semente de luz e ajuda outras pessoas a encontrarem clareza. Envie sua mensagem pelo WhatsApp para publicarmos aqui!</p>
+            <h3>Já fez uma consulta comigo?</h3>
+            <p>Seu feedback é muito especial e ajuda outras pessoas a tomarem decisões com confiança. Envie sua mensagem pelo WhatsApp para colocarmos aqui com carinho!</p>
           </div>
           <a href="#" class="btn btn-gold whatsapp-general-link" id="btn-send-testimonial">
             <span>💬</span> Enviar Meu Depoimento
@@ -598,9 +582,9 @@
     <section class="cta-section">
       <div class="container">
         <div class="cta-box reveal-on-scroll">
-          <h2>Pronta para abrir o seu <span class="gold-text">Pergaminho</span>?</h2>
+          <h2>Pronta para tirar suas dúvidas com <span class="gold-text">clareza</span>?</h2>
           <p>
-            Permita que as cartas e os astros revelem o melhor caminho para o seu momento. Atendimento sigiloso, acolhedor e direto pelo WhatsApp.
+            Vamos conversar pelo WhatsApp de forma acolhedora, sigilosa e sem complicações. Escolha seu atendimento e venha encontrar as respostas que você procura!
           </p>
           <a href="#" class="btn btn-coral whatsapp-general-link" id="btn-cta-final" style="font-size: 1.1rem; padding: 1rem 2.2rem;">
             <span>💬</span> Conversar no WhatsApp Agora
@@ -619,11 +603,11 @@
             <div class="logo-icon">✧</div>
             <div class="logo-text">
               <span class="logo-title">Buscadora Astral</span>
-              <span class="logo-subtitle">Oráculos & Saberes</span>
+              <span class="logo-subtitle">Patricia Tarô • Consulta Online</span>
             </div>
           </div>
           <p>
-            Conectando almas à sabedoria ancestral através das cartas, dos sonhos e dos mistérios celestes.
+            Acolhendo pessoas e iluminando caminhos através da Cartomancia, da Numerologia e da Astrologia, com clareza, leveza e carinho.
           </p>
         </div>
 
@@ -631,13 +615,13 @@
           <h4>Navegação</h4>
           <ul class="footer-links">
             <li><a href="#inicio">Início</a></li>
-            <li><a href="#oraculo">✨ Oráculo do Dia</a></li>
-            <li><a href="#catalogo">Catálogo de Leituras & Terapias</a></li>
-            <li><a href="#ebooks">📚 Biblioteca de E-books</a></li>
-            <li><a href="#saberes">Saberes, Oráculos & Terapias</a></li>
+            <li><a href="#oraculo">✨ Carta do Dia</a></li>
+            <li><a href="#catalogo">Consulta Online</a></li>
+            <li><a href="#ebooks">📚 E-books & Guias</a></li>
+            <li><a href="#saberes">Saberes & Dicas</a></li>
             <li><a href="#youtube">Canal no YouTube</a></li>
-            <li><a href="#sobre">A História do Sonho</a></li>
-            <li><a href="#depoimentos">Relatos de Luz</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
           </ul>
         </div>
 
@@ -645,15 +629,15 @@
           <h4>Atendimento</h4>
           <ul class="footer-links">
             <li><a href="#" class="whatsapp-general-link">WhatsApp Direto</a></li>
-            <li><a href="#catalogo">Agendamentos</a></li>
-            <li><a href="#saberes">Saberes & Dúvidas</a></li>
+            <li><a href="#catalogo">Agendamentos Online</a></li>
+            <li><a href="#saberes">Dúvidas & Conteúdos</a></li>
             <li><a href="admin.html" style="color: var(--gold-light); font-size: 0.85rem;">✦ Área da Escritora</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Buscadora Astral. Todos os direitos reservados. Feito com amor, luz e mistério.</p>
+        <p>© 2026 Patricia Tarô • Buscadora Astral. Todos os direitos reservados. Clareza, alegria e acolhimento.</p>
       </div>
     </div>
   </footer>

@@ -1,68 +1,78 @@
 /**
- * BUSCADORA ASTRAL - ORÁCULO DO PERGAMINHO (CARTA DO DIA)
- * Experiência interativa com mensagens profundas e reflexões astrais.
+ * BUSCADORA ASTRAL - CARTA DO DIA (ORÁCULO INTERATIVO)
+ * Interação leve, alegre e acolhedora com imagens dos Arcanos Maiores do Tarô.
  */
 
 const oracleCardsData = [
   {
     id: 1,
-    name: "O Sol Dourado",
-    archetype: "Clareza & Vitalidade Astral",
-    symbol: "☀️",
-    number: "XIX",
-    message: "A luz da verdade dissipa qualquer névoa. Hoje, seus caminhos estão iluminados com calor, entusiasmo e revelação. O que estava oculto agora se mostra em toda a sua beleza.",
-    advice: "Confie na sua autenticidade. Compartilhe sua energia calorosa e assuma o protagonismo do seu dia com confiança.",
+    name: "O Mago",
+    number: "I",
+    archetype: "Criatividade & Novos Começos",
+    image: "assets/cards/o_mago.jpg",
+    message: "Hoje é um dia com energia excelente para colocar suas ideias em prática! Você tem em mãos todas as habilidades e a criatividade necessárias para dar o primeiro passo naquele plano ou conversa importante.",
+    advice: "Confie na sua capacidade e tome a iniciativa. O universo adora quem se movimenta com alegria e atitude!",
     color: "#e5c365"
   },
   {
     id: 2,
-    name: "A Sacerdotisa dos Portais",
-    archetype: "Intuição & Mistérios Ocultos",
-    symbol: "🔮",
+    name: "A Sacerdotisa",
     number: "II",
-    message: "O véu entre o visível e o invisível está sutil. Há um conhecimento profundo repousando no silêncio do seu ser. O pergaminho da sua alma guarda respostas que a pressa não consegue ler.",
-    advice: "Antes de agir no mundo externo, silencie e escute sua voz interior. Os sinais e sonhos de hoje carregam mensagens valiosas.",
+    archetype: "Intuição & Sabedoria Interior",
+    image: "assets/cards/a_sacerdotisa.jpg",
+    message: "Sabe aquele pressentimento bom ou aquela voz suave no peito? Sua intuição está super afinada hoje. Um momento de calma trará a clareza que nenhuma pressa conseguiria alcançar.",
+    advice: "Não tenha pressa. Respire fundo, observe com carinho e escute o que o seu coração está dizendo.",
     color: "#a855f7"
   },
   {
     id: 3,
-    name: "A Roda das Estrelas",
-    archetype: "Ciclos & Transformação Cósmica",
-    symbol: "☸️",
-    number: "X",
-    message: "O tempo não é uma linha reta, mas uma espiral sagrada. Os ventos astrais estão mudando o cenário ao seu favor. Um ciclo antigo se encerra com gratidão para dar lugar ao novo florescer.",
-    advice: "Abrace as mudanças com leveza. Não lute contra o fluxo cósmico: ajuste suas velas e confie no ritmo divino.",
-    color: "#ff6f59"
-  },
-  {
-    id: 4,
-    name: "A Estrela Guia",
-    archetype: "Esperança & Alinhamento Espiritual",
-    symbol: "✨",
-    number: "XVII",
-    message: "Mesmo na noite mais escura, as constelações indicam a direção certa. Há uma renovação profunda de fé, cura e serenidade banhando seus projetos e seu coração.",
-    advice: "Mantenha a pureza de intenção. Você está no caminho sagrado, continue emanando sua verdadeira luz.",
-    color: "#fae8a4"
-  },
-  {
-    id: 5,
-    name: "A Imperatriz Criativa",
-    archetype: "Abundância & Nutrição da Alma",
-    symbol: "👑",
+    name: "A Imperatriz",
     number: "III",
-    message: "A semente da sua ideia está pronta para germinar em solo fértil. A beleza, a harmonia e a prosperidade pedem passagem através do afeto e do cuidado consigo mesma.",
-    advice: "Dedique tempo ao que te faz sentir viva e nutrida. Cultive seus relacionamentos e celebre a abundância presente.",
+    archetype: "Prosperidade, Cuidado & Brilho Pessoal",
+    image: "assets/cards/a_imperatriz.jpg",
+    message: "Energia linda de afeto, florescimento e boas notícias! A Imperatriz lembra você de se cuidar com carinho, celebrar quem você é e se abrir para receber coisas boas na vida pessoal e financeira.",
+    advice: "Faça algo gostoso por você hoje: uma pausa relaxante, um momento com quem você ama ou um mimo que renove seu bem-estar.",
     color: "#ff8a78"
   },
   {
+    id: 4,
+    name: "A Roda da Fortuna",
+    number: "X",
+    archetype: "Boas Mudanças & Novas Oportunidades",
+    image: "assets/cards/a_roda_da_fortuna.jpg",
+    message: "A energia está se movimentando para o seu bem! Uma reviravolta positiva ou uma oportunidade inesperada pode surgir para destravar aquilo que parecia empacado.",
+    advice: "Abrace os novos momentos com leveza. Quando a vida muda o ritmo, é para nos levar a lugares ainda melhores!",
+    color: "#ff6f59"
+  },
+  {
+    id: 5,
+    name: "A Estrela",
+    number: "XVII",
+    archetype: "Esperança, Boas Notícias & Paz",
+    image: "assets/cards/a_estrela.jpg",
+    message: "Pode respirar aliviada: vem aí um momento de muita serenidade, boas notícias e clareza para os seus planos. Seus sonhos têm fundamento e caminhos bonitos estão se abrindo.",
+    advice: "Mantenha o pensamento leve e o coração confiante. O que é seu por merecimento está encontrando o caminho até você!",
+    color: "#fae8a4"
+  },
+  {
     id: 6,
-    name: "O Eremita da Sabedoria",
-    archetype: "Reflexão & Luz Interior",
-    symbol: "🕯️",
-    number: "IX",
-    message: "Com uma lanterna antiga e passos firmes na colina, o sábio sabe que a verdade não faz alarde. Um momento de introspecção trará a chave que você procurava.",
-    advice: "Dê uma pausa no barulho do mundo. Um momento de leitura, estudo ou contemplação trará uma epifania crucial.",
-    color: "#c8b082"
+    name: "O Sol",
+    number: "XIX",
+    archetype: "Alegria, Sucesso & Vitalidade",
+    image: "assets/cards/o_sol.jpg",
+    message: "Dia iluminado, alegre e cheio de boas vibrações! O Sol traz clareza total para qualquer dúvida que você tinha, energia positiva nos seus relacionamentos e motivos para sorrir.",
+    advice: "Espalhe seu bom humor, comemore cada pequena vitória do dia e aproveite essa energia gostosa e contagiante!",
+    color: "#e5c365"
+  },
+  {
+    id: 7,
+    name: "O Mundo",
+    number: "XXI",
+    archetype: "Realização & Ciclo Vitorioso",
+    image: "assets/cards/o_mundo.jpg",
+    message: "Sensação maravilhosa de bem-estar e conquista! Uma etapa importante da sua vida se conclui com sucesso, abrindo espaço para novas alegrias e realizações ainda maiores.",
+    advice: "Olhe para a sua trajetória com orgulho e gratidão. Você aprendeu muito e está pronta para viver coisas incríveis!",
+    color: "#38bdf8"
   }
 ];
 
@@ -77,7 +87,7 @@ function initOracle() {
     cardsContainer.innerHTML = '';
     resultBox.classList.remove('active');
 
-    // Embaralhar as cartas
+    // Embaralhar e sortear 4 cartas para a mesa
     const shuffled = [...oracleCardsData].sort(() => 0.5 - Math.random()).slice(0, 4);
 
     shuffled.forEach((card, index) => {
@@ -87,16 +97,18 @@ function initOracle() {
       cardEl.innerHTML = `
         <div class="tarot-card-face card-back">
           <div class="card-back-pattern">
-            <span>✧</span>
-            <small style="font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-primary);">Buscadora</small>
-            <span>📜</span>
-            <small style="font-size: 0.6rem; opacity: 0.7;">Toque para revelar</small>
+            <span class="card-back-star">✧</span>
+            <small class="card-back-brand">Patricia Tarô</small>
+            <span class="card-back-symbol">🎴</span>
+            <small class="card-back-hint">Toque para tirar</small>
           </div>
         </div>
         <div class="tarot-card-face card-front">
-          <div style="font-size: 2.2rem; margin-bottom: 0.3rem;">${card.symbol}</div>
-          <strong style="font-family: var(--font-serif-title); font-size: 0.85rem; color: #3b092b; text-align: center;">${card.name}</strong>
-          <span style="font-size: 0.7rem; color: #7a5c3d; margin-top: 0.2rem;">Arcano ${card.number}</span>
+          <img src="${card.image}" alt="Carta de Tarô: ${card.name}" class="tarot-card-img" />
+          <div class="tarot-card-caption">
+            <strong>${card.name}</strong>
+            <span>Arcano ${card.number}</span>
+          </div>
         </div>
       `;
 
@@ -108,7 +120,7 @@ function initOracle() {
   function revealCard(cardElement, cardData) {
     if (cardElement.classList.contains('revealed')) return;
 
-    // Desabilitar outros cliques
+    // Desabilitar outros cliques para manter o foco na carta escolhida
     const allCards = document.querySelectorAll('.tarot-card');
     allCards.forEach(c => {
       if (c !== cardElement) {
@@ -119,24 +131,37 @@ function initOracle() {
 
     cardElement.classList.add('revealed');
 
-    // Preencher o resultado
-    document.getElementById('result-card-symbol').textContent = cardData.symbol;
-    document.getElementById('result-card-name').textContent = `${cardData.name} (${cardData.number})`;
-    document.getElementById('result-card-archetype').textContent = cardData.archetype;
-    document.getElementById('result-card-message').textContent = cardData.message;
-    document.getElementById('result-card-advice').textContent = cardData.advice;
+    // Preencher o resultado com a imagem da carta e o conselho alegre e acolhedor
+    const resultImg = document.getElementById('result-card-image');
+    if (resultImg) {
+      resultImg.src = cardData.image;
+      resultImg.alt = `Arcano ${cardData.number} - ${cardData.name}`;
+    }
 
-    // Botão de WhatsApp personalizado com a carta tirada
+    const nameEl = document.getElementById('result-card-name');
+    if (nameEl) nameEl.textContent = `${cardData.name} (Arcano ${cardData.number})`;
+
+    const archEl = document.getElementById('result-card-archetype');
+    if (archEl) archEl.textContent = cardData.archetype;
+
+    const msgEl = document.getElementById('result-card-message');
+    if (msgEl) msgEl.textContent = cardData.message;
+
+    const advEl = document.getElementById('result-card-advice');
+    if (advEl) advEl.textContent = cardData.advice;
+
+    // Link para conversar no WhatsApp sobre a carta tirada
     const whatsappBtn = document.getElementById('btn-whatsapp-oracle');
     if (whatsappBtn) {
-      const msg = encodeURIComponent(`Olá, Buscadora Astral! Tirei a carta "${cardData.name}" no Oráculo do site e gostaria de aprofundar essa mensagem em uma consulta.`);
-      whatsappBtn.href = `https://wa.me/5511999999999?text=${msg}`;
+      const textMsg = encodeURIComponent(`Olá, Patrícia! Tirei a carta "${cardData.name}" na tiragem do site e adorei o conselho! Gostaria de agendar uma consulta com você para conversar mais.`);
+      whatsappBtn.href = `https://wa.me/5511999999999?text=${textMsg}`;
+      whatsappBtn.target = "_blank";
     }
 
     setTimeout(() => {
       resultBox.classList.add('active');
       resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 500);
+    }, 450);
   }
 
   if (shuffleBtn) {
@@ -147,3 +172,4 @@ function initOracle() {
 }
 
 document.addEventListener('DOMContentLoaded', initOracle);
+
