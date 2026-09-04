@@ -18,9 +18,10 @@
 
 ---
 
-## 🚀 Links Oficiais
+## 🚀 Links & Contatos Oficiais
  
 - 🌐 **Site em Produção**: [https://buscadora-astral.vercel.app](https://buscadora-astral.vercel.app)
+- ✉️ **E-mail Oficial**: [astralbuscadora@gmail.com](mailto:astralbuscadora@gmail.com)
 - 🛒 **E-book na Eduzz**: [https://chk.eduzz.com/ah5vey2i?currency=BRL](https://chk.eduzz.com/ah5vey2i?currency=BRL)
 - 🎥 **Canal Oficial no YouTube**: [https://www.youtube.com/@BuscadoraAstral](https://www.youtube.com/@BuscadoraAstral)
 - ✍️ **Caderno da Escritora**: [https://buscadora-astral.vercel.app/admin.html](https://buscadora-astral.vercel.app/admin.html)
