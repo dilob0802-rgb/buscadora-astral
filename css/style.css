@@ -215,6 +215,21 @@ h2 {
   flex-shrink: 0;
 }
 
+.logo-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-primary);
+  object-fit: cover;
+  box-shadow: 0 0 15px var(--gold-glow);
+  transition: var(--transition-smooth);
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.08) rotate(5deg);
+  box-shadow: 0 0 25px var(--gold-glow);
+}
+
 .logo-icon {
   width: 36px;
   height: 36px;
