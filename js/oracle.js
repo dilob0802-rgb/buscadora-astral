@@ -98,9 +98,11 @@ function initOracle() {
         <div class="tarot-card-face card-back">
           <div class="card-back-pattern">
             <span class="card-back-star">✧</span>
-            <small class="card-back-brand">Patricia Tarô</small>
-            <span class="card-back-symbol">🎴</span>
-            <small class="card-back-hint">Toque para tirar</small>
+            <small class="card-back-brand">Buscadora Astral</small>
+            <div class="card-back-logo-wrapper">
+              <img src="assets/logo_buscadora.jpg" alt="Logo Buscadora Astral" class="card-back-logo-img" />
+            </div>
+            <small class="card-back-hint">✨ Toque para tirar ✨</small>
           </div>
         </div>
         <div class="tarot-card-face card-front">
@@ -153,7 +155,7 @@ function initOracle() {
     // Link para conversar no WhatsApp sobre a carta tirada
     const whatsappBtn = document.getElementById('btn-whatsapp-oracle');
     if (whatsappBtn) {
-      const textMsg = encodeURIComponent(`Olá, Patrícia! Tirei a carta "${cardData.name}" na tiragem do site e adorei o conselho! Gostaria de agendar uma consulta com você para conversar mais.`);
+      const textMsg = encodeURIComponent(`Olá! Tirei a carta "${cardData.name}" na tiragem do site da Buscadora Astral e adorei o conselho! Gostaria de agendar uma consulta para conversar mais.`);
       whatsappBtn.href = `https://wa.me/5521969689509?text=${textMsg}`;
       whatsappBtn.target = "_blank";
     }
