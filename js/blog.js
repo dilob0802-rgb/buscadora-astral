@@ -204,7 +204,7 @@ function initBlog() {
       card.className = 'personare-card reveal-on-scroll revealed';
       const imgSrc = art.image || 'assets/oracle_cards.jpg';
       const badge = art.categoryBadge || (art.category ? art.category.toUpperCase() : 'AUTOCONHECIMENTO');
-      const authorRole = art.authorRole || 'Patricia Tarô';
+      const authorRole = art.authorRole || 'Patricia - Buscadora Astral';
 
       card.innerHTML = `
         <div class="personare-card-media">
