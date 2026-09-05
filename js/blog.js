@@ -9,7 +9,7 @@ const defaultBlogArticles = [
     id: 1,
     category: "astrologia",
     categoryBadge: "AUTOCONHECIMENTO",
-    categoryLabel: "🌟 Astrologia",
+    categoryLabel: "Astrologia",
     authorRole: "Astrologia",
     image: "assets/astrologia.jpg",
     date: "Hoje",
@@ -29,33 +29,34 @@ const defaultBlogArticles = [
   },
   {
     id: 2,
-    category: "cartomancia",
-    categoryBadge: "FUTURO",
-    categoryLabel: "🃏 Cartomancia",
-    authorRole: "Sonhos & Símbolos",
-    image: "assets/cartomancia.jpg",
+    category: "astrologia",
+    categoryBadge: "AUTOCONHECIMENTO",
+    categoryLabel: "Astrologia",
+    authorRole: "Astrologia",
+    image: "assets/hero_bg.jpg",
     date: "Ontem",
-    title: "SONHAR COM COBRA OU ÁGUA: O QUE O SEU INCONSCIENTE QUER DIZER?",
-    excerpt: "Descubra o significado simbólico e vibracional dos sonhos mais comuns e como eles funcionam como avisos práticos da sua intuição.",
+    title: "FASES DA LUA E DECISÕES: COMO USAR CADA CICLO A SEU FAVOR",
+    excerpt: "Descubra como as quatro fases lunares afetam sua energia mental, suas emoções e o melhor momento para agir ou se recolher.",
     content: `
-      <p>Durante o sono, nosso racional descansa e o plano sutil ganha voz. Sonhar com animais de poder como serpentes, ou com elementos da natureza como rios e mares, carrega mensagens poderosas de cura, renovação ou alertas de proteção.</p>
+      <p>A Lua é o corpo celeste mais próximo da Terra e rege diretamente nossos humores, intuição e marés emocionais. Sintonizar seus projetos com as fases lunares é uma forma prática de não remar contra a maré.</p>
       
-      <blockquote>"O sonho não é mera imaginação: é uma conversa direta da sua alma com a sua realidade."</blockquote>
+      <blockquote>"Quando você respeita o ritmo da Lua, suas decisões ganham força natural e menos desgaste."</blockquote>
 
-      <h3>Os Símbolos mais Reveladores</h3>
+      <h3>As 4 Fases e seus Poderes:</h3>
       <ul>
-        <li><strong>Cobras:</strong> Simbolizam renovação de ciclo, troca de pele, transmutação e atenção com pessoas ao seu redor.</li>
-        <li><strong>Água limpa e calma:</strong> Paz interior, equilíbrio emocional e novos começos abençoados.</li>
-        <li><strong>Água agitada ou turva:</strong> Emoções acumuladas que pedem conversa sincera e desabafo.</li>
+        <li><strong>Lua Nova:</strong> Plantio de intenções, novos começos e planejamento silencioso.</li>
+        <li><strong>Lua Crescente:</strong> Ação, superação de obstáculos e impulsionamento prático.</li>
+        <li><strong>Lua Cheia:</strong> Ápice do magnetismo, clareza total e celebração de resultados.</li>
+        <li><strong>Lua Minguante:</strong> Desapego, limpeza de pendências, descanso e discernimento.</li>
       </ul>
-      <p>Quando um sonho se repete, as cartas do Baralho Cigano e do Tarô ajudam a desatar os nós e traduzir exatamente a mensagem que sua intuição está querendo te entregar.</p>
+      <p>Acompanhe o widget de Céu do Dia em nossa página inicial para saber o trânsito da Lua a cada momento!</p>
     `
   },
   {
     id: 3,
     category: "tarot",
     categoryBadge: "AMOR",
-    categoryLabel: "🔮 Tarô",
+    categoryLabel: "Tarô",
     authorRole: "Cartomancia",
     image: "assets/tarot.jpg",
     date: "28 Ago",
@@ -80,7 +81,7 @@ const defaultBlogArticles = [
     id: 4,
     category: "numerologia",
     categoryBadge: "AUTOCONHECIMENTO",
-    categoryLabel: "🔢 Numerologia",
+    categoryLabel: "Numerologia",
     authorRole: "Numerologia",
     image: "assets/numerologia.jpg",
     date: "25 Ago",
@@ -104,8 +105,8 @@ const defaultBlogArticles = [
     id: 5,
     category: "cartomancia",
     categoryBadge: "FUTURO",
-    categoryLabel: "🃏 Cartomancia",
-    authorRole: "Mandala Anual",
+    categoryLabel: "Cartomancia",
+    authorRole: "Cartomancia",
     image: "assets/oracle_cards.jpg",
     date: "22 Ago",
     title: "MANDALA ANUAL E PREVISÕES: COMO PLANEJAR SEU ANO COM SEGURANÇA",
@@ -124,22 +125,21 @@ const defaultBlogArticles = [
   },
   {
     id: 6,
-    category: "terapia-holistica",
-    categoryBadge: "BEM-ESTAR",
-    categoryLabel: "🌿 Bem-Estar",
-    authorRole: "Terapia Holística",
-    image: "assets/terapia_holistica.jpg",
-    date: "18 Ago",
-    title: "BANHOS DE ERVAS E LIMPEZA ENERGÉTICA: RITUAIS SIMPLES PARA FAZER EM CASA",
-    excerpt: "Receitas práticas de banhos aromáticos com alecrim, lavanda e camomila para restaurar o sono e blindar seu campo áurico.",
+    category: "numerologia",
+    categoryBadge: "AUTOCONHECIMENTO",
+    categoryLabel: "Numerologia",
+    authorRole: "Numerologia",
+    image: "assets/cartomancia.jpg",
+    date: "19 Ago",
+    title: "NÚMERO DE DESTINO: A MISSÃO OCULTA NA SUA DATA DE NASCIMENTO",
+    excerpt: "Aprenda o que a soma da sua data de nascimento revela sobre o seu propósito maior e os aprendizados desta existência.",
     content: `
-      <p>Cuidar da sua energia é tão natural e necessário quanto cuidar da sua higiene física diária. Quando o dia foi puxado ou o ambiente estava pesado, um banho de ervas simples é um verdadeiro abraço na alma.</p>
+      <p>O Número de Destino é a soma reduzida do dia, mês e ano em que você veio ao mundo. Ele representa a estrada principal por onde você caminha e as lições mestras que sua alma escolheu aprender.</p>
       
-      <blockquote>"As plantas carregam a sabedoria viva da terra e restauram nossa leveza em poucos minutos."</blockquote>
+      <blockquote>"Quando você compreende seu Número de Destino, a sensação de estar perdida dá lugar à clareza e ao propósito."</blockquote>
 
-      <h3>Receita de Banho de Alecrim com Lavanda</h3>
-      <p>Ferva 1 litro de água, desligue o fogo e adicione um punhado de alecrim (alegria e foco) e um punhado de lavanda (paz e sono tranquilo). Deixe em infusão por 15 minutos, coe e jogue do pescoço para baixo após o seu banho habitual.</p>
-      <p>A sensação de alívio e descanso é imediata!</p>
+      <h3>O que a Numerologia do Destino esclarece:</h3>
+      <p>Em nossa consulta e no E-book oficial da Buscadora Astral, decodificamos a vibração de cada número (de 1 a 9, além dos números mestres 11 e 22), oferecendo um mapa direto para suas realizações.</p>
     `
   }
 ];
@@ -215,9 +215,9 @@ function initBlog() {
           <h3 class="personare-card-title">${art.title}</h3>
           <p class="personare-card-excerpt">${art.excerpt}</p>
           <div class="personare-card-footer">
-            <div class="personare-author-avatar">P</div>
+            <img src="assets/logo_buscadora.jpg" alt="Buscadora Astral" class="personare-author-avatar-img">
             <div class="personare-author-info">
-              <strong class="personare-author-name">PATRICIA TARÔ</strong>
+              <strong class="personare-author-name">Patricia - Buscadora Astral</strong>
               <span class="personare-author-role">${authorRole}</span>
             </div>
             <span class="personare-card-arrow">→</span>

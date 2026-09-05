@@ -99,12 +99,10 @@ function initPostForm() {
 
     // Map de labels das categorias
     const categoryLabels = {
-      'cartomancia': '🃏 Cartomancia',
-      'tarot': '🔮 Tarô',
-      'astrologia': '🌟 Astrologia',
-      'numerologia': '🔢 Numerologia',
-      'terapia-holistica': '🌿 Terapia Holística',
-      'espiritualidade': '🕯️ Espiritualidade'
+      'cartomancia': 'Cartomancia',
+      'tarot': 'Tarô',
+      'astrologia': 'Astrologia',
+      'numerologia': 'Numerologia'
     };
 
     // Data formatada
