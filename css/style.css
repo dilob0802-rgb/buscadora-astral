@@ -39,7 +39,7 @@
   --parchment-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(229, 195, 101, 0.15);
 
   /* Fontes */
-  --font-serif-title: 'Cinzel Decorative', 'Cinzel', serif;
+  --font-serif-title: 'Cinzel', 'Marcellus', serif;
   --font-serif-sub: 'Cormorant Garamond', serif;
   --font-sans: 'Outfit', 'Plus Jakarta Sans', sans-serif;
 
@@ -620,13 +620,13 @@ h2 {
 
 /* Widget do Céu de Hoje & Fase Lunar */
 .celestial-widget {
-  background: var(--card-bg-glass);
-  border: 1px solid rgba(229, 195, 101, 0.3);
+  background: linear-gradient(145deg, rgba(38, 16, 62, 0.82) 0%, rgba(18, 7, 34, 0.92) 100%);
+  border: 1px solid rgba(229, 195, 101, 0.35);
   border-radius: var(--radius-lg);
   padding: 2.2rem;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(168, 85, 247, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65), 0 0 30px rgba(168, 85, 247, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.12);
   position: relative;
   overflow: hidden;
 }
@@ -638,7 +638,7 @@ h2 {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(229, 195, 101, 0.08) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(229, 195, 101, 0.09) 0%, transparent 60%);
   pointer-events: none;
   animation: rotateGlow 25s linear infinite;
 }
@@ -647,19 +647,44 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(229, 195, 101, 0.15);
-  padding-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.4rem;
+  border-bottom: 1px solid rgba(229, 195, 101, 0.18);
+  padding-bottom: 0.9rem;
+}
+
+.widget-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
 }
 
 .widget-title {
   font-family: var(--font-serif-title);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--gold-light);
+  letter-spacing: 0.02em;
+}
+
+.widget-sign-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.28), rgba(255, 111, 89, 0.2));
+  border: 1px solid rgba(168, 85, 247, 0.45);
+  color: #f3e8ff;
+  padding: 0.22rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 10px rgba(168, 85, 247, 0.2);
 }
 
 .widget-date {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--coral-light);
   font-weight: 500;
 }
@@ -667,53 +692,82 @@ h2 {
 .moon-phase-display {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  gap: 1.4rem;
+  margin-bottom: 1.4rem;
 }
 
 .moon-visual {
-  width: 70px;
-  height: 70px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #fff9e6, #d4be93 60%, #5e4a36 100%);
-  box-shadow: 0 0 25px rgba(254, 241, 184, 0.4), inset -5px -5px 15px rgba(0,0,0,0.6);
+  background: radial-gradient(circle at 30% 30%, #fff9e6, #d4be93 60%, #4a3827 100%);
+  box-shadow: 0 0 25px rgba(254, 241, 184, 0.45), inset -5px -5px 15px rgba(0,0,0,0.6);
   flex-shrink: 0;
   position: relative;
+  transition: all 0.5s ease;
+}
+
+/* Fases da Lua visuais */
+.moon-visual.moon-waning {
+  background: radial-gradient(circle at 75% 40%, #fff9e6 0%, #d4be93 35%, #241432 70%);
+  box-shadow: 0 0 20px rgba(254, 241, 184, 0.35), inset 4px -4px 10px rgba(0,0,0,0.7);
+}
+
+.moon-visual.moon-waxing {
+  background: radial-gradient(circle at 25% 40%, #fff9e6 0%, #d4be93 35%, #241432 70%);
+  box-shadow: 0 0 20px rgba(254, 241, 184, 0.35), inset -4px -4px 10px rgba(0,0,0,0.7);
+}
+
+.moon-visual.moon-full {
+  background: radial-gradient(circle at 45% 45%, #ffffff 0%, #fff6d6 45%, #cca762 100%);
+  box-shadow: 0 0 30px rgba(254, 241, 184, 0.65), 0 0 10px rgba(229, 195, 101, 0.8);
+}
+
+.moon-visual.moon-new {
+  background: radial-gradient(circle at 50% 50%, #2b1240 0%, #150722 80%, #0d0414 100%);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3), inset 0 0 12px rgba(0,0,0,0.8);
 }
 
 .moon-info h4 {
+  font-family: var(--font-serif-title);
   font-size: 1.25rem;
-  margin-bottom: 0.2rem;
-  color: var(--white-pure);
+  margin-bottom: 0.35rem;
+  color: #fff9e6;
+  line-height: 1.25;
 }
 
 .moon-info p {
   font-size: 0.9rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.5;
 }
 
 .daily-energy {
-  background: rgba(13, 4, 20, 0.6);
-  border: 1px dashed rgba(229, 195, 101, 0.25);
+  background: linear-gradient(135deg, rgba(15, 6, 26, 0.75), rgba(32, 12, 50, 0.6));
+  border: 1px solid rgba(229, 195, 101, 0.25);
+  border-left: 3px solid var(--gold-primary);
   border-radius: var(--radius-sm);
-  padding: 1rem;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .daily-energy h5 {
-  font-size: 0.85rem;
-  color: var(--gold-primary);
+  font-size: 0.82rem;
+  color: var(--gold-light);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.4rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
   display: flex;
   align-items: center;
   gap: 0.4rem;
 }
 
 .daily-energy p {
-  font-size: 0.9rem;
-  color: var(--white-muted);
+  font-size: 0.88rem;
+  color: #ede9fe;
   font-style: italic;
+  line-height: 1.45;
 }
 
 /* ============================================================
@@ -1782,9 +1836,12 @@ h2 {
 }
 
 .article-title {
-  font-size: 2.2rem;
+  font-family: var(--font-serif-title);
+  font-size: 2rem;
   color: #3b092b;
-  line-height: 1.2;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  font-weight: 700;
 }
 
 .article-body {

@@ -154,7 +154,7 @@ function initOracle() {
     const whatsappBtn = document.getElementById('btn-whatsapp-oracle');
     if (whatsappBtn) {
       const textMsg = encodeURIComponent(`Olá, Patrícia! Tirei a carta "${cardData.name}" na tiragem do site e adorei o conselho! Gostaria de agendar uma consulta com você para conversar mais.`);
-      whatsappBtn.href = `https://wa.me/5511999999999?text=${textMsg}`;
+      whatsappBtn.href = `https://wa.me/5521969689509?text=${textMsg}`;
       whatsappBtn.target = "_blank";
     }
 

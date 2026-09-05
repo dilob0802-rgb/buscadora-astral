@@ -9,7 +9,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Marcellus&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
@@ -92,19 +92,22 @@
         <!-- Widget de Energia do Dia -->
         <div class="celestial-widget float-element">
           <div class="widget-header">
-            <span class="widget-title">Céu de Hoje & Energia</span>
+            <div class="widget-header-left">
+              <span class="widget-title">🌌 Céu de Hoje</span>
+              <span class="widget-sign-badge" id="current-moon-sign-badge">♊ Lua em Gêmeos</span>
+            </div>
             <span class="widget-date" id="current-celestial-date">Hoje</span>
           </div>
           <div class="moon-phase-display">
-            <div class="moon-visual"></div>
+            <div class="moon-visual" id="current-moon-visual"></div>
             <div class="moon-info">
-              <h4 id="current-moon-phase">Lua Crescente Iluminada</h4>
-              <p id="current-moon-desc">Momento favorável para iniciar bons projetos, clarear objetivos e cuidar do seu bem-estar.</p>
+              <h4 id="current-moon-phase">Lua Minguante em Gêmeos</h4>
+              <p id="current-moon-desc">Momento de desacelerar a mente, desapegar de excessos de pensamentos e clarear ideias com serenidade.</p>
             </div>
           </div>
           <div class="daily-energy">
-            <h5><span>✦</span> Conselho do Dia</h5>
-            <p>"Confie nas suas escolhas, valorize sua alegria e dê um passo de cada vez com tranquilidade."</p>
+            <h5><span>✦</span> Energia & Conselho do Céu</h5>
+            <p id="current-daily-advice">"Filtre o ruído externo, valorize a sua paz mental e confie que cada resposta chega no tempo certo."</p>
           </div>
         </div>
       </div>
@@ -288,10 +291,6 @@
                 <li>
                   <span class="check-icon">✦</span>
                   <div><strong>Calendário Astrológico & Lunações:</strong> Sintonize suas intenções e ações com as quatro fases da Lua para não remar contra a maré.</div>
-                </li>
-                <li>
-                  <span class="check-icon">✦</span>
-                  <div><strong>Cores Sagradas no Cotidiano:</strong> O uso vibracional do violeta, vinho, coral, dourado e branco para magnetismo, paz e proteção da sua aura.</div>
                 </li>
                 <li>
                   <span class="check-icon">✦</span>
