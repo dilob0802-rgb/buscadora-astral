@@ -14,17 +14,19 @@
 - 🃏 **Catálogo de Atendimentos**: Conversão direta para o WhatsApp com mensagens personalizadas pré-formatadas para cada tipo de leitura.
 - ✨ **Oráculo do Pergaminho (Interativo)**: Tiragem diária de cartas com animação 3D e conselhos espirituais.
 - 📖 **Diário Astral & Crônicas (Blog)**: Sistema com busca, filtros por categoria e leitor modal estilo livro antigo.
-- ✍️ **Caderno da Escritora (Painel Admin Visual)**: Área reservada com senha (`astral2026`) para publicação instantânea de crônicas no blog sem necessidade de código (editor 100% visual WYSIWYG).
+- ✍️ **Caderno da Escritora (Painel Admin Visual)**: Área reservada com senha para publicação instantânea de crônicas no blog sem necessidade de código (editor 100% visual WYSIWYG).
 
 ---
 
 ## 🚀 Links & Contatos Oficiais
  
-- 🌐 **Site em Produção**: [https://buscadora-astral.vercel.app](https://buscadora-astral.vercel.app)
+- 🌐 **Site em Produção**: [https://buscadoraastral.com.br](https://buscadoraastral.com.br)
 - ✉️ **E-mail Oficial**: [astralbuscadora@gmail.com](mailto:astralbuscadora@gmail.com)
 - 🛒 **E-book na Eduzz**: [https://chk.eduzz.com/ah5vey2i?currency=BRL](https://chk.eduzz.com/ah5vey2i?currency=BRL)
 - 🎥 **Canal Oficial no YouTube**: [https://www.youtube.com/@BuscadoraAstral](https://www.youtube.com/@BuscadoraAstral)
-- ✍️ **Caderno da Escritora**: [https://buscadora-astral.vercel.app/admin.html](https://buscadora-astral.vercel.app/admin.html)
+- 🎵 **TikTok Oficial**: [https://www.tiktok.com/@buscadora.astral](https://www.tiktok.com/@buscadora.astral)
+- 🎧 **Perfil no Spotify**: [https://open.spotify.com/user/31qgppuoqwcsnlwxddd2i5maxgmy](https://open.spotify.com/user/31qgppuoqwcsnlwxddd2i5maxgmy)
+- ✍️ **Caderno da Escritora**: [https://buscadoraastral.com.br/admin.html](https://buscadoraastral.com.br/admin.html)
 
 ---
 

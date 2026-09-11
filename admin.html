@@ -17,6 +17,28 @@
 </head>
 <body class="admin-body">
 
+  <!-- ==================== SVG SPRITE DE ÍCONES MONOCROMÁTICOS ==================== -->
+  <svg style="display: none;" id="astral-admin-icons" aria-hidden="true">
+    <defs>
+      <symbol id="icon-sparkles" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/>
+      </symbol>
+      <symbol id="icon-scroll" viewBox="0 0 24 24">
+        <path d="M19 17V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2zM19 17a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="icon-pen" viewBox="0 0 24 24">
+        <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="icon-book" viewBox="0 0 24 24">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="icon-send" viewBox="0 0 24 24">
+        <line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <polygon points="22 2 15 22 11 13 2 9 22 2" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
   <canvas id="stars-canvas"></canvas>
 
   <!-- Header do Painel -->
@@ -41,7 +63,9 @@
     <!-- ==================== TELA DE LOGIN ==================== -->
     <div id="login-section">
       <div class="login-box">
-        <div class="icon">📜</div>
+        <div class="icon" style="color: var(--gold-primary);">
+          <svg class="icon-svg stroke" style="width: 48px; height: 48px;"><use href="#icon-scroll"></use></svg>
+        </div>
         <div class="coral-badge">Portal Exclusivo</div>
         <h2>Acesso da Escritora</h2>
         <p>Digite a senha para entrar no seu caderno de publicações.</p>
@@ -53,12 +77,9 @@
           </div>
           <div id="login-error" style="color: #ff6f59; font-size: 0.85rem; margin-bottom: 1rem; display: none;"></div>
           <button type="submit" class="btn btn-gold" style="width: 100%;">
-            <span>✨</span> Entrar no Caderno
+            <svg class="icon-svg"><use href="#icon-sparkles"></use></svg> Entrar no Caderno
           </button>
         </form>
-        <small style="display: block; margin-top: 1.5rem; color: var(--text-muted); font-size: 0.8rem;">
-          Senha padrão: <code>astral2026</code>
-        </small>
       </div>
     </div>
 
@@ -66,14 +87,14 @@
     <div id="admin-dashboard" style="display: none;">
       
       <div class="alert-success" id="post-success-alert">
-        ✨ <strong>Maravilha!</strong> Sua crônica foi publicada no site com sucesso!
+        <svg class="icon-svg" style="margin-right: 0.4rem;"><use href="#icon-sparkles"></use></svg> <strong>Maravilha!</strong> Sua crônica foi publicada no site com sucesso!
       </div>
 
       <div class="dashboard-grid">
         
         <!-- Formulário Super Amigável e Visual -->
         <div class="admin-card">
-          <h3><span>✍️</span> Escrever Nova Crônica</h3>
+          <h3><svg class="icon-svg stroke" style="margin-right: 0.4rem;"><use href="#icon-pen"></use></svg> Escrever Nova Crônica</h3>
           
           <form id="new-post-form">
             
@@ -85,10 +106,10 @@
             <div class="form-group">
               <label for="post-category">2. Onde este texto deve aparecer?</label>
               <select id="post-category" class="form-control" required style="background: rgba(13,4,20,0.95); color: #fff;">
-                <option value="cartomancia">🃏 Cartomancia (Baralho Cigano & Leituras)</option>
-                <option value="tarot">🔮 Tarô (Arcanos & Autoconhecimento)</option>
-                <option value="astrologia">🌟 Astrologia (Céu do Dia, Fases da Lua & Trânsitos)</option>
-                <option value="numerologia">🔢 Numerologia (Frequências & Números de Destino)</option>
+                <option value="cartomancia">Cartomancia (Baralho Cigano & Leituras)</option>
+                <option value="tarot">Tarô (Arcanos & Autoconhecimento)</option>
+                <option value="astrologia">Astrologia (Céu do Dia, Fases da Lua & Trânsitos)</option>
+                <option value="numerologia">Numerologia (Frequências & Números de Destino)</option>
               </select>
             </div>
 
@@ -107,8 +128,8 @@
               <div class="visual-toolbar">
                 <button type="button" class="vtool-btn" data-command="bold" title="Negrito"><b>B</b> Negrito</button>
                 <button type="button" class="vtool-btn" data-command="italic" title="Itálico"><i>I</i> Itálico</button>
-                <button type="button" class="vtool-btn" data-command="formatBlock" data-value="H3" title="Subtítulo">📌 Subtítulo</button>
-                <button type="button" class="vtool-btn" data-command="formatBlock" data-value="BLOCKQUOTE" title="Destaque">✨ Destaque Especial</button>
+                <button type="button" class="vtool-btn" data-command="formatBlock" data-value="H3" title="Subtítulo">Subtítulo</button>
+                <button type="button" class="vtool-btn" data-command="formatBlock" data-value="BLOCKQUOTE" title="Destaque">Destaque Especial</button>
                 <button type="button" class="vtool-btn" data-command="insertUnorderedList" title="Lista de Tópicos">• Lista</button>
               </div>
 
@@ -117,7 +138,7 @@
             </div>
 
             <button type="submit" class="btn btn-coral" style="width: 100%; padding: 1.1rem; font-size: 1.1rem; font-weight: 700;">
-              <span>🚀</span> Publicar Crônica Agora
+              <svg class="icon-svg" style="margin-right: 0.4rem;"><use href="#icon-send"></use></svg> Publicar Crônica Agora
             </button>
           </form>
         </div>
@@ -125,7 +146,7 @@
         <!-- Coluna da Direita: Lista de Textos e Ajuda -->
         <div>
           <div class="admin-card">
-            <h3><span>📚</span> Suas Crônicas Ativas</h3>
+            <h3><svg class="icon-svg stroke" style="margin-right: 0.4rem;"><use href="#icon-book"></use></svg> Suas Crônicas Ativas</h3>
             <p style="font-size: 0.88rem; color: var(--white-muted); margin-bottom: 1.2rem;">
               Textos que você já publicou. Você pode removê-los a qualquer momento:
             </p>
@@ -136,7 +157,7 @@
           </div>
 
           <div class="admin-card" style="margin-top: 1.5rem; background: rgba(36, 10, 26, 0.4); border-color: rgba(229,195,101,0.2);">
-            <h4 style="color: var(--gold-light); font-size: 1rem; margin-bottom: 0.6rem;">💡 Como funciona:</h4>
+            <h4 style="color: var(--gold-light); font-size: 1rem; margin-bottom: 0.6rem;">Como funciona:</h4>
             <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
               Basta preencher os 4 campos e clicar no botão de publicar. O texto entra no ar instantaneamente, já com a formatação elegante de pergaminho antigo para todos os seus leitores!
             </p>

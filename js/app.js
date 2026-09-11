@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMoonPhase();
   initScrollReveal();
   initWhatsAppLinks();
+  initMediaTabs();
 });
 
 // Efeito de scroll na navbar
@@ -138,6 +139,7 @@ const ZODIAC_SIGNS = [
 function initMoonPhase() {
   const moonNameEl = document.getElementById('current-moon-phase');
   const moonDescEl = document.getElementById('current-moon-desc');
+  const moonActionsEl = document.getElementById('current-moon-actions');
   const moonDateEl = document.getElementById('current-celestial-date');
   const moonBadgeEl = document.getElementById('current-moon-sign-badge');
   const dailyAdviceEl = document.getElementById('current-daily-advice');
@@ -170,48 +172,73 @@ function initMoonPhase() {
                      - 0.214 * Math.sin(2*M * Math.PI / 180) 
                      - 0.114 * Math.sin(2*F * Math.PI / 180) % 360 + 360) % 360;
   
-  // Signo do Zodíaco
+  // Signo do Zodíaco (0 = Áries, 1 = Touro, ..., 11 = Peixes)
   const signIndex = Math.floor(moonLon / 30) % 12;
-  const sign = ZODIAC_SIGNS[signIndex] || ZODIAC_SIGNS[2]; // fallback Gêmeos
 
   // Fase Lunar (diferença angular da elongação entre Lua e Sol)
+  // 0° a 90°: Lua Nova (conjunção até quadratura)
+  // 90° a 180°: Lua Crescente (quadratura até oposição)
+  // 180° a 270°: Lua Cheia (oposição até quadratura minguante)
+  // 270° a 360°: Lua Minguante (quadratura minguante até novilúnio)
   const elongation = (moonLon - sunLon + 360) % 360;
-  let phaseName = 'Lua Minguante';
-  let phaseClass = 'moon-waning';
+  let phaseKey = 'waning';
 
-  if (elongation >= 337.5 || elongation < 22.5) {
-    phaseName = 'Lua Nova';
-    phaseClass = 'moon-new';
-  } else if (elongation >= 22.5 && elongation < 135) {
-    phaseName = 'Lua Crescente';
-    phaseClass = 'moon-waxing';
-  } else if (elongation >= 135 && elongation < 225) {
-    phaseName = 'Lua Cheia';
-    phaseClass = 'moon-full';
+  if (elongation >= 0 && elongation < 90) {
+    phaseKey = 'new';
+  } else if (elongation >= 90 && elongation < 180) {
+    phaseKey = 'waxing';
+  } else if (elongation >= 180 && elongation < 270) {
+    phaseKey = 'full';
   } else {
-    phaseName = 'Lua Minguante';
-    phaseClass = 'moon-waning';
+    phaseKey = 'waning';
+  }
+
+  // Obter dados dinâmicos da combinação Fase + Signo
+  let celestialData;
+  if (typeof getCelestialDayData === 'function') {
+    celestialData = getCelestialDayData(phaseKey, signIndex);
+  } else {
+    // Fallback de segurança se lunar-data não tiver carregado
+    const defaultSigns = ['Áries','Touro','Gêmeos','Câncer','Leão','Virgem','Libra','Escorpião','Sagitário','Capricórnio','Aquário','Peixes'];
+    const defaultSymbols = ['♈','♉','♊','♋','♌','♍','♎','♏','♐','♑','♒','♓'];
+    const signName = defaultSigns[signIndex] || 'Áries';
+    celestialData = {
+      phaseName: phaseKey === 'new' ? 'Lua Nova' : phaseKey === 'waxing' ? 'Lua Crescente' : phaseKey === 'full' ? 'Lua Cheia' : 'Lua Minguante',
+      phaseIcon: phaseKey === 'new' ? '🌑' : phaseKey === 'waxing' ? '🌓' : phaseKey === 'full' ? '🌕' : '🌘',
+      phaseClass: `moon-${phaseKey}`,
+      signName: signName,
+      signSymbol: defaultSymbols[signIndex] || '✦',
+      signElement: 'Céu',
+      title: `${phaseKey === 'new' ? '🌑' : phaseKey === 'waxing' ? '🌓' : phaseKey === 'full' ? '🌕' : '🌘'} Lua em ${signName}`,
+      energy: `Momento de profunda sintonia e reflexão para a sua jornada.`,
+      actions: `Conecte-se com as suas prioridades e aja com equilíbrio e foco.`,
+      advice: `Dê um passo de cada vez com serenidade e confie no seu processo.`
+    };
   }
 
   // Renderização no HTML
   if (moonBadgeEl) {
-    moonBadgeEl.innerHTML = `${sign.symbol} Lua em ${sign.name} &bull; ${sign.element}`;
+    moonBadgeEl.innerHTML = `${celestialData.signSymbol} Lua em ${celestialData.signName} &bull; ${celestialData.signElement}`;
   }
 
   if (moonNameEl) {
-    moonNameEl.textContent = `${phaseName} em ${sign.name}`;
+    moonNameEl.textContent = celestialData.title;
   }
 
   if (moonDescEl) {
-    moonDescEl.textContent = sign.moonDesc;
+    moonDescEl.textContent = celestialData.energy;
+  }
+
+  if (moonActionsEl) {
+    moonActionsEl.textContent = celestialData.actions;
   }
 
   if (dailyAdviceEl) {
-    dailyAdviceEl.textContent = `"${sign.advice}"`;
+    dailyAdviceEl.textContent = `"${celestialData.advice}"`;
   }
 
   if (moonVisualEl) {
-    moonVisualEl.className = `moon-visual ${phaseClass}`;
+    moonVisualEl.className = `moon-visual ${celestialData.phaseClass}`;
   }
 }
 
@@ -245,5 +272,36 @@ function initScrollReveal() {
 
   document.querySelectorAll('.reveal-on-scroll').forEach(el => {
     observer.observe(el);
+  });
+}
+
+// Alternância de Abas da Seção Canais & Conteúdos (YouTube, Spotify, TikTok)
+function initMediaTabs() {
+  const tabBtns = document.querySelectorAll('.media-tab-btn');
+  const tabPanels = document.querySelectorAll('.media-tab-panel');
+
+  if (!tabBtns.length || !tabPanels.length) return;
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetTab = btn.getAttribute('data-tab');
+
+      // Atualiza botões ativos
+      tabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Atualiza painéis ativos
+      tabPanels.forEach(panel => {
+        if (panel.id === `tab-${targetTab}`) {
+          panel.classList.add('active');
+          // Força revelação dos elementos com reveal-on-scroll internos
+          panel.querySelectorAll('.reveal-on-scroll').forEach(el => {
+            el.classList.add('revealed');
+          });
+        } else {
+          panel.classList.remove('active');
+        }
+      });
+    });
   });
 }

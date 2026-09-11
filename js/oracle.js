@@ -102,7 +102,7 @@ function initOracle() {
             <div class="card-back-logo-wrapper">
               <img src="assets/logo_buscadora.jpg" alt="Logo Buscadora Astral" class="card-back-logo-img" />
             </div>
-            <small class="card-back-hint">✨ Toque para tirar ✨</small>
+            <small class="card-back-hint">✦ Toque para tirar ✦</small>
           </div>
         </div>
         <div class="tarot-card-face card-front">

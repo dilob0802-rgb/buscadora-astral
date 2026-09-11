@@ -18,6 +18,153 @@
 </head>
 <body>
 
+  <!-- ==================== SVG SPRITE DE ÍCONES MONOCROMÁTICOS ==================== -->
+  <svg style="display: none;" id="astral-icon-symbols" aria-hidden="true">
+    <defs>
+      <!-- Sparkles / Brilho místico -->
+      <symbol id="icon-sparkles" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/>
+      </symbol>
+      
+      <!-- Estrela 4 pontas -->
+      <symbol id="icon-star" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5z"/>
+      </symbol>
+
+      <!-- Astrologia / Órbita & Planeta -->
+      <symbol id="icon-astrology" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor" stroke-width="1.6" transform="rotate(-28 12 12)"/>
+        <circle cx="12" cy="12" r="1.8" fill="currentColor"/>
+      </symbol>
+
+      <!-- Cartomancia / Cartas sobrepostas -->
+      <symbol id="icon-cards" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="12" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <rect x="9" y="3" width="12" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <path d="M15 9l1.5 2 2-1.5-1.5 3.5h-4l2-4z" fill="currentColor"/>
+      </symbol>
+
+      <!-- Tarô / Cartas com Arcano -->
+      <symbol id="icon-tarot" viewBox="0 0 24 24">
+        <rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M9 17h6M12 15v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </symbol>
+
+      <!-- Oráculo / Bola de Cristal Monocromática -->
+      <symbol id="icon-crystal" viewBox="0 0 24 24">
+        <circle cx="12" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M7 19h10l-2 3H9l-2-3z" fill="currentColor"/>
+        <path d="M10 8l.8 1.6 1.7.8-1.7.8-.8 1.6-.8-1.6-1.7-.8 1.7-.8.8-1.6z" fill="currentColor"/>
+      </symbol>
+
+      <!-- Numerologia / Matriz de Números -->
+      <symbol id="icon-numerology" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M7 8h2v8M6 16h4M14 8h2a2 2 0 0 1 2 2c0 .9-.6 1.6-1.4 1.9.9.3 1.4 1 1.4 1.9a2 2 0 0 1-2 2h-2M14 12h2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </symbol>
+
+      <!-- Acolhimento & Leveza / Coração -->
+      <symbol id="icon-heart" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </symbol>
+
+      <!-- Missão & Propósito / Folha & Broto -->
+      <symbol id="icon-sprout" viewBox="0 0 24 24">
+        <path d="M12 22v-9M12 13a6 6 0 0 1 6-6c0 0 1 3-2 6a6 6 0 0 1-4 0zM12 13a6 6 0 0 0-6-6c0 0-1 3 2 6a6 6 0 0 0 4 0z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+      <!-- YouTube -->
+      <symbol id="icon-youtube" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+      </symbol>
+
+      <!-- Spotify -->
+      <symbol id="icon-spotify" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.527 17.306a.754.754 0 0 1-1.04.249c-2.85-1.741-6.438-2.135-10.665-1.168a.754.754 0 0 1-.341-1.469c4.63-1.06 8.583-.615 11.797 1.348a.754.754 0 0 1 .249 1.04zm1.474-3.275a.944.944 0 0 1-1.3.311c-3.262-2.005-8.235-2.586-12.093-1.414a.944.944 0 0 1-.555-1.802c4.408-1.338 9.89-.693 13.637 1.605a.944.944 0 0 1 .311 1.3zm.126-3.41c-3.912-2.323-10.364-2.537-14.093-1.404a1.132 1.132 0 1 1-.655-2.167c4.286-1.3 11.402-1.048 15.91 1.628a1.133 1.133 0 0 1-1.162 1.943z"/>
+      </symbol>
+
+      <!-- TikTok -->
+      <symbol id="icon-tiktok" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-1.01v8.52c-.05 2.5-1.35 4.88-3.49 6.16-2.13 1.28-4.85 1.4-7.09.32-2.23-1.08-3.79-3.27-4.01-5.73-.23-2.47.88-4.94 2.87-6.39 1.99-1.45 4.67-1.74 6.94-.75v4.14c-1.05-.56-2.34-.63-3.45-.19-1.11.44-1.92 1.45-2.11 2.63-.19 1.19.26 2.41 1.18 3.17.92.76 2.19.92 3.26.4 1.07-.51 1.74-1.62 1.77-2.82V.02h-.2z"/>
+      </symbol>
+
+      <!-- WhatsApp -->
+      <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.79 14.07c-.24.68-1.2 1.25-1.84 1.32-.49.06-1.12.1-3.27-.79-2.75-1.14-4.52-3.95-4.66-4.14-.14-.18-1.12-1.49-1.12-2.84 0-1.36.71-2.02.96-2.3.25-.28.55-.35.73-.35.19 0 .37 0 .53.01.17.01.4.07.61.57.24.58.82 2 .89 2.15.07.15.12.33.02.53-.1.2-.15.33-.3.51-.15.18-.32.4-.46.54-.15.15-.31.32-.13.63.18.31.8 1.32 1.72 2.14 1.18 1.05 2.17 1.38 2.48 1.53.31.15.49.13.67-.08.18-.21.78-.91.99-1.22.21-.31.42-.26.7-.16.28.1 1.78.84 2.09.99.31.15.51.23.59.35.08.13.08.76-.16 1.44z"/>
+      </symbol>
+
+      <!-- Carrinho de Compras / Loja -->
+      <symbol id="icon-cart" viewBox="0 0 24 24">
+        <circle cx="9" cy="20" r="1.5" fill="currentColor"/>
+        <circle cx="18" cy="20" r="1.5" fill="currentColor"/>
+        <path d="M2.5 3h3.2l2.4 11.5h10.8l2.1-8.5H7.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+      <!-- Cadeado / Segurança -->
+      <symbol id="icon-lock" viewBox="0 0 24 24">
+        <rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M8 11V7a4 4 0 0 1 8 0v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="12" cy="16" r="1.2" fill="currentColor"/>
+      </symbol>
+
+      <!-- Raio / Energia Imediata -->
+      <symbol id="icon-zap" viewBox="0 0 24 24">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="currentColor"/>
+      </symbol>
+
+      <!-- Smartphone / Mobile -->
+      <symbol id="icon-mobile" viewBox="0 0 24 24">
+        <rect x="6" y="2" width="12" height="20" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="12" cy="18" r="0.9" fill="currentColor"/>
+        <line x1="10" y1="5" x2="14" y2="5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </symbol>
+
+      <!-- Embaralhar / Atualizar -->
+      <symbol id="icon-refresh" viewBox="0 0 24 24">
+        <path d="M20 11a8.1 8.1 0 0 0-15.5-2m-.5-4v4h4m-4 5a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+      <!-- Livro / E-book -->
+      <symbol id="icon-book" viewBox="0 0 24 24">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+      <!-- Email -->
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <polyline points="3 7 12 13 21 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+      <!-- Play Button -->
+      <symbol id="icon-play" viewBox="0 0 24 24">
+        <polygon points="6 4 20 12 6 20 6 4" fill="currentColor"/>
+      </symbol>
+
+      <!-- Compartilhar -->
+      <symbol id="icon-share" viewBox="0 0 24 24">
+        <circle cx="18" cy="5" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="6" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="18" cy="19" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.8"/>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.8"/>
+      </symbol>
+
+      <!-- Comentar -->
+      <symbol id="icon-comment" viewBox="0 0 24 24">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+      <!-- Menu Hambúrguer -->
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+        <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
   <!-- Canvas Interativo de Constelações e Poeira Estelar -->
   <canvas id="stars-canvas"></canvas>
 
@@ -35,7 +182,7 @@
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-links">
           <li><a href="#inicio" class="nav-link">Início</a></li>
-          <li><a href="#oraculo" class="nav-link nav-highlight">✨ Carta do Dia</a></li>
+          <li><a href="#oraculo" class="nav-link nav-highlight"><svg class="icon-svg"><use href="#icon-sparkles"></use></svg> Carta do Dia</a></li>
           <li><a href="#catalogo" class="nav-link">Consulta Online</a></li>
           <li><a href="#ebooks" class="nav-link">E-books</a></li>
           <li class="nav-item-dropdown">
@@ -43,21 +190,22 @@
               Autoconhecimento <span class="dropdown-arrow">▾</span>
             </a>
             <ul class="dropdown-menu" id="nav-saberes-dropdown">
-              <li><a href="#autoconhecimento" data-category="astrologia"><span class="drop-icon">🌟</span> Astrologia</a></li>
-              <li><a href="#autoconhecimento" data-category="cartomancia"><span class="drop-icon">🃏</span> Cartomancia</a></li>
-              <li><a href="#autoconhecimento" data-category="tarot"><span class="drop-icon">🔮</span> Tarô</a></li>
-              <li><a href="#autoconhecimento" data-category="numerologia"><span class="drop-icon">🔢</span> Numerologia</a></li>
+              <li><a href="#autoconhecimento" data-category="astrologia"><span class="drop-icon"><svg class="icon-svg"><use href="#icon-astrology"></use></svg></span> Astrologia</a></li>
+              <li><a href="#autoconhecimento" data-category="cartomancia"><span class="drop-icon"><svg class="icon-svg"><use href="#icon-cards"></use></svg></span> Cartomancia</a></li>
+              <li><a href="#autoconhecimento" data-category="tarot"><span class="drop-icon"><svg class="icon-svg"><use href="#icon-tarot"></use></svg></span> Tarô</a></li>
+              <li><a href="#autoconhecimento" data-category="numerologia"><span class="drop-icon"><svg class="icon-svg"><use href="#icon-numerology"></use></svg></span> Numerologia</a></li>
             </ul>
           </li>
-          <li><a href="#youtube" class="nav-link">YouTube</a></li>
+          <li><a href="#canais" class="nav-link">Canais</a></li>
           <li><a href="#sobre" class="nav-link">Sobre Mim</a></li>
-          <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
         <a href="#catalogo" class="btn btn-header-cta" id="btn-header-cta">Agendar Consulta</a>
-        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Abrir Menu">☰</button>
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Abrir Menu">
+          <svg class="icon-svg" style="width: 22px; height: 22px;"><use href="#icon-menu"></use></svg>
+        </button>
       </div>
     </div>
   </header>
@@ -69,7 +217,7 @@
       <div class="container hero-grid">
         <div class="hero-content">
           <div class="coral-badge">
-            <span>✨</span> Um espaço esotérico para explorar o universo e a si mesmo
+            <svg class="icon-svg"><use href="#icon-sparkles"></use></svg> Um espaço esotérico para explorar o universo e a si mesmo
           </div>
           <h1>Seja bem-vindo(a) à <span class="gold-text">Buscadora Astral</span></h1>
           <p class="hero-description">
@@ -80,10 +228,10 @@
           </div>
           <div class="hero-buttons">
             <a href="#catalogo" class="btn btn-primary" id="hero-btn-catalogo">
-              <span>🃏</span> Ver Consultas Online
+              Ver Consultas Online
             </a>
             <a href="#oraculo" class="btn btn-outline" id="hero-btn-oraculo">
-              <span>✨</span> Tirar Minha Carta do Dia
+              <svg class="icon-svg"><use href="#icon-sparkles"></use></svg> Tirar Minha Carta do Dia
             </a>
           </div>
         </div>
@@ -92,21 +240,30 @@
         <div class="celestial-widget float-element">
           <div class="widget-header">
             <div class="widget-header-left">
-              <span class="widget-title">🌌 Céu de Hoje</span>
-              <span class="widget-sign-badge" id="current-moon-sign-badge">♊ Lua em Gêmeos</span>
+              <span class="widget-title">✦ Céu de Hoje</span>
+              <span class="widget-sign-badge" id="current-moon-sign-badge">♊ Lua em Gêmeos &bull; Ar</span>
             </div>
             <span class="widget-date" id="current-celestial-date">Hoje</span>
           </div>
           <div class="moon-phase-display">
             <div class="moon-visual" id="current-moon-visual"></div>
             <div class="moon-info">
-              <h4 id="current-moon-phase">Lua Minguante em Gêmeos</h4>
-              <p id="current-moon-desc">Momento de desacelerar a mente, desapegar de excessos de pensamentos e clarear ideias com serenidade.</p>
+              <h4 id="current-moon-phase">🌑 Lua Nova</h4>
+              <div class="celestial-section">
+                <span class="celestial-label"><svg class="icon-svg" style="width:0.9em;height:0.9em;margin-right:0.2rem;"><use href="#icon-zap"></use></svg> Energia do Momento:</span>
+                <p id="current-moon-desc">Sintonizando com o momento astral presente...</p>
+              </div>
             </div>
           </div>
-          <div class="daily-energy">
-            <h5><span>✦</span> Energia & Conselho do Céu</h5>
-            <p id="current-daily-advice">"Filtre o ruído externo, valorize a sua paz mental e confie que cada resposta chega no tempo certo."</p>
+          <div class="celestial-details">
+            <div class="celestial-section">
+              <span class="celestial-label"><svg class="icon-svg stroke" style="width:0.9em;height:0.9em;margin-right:0.2rem;"><use href="#icon-sprout"></use></svg> Aproveite para:</span>
+              <p id="current-moon-actions">Direcionar suas energias para o que está favorecido hoje.</p>
+            </div>
+            <div class="daily-energy">
+              <h5><svg class="icon-svg" style="width:0.95em;height:0.95em;margin-right:0.25rem;"><use href="#icon-sparkles"></use></svg> Conselho Prático</h5>
+              <p id="current-daily-advice">"Dê um passo de cada vez com serenidade e confie no seu processo."</p>
+            </div>
           </div>
         </div>
       </div>
@@ -116,7 +273,7 @@
     <section class="oracle-section" id="oraculo">
       <div class="container oracle-container">
         <div class="coral-badge" style="display: inline-block;">
-          ✨ Pausa de Bem-Estar
+          <svg class="icon-svg"><use href="#icon-sparkles"></use></svg> Pausa de Bem-Estar
         </div>
         <h2>Tire a sua Carta do Dia</h2>
         <p class="section-subtitle">Respire fundo, conecte-se com um pensamento bom e toque em uma das cartas para receber um conselho leve e alegre!</p>
@@ -129,7 +286,7 @@
 
           <div style="margin-top: 1.2rem;">
             <button class="btn btn-outline" id="btn-shuffle-oracle">
-              <span>🔄</span> Embaralhar Novamente
+              <svg class="icon-svg stroke"><use href="#icon-refresh"></use></svg> Embaralhar Novamente
             </button>
           </div>
 
@@ -152,7 +309,7 @@
                 </div>
                 <div class="oracle-actions">
                   <a href="#" class="btn btn-whatsapp-service" id="btn-whatsapp-oracle" style="width: auto;">
-                    <span>💬</span> Conversar no WhatsApp sobre esta Carta
+                    <svg class="icon-svg"><use href="#icon-whatsapp"></use></svg> Conversar no WhatsApp sobre esta Carta
                   </a>
                 </div>
               </div>
@@ -173,34 +330,13 @@
         <div class="mystic-divider"><span>✦</span></div>
 
         <div class="services-grid services-three-col">
-          <!-- Serviço 1: CARTOMANCIA -->
+          <!-- 1. NUMEROLOGIA -->
           <div class="service-card reveal-on-scroll">
-            <div>
-              <div class="service-tag-header">✦ Leitura de Cartas</div>
-              <h3 class="service-title">CARTOMANCIA</h3>
-              <p class="service-desc">
-                Leituras claras, objetivas e acolhedoras para trazer direcionamento prático às suas dúvidas e iluminar suas decisões.
-              </p>
-              <ul class="service-features">
-                <li>Amor e relacionamentos afetivos</li>
-                <li>Carreira e vida profissional</li>
-                <li>Financeiro e oportunidades</li>
-                <li>Geral da vida e tomadas de decisões</li>
-                <li>Previsões futuras e análise da vida</li>
-                <li>Mandala mensal e anual, entre outros...</li>
-              </ul>
+            <div class="service-image-container">
+              <img src="assets/foto_numerologia.jpg" alt="Consulta de Numerologia" class="service-thumbnail">
             </div>
-            <div class="service-action">
-              <a href="#" class="btn btn-whatsapp-service" data-service-name="Consulta Online de Cartomancia">
-                Agendar Cartomancia no WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <!-- Serviço 2: NUMEROLOGIA -->
-          <div class="service-card reveal-on-scroll">
             <div>
-              <div class="service-tag-header">✦ Mapa dos Números</div>
+              <div class="service-tag-header"><svg class="icon-svg" style="width: 0.9em; height: 0.9em; margin-right: 0.2rem;"><use href="#icon-numerology"></use></svg> Mapa dos Números</div>
               <h3 class="service-title">NUMEROLOGIA</h3>
               <p class="service-desc">
                 Descubra a força dos seus números pessoais para alinhar seus talentos, sua vibração e abrir seus caminhos com assertividade.
@@ -214,15 +350,45 @@
             </div>
             <div class="service-action">
               <a href="#" class="btn btn-whatsapp-service" data-service-name="Consulta Online de Numerologia">
-                Agendar Numerologia no WhatsApp
+                Agendar
               </a>
             </div>
           </div>
 
-          <!-- Serviço 3: ASTROLOGIA -->
+          <!-- 2. TAROT & CARTOMANCIA -->
           <div class="service-card reveal-on-scroll">
+            <div class="service-image-container">
+              <img src="assets/foto_tarot.jpg" alt="Consulta de Tarot e Cartomancia" class="service-thumbnail">
+            </div>
             <div>
-              <div class="service-tag-header">✦ Mapa Celeste</div>
+              <div class="service-tag-header"><svg class="icon-svg" style="width: 0.9em; height: 0.9em; margin-right: 0.2rem;"><use href="#icon-tarot"></use></svg> Leitura de Cartas</div>
+              <h3 class="service-title">TAROT</h3>
+              <p class="service-desc">
+                Leituras claras, objetivas e acolhedoras para trazer direcionamento prático às suas dúvidas e iluminar suas decisões.
+              </p>
+              <ul class="service-features">
+                <li>Amor e relacionamentos afetivos</li>
+                <li>Carreira e vida profissional</li>
+                <li>Financeiro e oportunidades</li>
+                <li>Geral da vida e tomadas de decisões</li>
+                <li>Previsões futuras e análise da vida</li>
+                <li>Mandala mensal e anual, entre outros...</li>
+              </ul>
+            </div>
+            <div class="service-action">
+              <a href="#" class="btn btn-whatsapp-service" data-service-name="Consulta Online de Tarot">
+                Agendar
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. ASTROLOGIA -->
+          <div class="service-card reveal-on-scroll">
+            <div class="service-image-container">
+              <img src="assets/foto_astrologia.jpg" alt="Consulta de Astrologia e Mapa Astral" class="service-thumbnail">
+            </div>
+            <div>
+              <div class="service-tag-header"><svg class="icon-svg" style="width: 0.9em; height: 0.9em; margin-right: 0.2rem;"><use href="#icon-astrology"></use></svg> Mapa Celeste</div>
               <h3 class="service-title">ASTROLOGIA</h3>
               <p class="service-desc">
                 Um mergulho no seu mapa celeste para planejar seus passos, compreender suas fases e encontrar os melhores rumos.
@@ -236,7 +402,7 @@
             </div>
             <div class="service-action">
               <a href="#" class="btn btn-whatsapp-service" data-service-name="Consulta Online de Astrologia">
-                Agendar Astrologia no WhatsApp
+                Agendar
               </a>
             </div>
           </div>
@@ -248,7 +414,7 @@
     <section class="ebooks-section" id="ebooks">
       <div class="container">
         <div class="coral-badge" style="display: block; width: fit-content; margin: 0 auto 0.5rem;">
-          ✦ Infoprodutos & Conhecimento Prático
+          <svg class="icon-svg stroke"><use href="#icon-book"></use></svg> Infoprodutos & Conhecimento Prático
         </div>
         <h2>Biblioteca Astral & E-books</h2>
         <p class="section-subtitle">Aprenda a decifrar seus próprios ciclos e números com os guias práticos da Buscadora Astral</p>
@@ -258,7 +424,7 @@
           <!-- Coluna 1: Mockup Visual 3D do Livro Digital -->
           <div class="ebook-visual-col">
             <div class="ebook-frame">
-              <img src="assets/ebook_numerologia.jpg" alt="E-book Numerologia do Destino e Calendário Astral" class="ebook-cover-img">
+              <img src="assets/foto_ebook.jpg" alt="E-book Numerologia do Destino e Calendário Astral" class="ebook-cover-img">
               <div class="ebook-badge-tag">Livro Digital Prático (PDF)</div>
               <div class="ebook-glow"></div>
             </div>
@@ -311,19 +477,19 @@
                   <span class="price-sub">pagamento único • acesso vitalício imediato</span>
                 </div>
                 <div class="security-badges">
-                  <span>🔒 Compra Segura via Eduzz</span>
-                  <span>⚡ Envio Imediato no seu E-mail</span>
-                  <span>📱 Leia no Celular, Tablet ou PC</span>
+                  <span><svg class="icon-svg stroke" style="margin-right: 0.25rem;"><use href="#icon-lock"></use></svg> Compra Segura via Eduzz</span>
+                  <span><svg class="icon-svg" style="margin-right: 0.25rem;"><use href="#icon-zap"></use></svg> Envio Imediato no seu E-mail</span>
+                  <span><svg class="icon-svg stroke" style="margin-right: 0.25rem;"><use href="#icon-mobile"></use></svg> Leia no Celular, Tablet ou PC</span>
                 </div>
               </div>
 
               <div class="pricing-actions">
                 <!-- Botão de Checkout Eduzz oficial -->
                 <a href="https://chk.eduzz.com/ah5vey2i?currency=BRL" target="_blank" rel="noopener noreferrer" class="btn btn-eduzz" id="btn-buy-ebook-eduzz">
-                  <span>✨</span> Garantir Meu E-book por R$ 47 na Eduzz
+                  <svg class="icon-svg stroke"><use href="#icon-cart"></use></svg> Garantir Meu E-book por R$ 47 na Eduzz
                 </a>
                 <a href="#" class="btn btn-outline whatsapp-general-link" data-msg="Olá, Patrícia! Gostaria de tirar algumas dúvidas sobre o seu e-book de Numerologia do Destino e Calendário Astral.">
-                  <span>💬</span> Dúvidas no WhatsApp
+                  <svg class="icon-svg"><use href="#icon-whatsapp"></use></svg> Dúvidas no WhatsApp
                 </a>
               </div>
             </div>
@@ -367,45 +533,189 @@
       </div>
     </section>
 
-    <!-- ==================== CANAL DO YOUTUBE ==================== -->
-    <section class="youtube-section" id="youtube">
+    <!-- ==================== CANAIS & CONTEÚDOS (DIVIDIDO POR ABAS) ==================== -->
+    <section class="media-section" id="canais">
+      <div id="youtube" style="position: relative; top: -80px;"></div>
       <div class="container">
-        <div class="youtube-wrapper reveal-on-scroll">
-          <div class="youtube-content">
-            <div class="youtube-badge">
-              <span class="yt-play-icon">▶</span> Canal Oficial no YouTube
-            </div>
-            <h2>Vídeos & Tiragens no <span class="gold-text">YouTube</span></h2>
-            <p class="section-subtitle" style="text-align: left; margin-bottom: 1.2rem;">
-              Tiragens semanais, orientações para os signos e dicas de autoconhecimento
-            </p>
-            <p style="color: var(--white-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">
-              Toda semana compartilho conteúdos especiais com tiragens intuitivas, dicas práticas de cartomancia, astrologia e conversas gostosas para inspirar o seu momento. Inscreva-se no canal para acompanhar cada vídeo novo!
-            </p>
-            <div class="youtube-actions">
-              <a href="https://www.youtube.com/@BuscadoraAstral" target="_blank" rel="noopener noreferrer" class="btn btn-youtube" id="btn-visit-youtube">
-                <span>▶</span> Acessar Canal @BuscadoraAstral & Inscrever-se
-              </a>
-              <a href="#catalogo" class="btn btn-outline" style="padding: 0.8rem 1.4rem;">
-                <span>🃏</span> Agendar Consulta Online
-              </a>
+        <div class="media-header reveal-on-scroll">
+          <div class="coral-badge" style="display: inline-block; margin-bottom: 0.5rem;">
+            ✦ Canais & Conteúdos Oficiais
+          </div>
+          <h2>Acompanhe a <span class="gold-text">Buscadora Astral</span></h2>
+          <p class="section-subtitle">Tiragens completas, reflexões no TikTok e frequências musicais no Spotify</p>
+          <div class="mystic-divider"><span>✧</span></div>
+
+          <!-- Navegação por Abas -->
+          <div class="media-tabs-nav">
+            <button class="media-tab-btn active" data-tab="youtube" id="tab-btn-youtube">
+              <span class="tab-icon yt-icon"><svg class="icon-svg"><use href="#icon-youtube"></use></svg></span>
+              <span class="tab-label">YouTube</span>
+            </button>
+            <button class="media-tab-btn" data-tab="spotify" id="tab-btn-spotify">
+              <span class="tab-icon sp-icon"><svg class="icon-svg"><use href="#icon-spotify"></use></svg></span>
+              <span class="tab-label">Spotify</span>
+            </button>
+            <button class="media-tab-btn" data-tab="tiktok" id="tab-btn-tiktok">
+              <span class="tab-icon tt-icon"><svg class="icon-svg"><use href="#icon-tiktok"></use></svg></span>
+              <span class="tab-label">TikTok</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Conteúdo das Abas -->
+        <div class="media-tabs-content">
+          
+          <!-- ABA 1: YOUTUBE -->
+          <div class="media-tab-panel active" id="tab-youtube">
+            <div class="media-panel-wrapper reveal-on-scroll">
+              <div class="media-panel-info">
+                <div class="media-platform-badge badge-yt">
+                  <svg class="icon-svg" style="margin-right: 0.3rem;"><use href="#icon-youtube"></use></svg> Canal Oficial no YouTube
+                </div>
+                <h3>Tiragens de Tarô & Previsões dos Signos</h3>
+                <p>
+                  No canal <strong>@BuscadoraAstral</strong> você encontra tiragens intuitivas semanais, orientações para os 12 signos do zodíaco, previsões para as quatro fases da lua e reflexões para o seu despertar espiritual.
+                </p>
+                <ul class="media-features-list">
+                  <li><span>✦</span> <strong>Tiragens Semanais:</strong> Mensagens guiadas para amor, trabalho e finanças.</li>
+                  <li><span>✦</span> <strong>Previsões do Céu:</strong> Entenda a energia das luas novas, cheias e eclipses.</li>
+                  <li><span>✦</span> <strong>Conteúdo 100% Gratuito:</strong> Novos vídeos toda semana para iluminar seus dias.</li>
+                </ul>
+                <div class="media-actions">
+                  <a href="https://www.youtube.com/@BuscadoraAstral" target="_blank" rel="noopener noreferrer" class="btn btn-youtube">
+                    <svg class="icon-svg"><use href="#icon-youtube"></use></svg> Acessar Canal & Inscrever-se
+                  </a>
+                  <a href="#catalogo" class="btn btn-outline">
+                    <svg class="icon-svg"><use href="#icon-tarot"></use></svg> Ver Consultas Online
+                  </a>
+                </div>
+              </div>
+
+              <div class="media-panel-visual">
+                <a href="https://www.youtube.com/@BuscadoraAstral" target="_blank" rel="noopener noreferrer" class="media-card-preview preview-youtube">
+                  <div class="preview-glow glow-yt"></div>
+                  <div class="yt-play-button-large">
+                    <svg class="icon-svg" style="width: 28px; height: 28px; color: #fff;"><use href="#icon-play"></use></svg>
+                  </div>
+                  <div class="preview-channel-info">
+                    <img src="assets/logo_buscadora.jpg" alt="Logo Buscadora Astral" class="preview-avatar">
+                    <div class="preview-text">
+                      <h4>@BuscadoraAstral</h4>
+                      <p>Vídeos, tiragens e previsões semanais</p>
+                    </div>
+                  </div>
+                  <span class="preview-click-hint">Clique para assistir no YouTube ↗</span>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="youtube-player-frame">
-            <div class="video-container">
-              <a href="https://www.youtube.com/@BuscadoraAstral" target="_blank" rel="noopener noreferrer" class="video-placeholder-card" id="yt-preview-link">
-                <div class="video-play-btn-large">▶</div>
-                <h4 style="color: var(--gold-light); margin-bottom: 0.5rem; font-size: 1.2rem;">@BuscadoraAstral no YouTube</h4>
-                <p style="color: var(--white-muted); font-size: 0.88rem; max-width: 320px;">
-                  Clique aqui para abrir os vídeos e se inscrever no canal
-                </p>
-                <div class="coral-badge" style="margin-top: 1rem; margin-bottom: 0;">
-                  ✦ Novos Vídeos Toda Semana
+          <!-- ABA 2: SPOTIFY -->
+          <div class="media-tab-panel" id="tab-spotify">
+            <div class="media-panel-wrapper reveal-on-scroll">
+              <div class="media-panel-info">
+                <div class="media-platform-badge badge-sp">
+                  <svg class="icon-svg" style="margin-right: 0.3rem;"><use href="#icon-spotify"></use></svg> Perfil & Playlists no Spotify
                 </div>
-              </a>
+                <h3>Músicas Sagradas & Frequências de Paz</h3>
+                <p>
+                  Músicas têm o poder de alterar nossa vibração instantaneamente. Seleciono e crio playlists com frequências sonoras terapêuticas, mantras sagrados e melodias envolventes para acompanhar suas meditações, leituras e momentos de descanso.
+                </p>
+                <ul class="media-features-list">
+                  <li><span>✦</span> <strong>Frequências Vibracionais:</strong> Solfeggio, sons da natureza e harmonia.</li>
+                  <li><span>✦</span> <strong>Trilhas para Rituais & Leitura:</strong> Concentração profunda e elevação de energia.</li>
+                  <li><span>✦</span> <strong>Paz & Relaxamento:</strong> Desacelere a mente após dias agitados.</li>
+                </ul>
+                <div class="media-actions">
+                  <a href="https://open.spotify.com/user/31qgppuoqwcsnlwxddd2i5maxgmy?si=hXJttdGvTJyCaPHKV1Mhbg&utm_source=copy-link" target="_blank" rel="noopener noreferrer" class="btn btn-spotify">
+                    <svg class="icon-svg"><use href="#icon-spotify"></use></svg> Seguir Perfil no Spotify
+                  </a>
+                  <a href="#catalogo" class="btn btn-outline">
+                    <svg class="icon-svg"><use href="#icon-sparkles"></use></svg> Ver Atendimentos
+                  </a>
+                </div>
+              </div>
+
+              <div class="media-panel-visual">
+                <a href="https://open.spotify.com/user/31qgppuoqwcsnlwxddd2i5maxgmy?si=hXJttdGvTJyCaPHKV1Mhbg&utm_source=copy-link" target="_blank" rel="noopener noreferrer" class="media-card-preview preview-spotify">
+                  <div class="preview-glow glow-sp"></div>
+                  <div class="spotify-visual-header">
+                    <div class="sp-logo-circle">
+                      <svg class="icon-svg" style="width: 22px; height: 22px; color: #1db954;"><use href="#icon-spotify"></use></svg>
+                    </div>
+                    <div class="spotify-wave-bars">
+                      <span class="bar bar1"></span>
+                      <span class="bar bar2"></span>
+                      <span class="bar bar3"></span>
+                      <span class="bar bar4"></span>
+                      <span class="bar bar5"></span>
+                      <span class="bar bar6"></span>
+                    </div>
+                  </div>
+                  <div class="preview-channel-info">
+                    <img src="assets/logo_buscadora.jpg" alt="Logo Buscadora Astral" class="preview-avatar">
+                    <div class="preview-text">
+                      <h4>Buscadora Astral</h4>
+                      <p>Playlists místicas & meditações</p>
+                    </div>
+                  </div>
+                  <span class="preview-click-hint">Clique para ouvir no Spotify ↗</span>
+                </a>
+              </div>
             </div>
           </div>
+
+          <!-- ABA 3: TIKTOK -->
+          <div class="media-tab-panel" id="tab-tiktok">
+            <div class="media-panel-wrapper reveal-on-scroll">
+              <div class="media-panel-info">
+                <div class="media-platform-badge badge-tt">
+                  <svg class="icon-svg" style="margin-right: 0.3rem;"><use href="#icon-tiktok"></use></svg> TikTok @buscadora.astral
+                </div>
+                <h3>Pílulas Diárias & Mensagens Express</h3>
+                <p>
+                  No <strong>TikTok</strong> trago conteúdos rápidos, sinceros e dinâmicos: previsões instantâneas, conselhos das cartas, curiosidades sobre numerologia pessoal e sincronicidades do dia a dia.
+                </p>
+                <ul class="media-features-list">
+                  <li><span>✦</span> <strong>Conselhos Rápidos:</strong> Mensagens diretas do oráculo para o momento.</li>
+                  <li><span>✦</span> <strong>Signos & Características:</strong> Humor, verdade e comportamento dos signos.</li>
+                  <li><span>✦</span> <strong>Interação Próxima:</strong> Respostas de dúvidas das consulentes em vídeo.</li>
+                </ul>
+                <div class="media-actions">
+                  <a href="https://www.tiktok.com/@buscadora.astral?_r=1&_t=ZS-99cZCq4mDjx" target="_blank" rel="noopener noreferrer" class="btn btn-tiktok">
+                    <svg class="icon-svg"><use href="#icon-tiktok"></use></svg> Seguir no TikTok @buscadora.astral
+                  </a>
+                  <a href="#catalogo" class="btn btn-outline">
+                    <svg class="icon-svg"><use href="#icon-tarot"></use></svg> Ver Consultas Online
+                  </a>
+                </div>
+              </div>
+
+              <div class="media-panel-visual">
+                <a href="https://www.tiktok.com/@buscadora.astral?_r=1&_t=ZS-99cZCq4mDjx" target="_blank" rel="noopener noreferrer" class="media-card-preview preview-tiktok">
+                  <div class="preview-glow glow-tt"></div>
+                  <div class="tt-phone-badge">
+                    <svg class="icon-svg" style="width: 14px; height: 14px; margin-right: 0.2rem;"><use href="#icon-tiktok"></use></svg>
+                    <span>@buscadora.astral</span>
+                  </div>
+                  <div class="preview-channel-info">
+                    <img src="assets/logo_buscadora.jpg" alt="Logo Buscadora Astral" class="preview-avatar">
+                    <div class="preview-text">
+                      <h4>@buscadora.astral</h4>
+                      <p>Previsões rápidas & espiritualidade leve</p>
+                    </div>
+                  </div>
+                  <div class="tt-metrics-pill">
+                    <span><svg class="icon-svg" style="width: 13px; height: 13px; margin-right: 0.2rem;"><use href="#icon-heart"></use></svg> Curtir</span>
+                    <span><svg class="icon-svg stroke" style="width: 13px; height: 13px; margin-right: 0.2rem;"><use href="#icon-comment"></use></svg> Comentar</span>
+                    <span><svg class="icon-svg stroke" style="width: 13px; height: 13px; margin-right: 0.2rem;"><use href="#icon-share"></use></svg> Compartilhar</span>
+                  </div>
+                  <span class="preview-click-hint">Clique para abrir no TikTok ↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -423,10 +733,10 @@
         <div class="about-grid">
           <div class="about-image-wrapper">
             <div class="about-image-frame">
-              <img src="assets/scroll_cards.jpg" alt="Cartas de Tarô e Cristais">
+              <img src="assets/patricia_sobre.jpg" alt="Buscadora Astral - Autora e Cartomante" class="about-author-photo">
             </div>
             <div class="parchment-badge-float">
-              "Fique à vontade para explorar. A jornada só começou. ✨"
+              "Fique à vontade para explorar. A jornada só começou. <svg class="icon-svg" style="width:0.9em;height:0.9em;color:#aa852b;"><use href="#icon-sparkles"></use></svg>"
             </div>
           </div>
 
@@ -450,136 +760,14 @@
               </p>
 
               <div class="numerology-pills">
-                <span class="num-pill">✨ Astrologia & Ciclos</span>
-                <span class="num-pill">🃏 Cartomancia & Tarô</span>
-                <span class="num-pill">🔢 Numerologia do Destino</span>
-                <span class="num-pill">🌱 Missão & Propósito</span>
-                <span class="num-pill">🤍 Acolhimento & Leveza</span>
+                <span class="num-pill"><svg class="icon-svg"><use href="#icon-astrology"></use></svg> Astrologia & Ciclos</span>
+                <span class="num-pill"><svg class="icon-svg"><use href="#icon-tarot"></use></svg> Cartomancia & Tarô</span>
+                <span class="num-pill"><svg class="icon-svg"><use href="#icon-numerology"></use></svg> Numerologia do Destino</span>
+                <span class="num-pill"><svg class="icon-svg stroke"><use href="#icon-sprout"></use></svg> Missão & Propósito</span>
+                <span class="num-pill"><svg class="icon-svg"><use href="#icon-heart"></use></svg> Acolhimento & Leveza</span>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== DEPOIMENTOS ==================== -->
-    <section class="testimonials-section" id="depoimentos">
-      <div class="container">
-        <div class="coral-badge" style="display: block; width: fit-content; margin: 0 auto 0.5rem;">
-          Depoimentos Reais
-        </div>
-        <h2>Relatos de Quem Já Se Consultou</h2>
-        <p class="section-subtitle">Mensagens de carinho e transformação de pessoas que encontraram clareza em nossas conversas</p>
-        <div class="mystic-divider"><span>✧</span></div>
-
-        <div class="testimonials-grid">
-          <!-- Relato 1 -->
-          <div class="testimonial-card reveal-on-scroll">
-            <div class="testimonial-badge-service">🃏 Cartomancia</div>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">
-              "A leitura com a Patrícia foi um verdadeiro divisor de águas! Ela descreveu com exatidão momentos que eu estava vivendo e me deu a clareza e coragem que eu precisava para tomar a decisão mais importante da minha carreira."
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar" style="background: radial-gradient(circle, #ff6f59, #4a0d2a);">M</div>
-              <div class="author-info">
-                <h4>Mariana Ramos</h4>
-                <span>São Paulo, SP</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Relato 2 -->
-          <div class="testimonial-card reveal-on-scroll">
-            <div class="testimonial-badge-service">🔢 Numerologia</div>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">
-              "A análise do meu mapa vocacional e a correção de assinatura me ajudaram a entender meus ciclos e destravaram projetos profissionais. O atendimento dela é leve, simpático e super detalhado!"
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar" style="background: radial-gradient(circle, #2ed573, #134629);">F</div>
-              <div class="author-info">
-                <h4>Fernanda Silveira</h4>
-                <span>Curitiba, PR</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Relato 3 -->
-          <div class="testimonial-card reveal-on-scroll">
-            <div class="testimonial-badge-service">🌟 Astrologia</div>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">
-              "Fiz minha Revolução Solar com a Patrícia e amei demais! A forma como ela explica é muito natural, didática e gostosa de ouvir. Saí da consulta com o coração leve e cheia de boas expectativas!"
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar" style="background: radial-gradient(circle, #a855f7, #3b092b);">B</div>
-              <div class="author-info">
-                <h4>Beatriz Costa</h4>
-                <span>Rio de Janeiro, RJ</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Relato 4 -->
-          <div class="testimonial-card reveal-on-scroll">
-            <div class="testimonial-badge-service">🃏 Cartomancia • Amor</div>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">
-              "Estava muito confusa sobre uma relação e a tiragem abriu meus olhos de uma maneira tão acolhedora! Não tem julgamento, só carinho, verdade e bom senso. Recomendo de olhos fechados!"
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar" style="background: radial-gradient(circle, #38bdf8, #163654);">C</div>
-              <div class="author-info">
-                <h4>Camila Albuquerque</h4>
-                <span>Belo Horizonte, MG</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Relato 5 -->
-          <div class="testimonial-card reveal-on-scroll">
-            <div class="testimonial-badge-service">🌟 Mapa Astral</div>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">
-              "A leitura do Mapa Astral me deu um autoconhecimento gigante. A Patrícia conversa de um jeito muito próximo e compreensivo, parece uma amiga de longa data orientando a gente."
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar" style="background: radial-gradient(circle, #e5c365, #5a4014);">L</div>
-              <div class="author-info">
-                <h4>Larissa Mendes</h4>
-                <span>Salvador, BA</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Relato 6 -->
-          <div class="testimonial-card reveal-on-scroll">
-            <div class="testimonial-badge-service">🃏 Mandala Anual</div>
-            <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">
-              "Faço a mandala anual com ela todo ano e as orientações sempre me guiam com muita precisão e paz. Ela tem uma energia incrível que acalma qualquer aflição. Gratidão imensa!"
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar" style="background: radial-gradient(circle, #f472b6, #480f2d);">P</div>
-              <div class="author-info">
-                <h4>Patrícia Nogueira</h4>
-                <span>Brasília, DF</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Banner Convite para Enviar Relato -->
-        <div class="send-testimonial-banner reveal-on-scroll">
-          <div class="banner-icon">💌</div>
-          <div class="banner-text">
-            <h3>Já fez uma consulta comigo?</h3>
-            <p>Seu feedback é muito especial e ajuda outras pessoas a tomarem decisões com confiança. Envie seu relato por e-mail para colocarmos aqui com carinho!</p>
-          </div>
-          <a href="mailto:astralbuscadora@gmail.com?subject=Meu%20Depoimento%20-%20Buscadora%20Astral&body=Ol%C3%A1!%20Gostaria%20de%20compartilhar%20meu%20depoimento%20sobre%20o%20atendimento%20da%20Buscadora%20Astral:" target="_blank" rel="noopener noreferrer" class="btn btn-gold" id="btn-send-testimonial">
-            Enviar Meu Depoimento
-          </a>
         </div>
       </div>
     </section>
@@ -593,7 +781,7 @@
             Vamos conversar pelo WhatsApp de forma acolhedora, sigilosa e sem complicações. Escolha seu atendimento e venha encontrar as respostas que você procura!
           </p>
           <a href="#" class="btn btn-coral whatsapp-general-link" id="btn-cta-final" style="font-size: 1.1rem; padding: 1rem 2.2rem;">
-            <span>💬</span> Conversar no WhatsApp Agora
+            <svg class="icon-svg"><use href="#icon-whatsapp"></use></svg> Conversar no WhatsApp Agora
           </a>
         </div>
       </div>
@@ -615,8 +803,22 @@
           <p>
             Acolhendo pessoas e iluminando caminhos através da Cartomancia, da Numerologia e da Astrologia, com clareza, leveza e carinho.
           </p>
+          <div class="footer-social-icons">
+            <a href="https://www.youtube.com/@BuscadoraAstral" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube">
+              <svg class="icon-svg"><use href="#icon-youtube"></use></svg>
+            </a>
+            <a href="https://www.tiktok.com/@buscadora.astral?_r=1&_t=ZS-99cZCq4mDjx" target="_blank" rel="noopener noreferrer" title="TikTok" aria-label="TikTok">
+              <svg class="icon-svg"><use href="#icon-tiktok"></use></svg>
+            </a>
+            <a href="https://open.spotify.com/user/31qgppuoqwcsnlwxddd2i5maxgmy?si=hXJttdGvTJyCaPHKV1Mhbg&utm_source=copy-link" target="_blank" rel="noopener noreferrer" title="Spotify" aria-label="Spotify">
+              <svg class="icon-svg"><use href="#icon-spotify"></use></svg>
+            </a>
+            <a href="#" class="whatsapp-general-link" title="WhatsApp" aria-label="WhatsApp">
+              <svg class="icon-svg"><use href="#icon-whatsapp"></use></svg>
+            </a>
+          </div>
           <p style="margin-top: 0.8rem; font-size: 0.88rem;">
-            ✉️ <a href="mailto:astralbuscadora@gmail.com" style="color: var(--gold-primary); text-decoration: none;">astralbuscadora@gmail.com</a>
+            <svg class="icon-svg stroke" style="margin-right: 0.25rem;"><use href="#icon-mail"></use></svg> <a href="mailto:astralbuscadora@gmail.com" style="color: var(--gold-primary); text-decoration: none;">astralbuscadora@gmail.com</a>
           </p>
         </div>
 
@@ -624,21 +826,30 @@
           <h4>Navegação</h4>
           <ul class="footer-links">
             <li><a href="#inicio">Início</a></li>
-            <li><a href="#oraculo">✨ Carta do Dia</a></li>
+            <li><a href="#oraculo"><svg class="icon-svg"><use href="#icon-sparkles"></use></svg> Carta do Dia</a></li>
             <li><a href="#catalogo">Consulta Online</a></li>
-            <li><a href="#ebooks">📚 E-books & Guias</a></li>
+            <li><a href="#ebooks"><svg class="icon-svg stroke"><use href="#icon-book"></use></svg> E-books & Guias</a></li>
             <li><a href="#autoconhecimento">Autoconhecimento</a></li>
-            <li><a href="#youtube">Canal no YouTube</a></li>
+            <li><a href="#canais">Canais & Mídias</a></li>
             <li><a href="#sobre">Sobre Mim</a></li>
-            <li><a href="#depoimentos">Depoimentos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Canais & Mídias</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.youtube.com/@BuscadoraAstral" target="_blank" rel="noopener noreferrer"><svg class="icon-svg"><use href="#icon-youtube"></use></svg> YouTube @BuscadoraAstral</a></li>
+            <li><a href="https://www.tiktok.com/@buscadora.astral?_r=1&_t=ZS-99cZCq4mDjx" target="_blank" rel="noopener noreferrer"><svg class="icon-svg"><use href="#icon-tiktok"></use></svg> TikTok @buscadora.astral</a></li>
+            <li><a href="https://open.spotify.com/user/31qgppuoqwcsnlwxddd2i5maxgmy?si=hXJttdGvTJyCaPHKV1Mhbg&utm_source=copy-link" target="_blank" rel="noopener noreferrer"><svg class="icon-svg"><use href="#icon-spotify"></use></svg> Spotify @BuscadoraAstral</a></li>
+            <li><a href="https://chk.eduzz.com/ah5vey2i?currency=BRL" target="_blank" rel="noopener noreferrer"><svg class="icon-svg stroke"><use href="#icon-cart"></use></svg> E-book na Eduzz</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Atendimento & Contato</h4>
           <ul class="footer-links">
-            <li><a href="#" class="whatsapp-general-link">💬 WhatsApp Direto</a></li>
-            <li><a href="mailto:astralbuscadora@gmail.com" title="Enviar e-mail para Patricia" style="color: var(--gold-light);">✉️ astralbuscadora@gmail.com</a></li>
+            <li><a href="#" class="whatsapp-general-link"><svg class="icon-svg"><use href="#icon-whatsapp"></use></svg> WhatsApp Direto</a></li>
+            <li><a href="mailto:astralbuscadora@gmail.com" title="Enviar e-mail para Patricia" style="color: var(--gold-light);"><svg class="icon-svg stroke"><use href="#icon-mail"></use></svg> astralbuscadora@gmail.com</a></li>
             <li><a href="#catalogo">Agendamentos Online</a></li>
             <li><a href="#autoconhecimento">Dúvidas & Conteúdos</a></li>
             <li><a href="admin.html" style="color: var(--gold-light); font-size: 0.85rem;">✦ Área da Escritora</a></li>
@@ -669,7 +880,7 @@
       <div style="margin-top: 2rem; border-top: 1px dashed var(--parchment-border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
         <span style="font-family: var(--font-serif-sub); font-style: italic; color: #7a5c3d;">Gostou desta crônica? Fale comigo!</span>
         <a href="#" class="btn btn-whatsapp-service whatsapp-general-link" style="width: auto; padding: 0.6rem 1.4rem; font-size: 0.9rem;">
-          <span>💬</span> Chamar no WhatsApp
+          <svg class="icon-svg"><use href="#icon-whatsapp"></use></svg> Chamar no WhatsApp
         </a>
       </div>
     </div>
@@ -677,11 +888,12 @@
 
   <!-- ==================== BOTÃO FLUTUANTE DO WHATSAPP ==================== -->
   <a href="#" class="floating-whatsapp whatsapp-general-link" aria-label="Fale conosco no WhatsApp" id="btn-floating-whatsapp">
-    <span>💬</span>
+    <svg class="icon-svg" style="width: 28px; height: 28px; color: #fff;"><use href="#icon-whatsapp"></use></svg>
   </a>
 
   <!-- JavaScript Scripts -->
   <script src="js/stars.js"></script>
+  <script src="js/lunar-data.js"></script>
   <script src="js/oracle.js"></script>
   <script src="js/blog.js"></script>
   <script src="js/app.js"></script>
