@@ -2161,11 +2161,19 @@ h2 {
   box-shadow: 0 6px 20px rgba(255, 0, 0, 0.45), 0 0 15px rgba(255, 0, 0, 0.3);
 }
 
-.media-tab-btn[data-tab="spotify"].active {
-  background: linear-gradient(135deg, #1db954 0%, #12823b 100%);
+.media-tab-btn[data-tab="instagram"].active,
+.media-tab-btn[data-tab="buskadora"].active {
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 6px 20px rgba(29, 185, 84, 0.45), 0 0 15px rgba(29, 185, 84, 0.3);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 6px 20px rgba(225, 48, 108, 0.5), 0 0 15px rgba(253, 29, 29, 0.35);
+}
+
+.media-tab-btn[data-tab="facebook"].active {
+  background: linear-gradient(135deg, #1877f2 0%, #0d5dc7 100%);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 6px 20px rgba(24, 119, 242, 0.5), 0 0 15px rgba(24, 119, 242, 0.35);
 }
 
 .media-tab-btn[data-tab="tiktok"].active {
@@ -2173,6 +2181,20 @@ h2 {
   color: #ffffff;
   border-color: rgba(254, 44, 85, 0.65);
   box-shadow: 0 6px 20px rgba(254, 44, 85, 0.35), 0 0 15px rgba(37, 244, 238, 0.25);
+}
+
+.media-tab-btn[data-tab="threads"].active {
+  background: linear-gradient(135deg, #1f1f28 0%, #050508 100%);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 255, 255, 0.25);
+}
+
+.media-tab-btn[data-tab="spotify"].active {
+  background: linear-gradient(135deg, #1db954 0%, #12823b 100%);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(29, 185, 84, 0.45), 0 0 15px rgba(29, 185, 84, 0.3);
 }
 
 /* Painéis de Conteúdo */
@@ -2252,16 +2274,34 @@ h2 {
   color: #ff6e6e;
 }
 
-.badge-sp {
-  background: rgba(29, 185, 84, 0.14);
-  border: 1px solid rgba(29, 185, 84, 0.45);
-  color: #3be87e;
+.badge-ig {
+  background: rgba(225, 48, 108, 0.16);
+  border: 1px solid rgba(225, 48, 108, 0.5);
+  color: #ff7597;
+}
+
+.badge-fb {
+  background: rgba(24, 119, 242, 0.15);
+  border: 1px solid rgba(24, 119, 242, 0.45);
+  color: #6bb0ff;
 }
 
 .badge-tt {
   background: rgba(254, 44, 85, 0.14);
   border: 1px solid rgba(254, 44, 85, 0.45);
   color: #ff6584;
+}
+
+.badge-threads {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+}
+
+.badge-sp {
+  background: rgba(29, 185, 84, 0.14);
+  border: 1px solid rgba(29, 185, 84, 0.45);
+  color: #3be87e;
 }
 
 .media-panel-info h3 {
@@ -2333,20 +2373,57 @@ h2 {
   color: #fff;
 }
 
-.btn-spotify {
-  background: linear-gradient(135deg, #1db954 0%, #15883e 100%);
+.btn-instagram {
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 6px 20px rgba(29, 185, 84, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 20px rgba(225, 48, 108, 0.4);
   font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
 }
 
-.btn-spotify:hover {
-  background: linear-gradient(135deg, #1ed760 0%, #1aa34a 100%);
-  box-shadow: 0 10px 28px rgba(29, 185, 84, 0.55);
+.btn-instagram:hover {
+  background: linear-gradient(135deg, #9b45d4 0%, #ff3333 50%, #ffbe57 100%);
+  box-shadow: 0 10px 28px rgba(225, 48, 108, 0.6);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.btn-instagram-sub {
+  background: rgba(225, 48, 108, 0.15);
+  color: #ffb3c7;
+  border: 1px solid rgba(225, 48, 108, 0.5);
+  box-shadow: 0 4px 15px rgba(225, 48, 108, 0.2);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.btn-instagram-sub:hover {
+  background: rgba(225, 48, 108, 0.3);
+  color: #fff;
+  border-color: #ff6584;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(225, 48, 108, 0.35);
+}
+
+.btn-facebook {
+  background: linear-gradient(135deg, #1877f2 0%, #0c57bd 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 20px rgba(24, 119, 242, 0.35);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.btn-facebook:hover {
+  background: linear-gradient(135deg, #2b87ff 0%, #1569dc 100%);
+  box-shadow: 0 10px 28px rgba(24, 119, 242, 0.55);
   transform: translateY(-2px);
   color: #fff;
 }
@@ -2365,6 +2442,43 @@ h2 {
 .btn-tiktok:hover {
   background: linear-gradient(135deg, #121212 0%, #20242f 100%);
   box-shadow: 0 10px 28px rgba(254, 44, 85, 0.5), 0 0 18px rgba(37, 244, 238, 0.4);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.btn-threads {
+  background: linear-gradient(135deg, #1e1e24 0%, #050508 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.btn-threads:hover {
+  background: linear-gradient(135deg, #2b2b36 0%, #111116 100%);
+  box-shadow: 0 10px 28px rgba(255, 255, 255, 0.15), 0 0 18px rgba(0, 0, 0, 0.8);
+  transform: translateY(-2px);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-spotify {
+  background: linear-gradient(135deg, #1db954 0%, #15883e 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 20px rgba(29, 185, 84, 0.35);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.btn-spotify:hover {
+  background: linear-gradient(135deg, #1ed760 0%, #1aa34a 100%);
+  box-shadow: 0 10px 28px rgba(29, 185, 84, 0.55);
   transform: translateY(-2px);
   color: #fff;
 }
@@ -2549,6 +2663,162 @@ h2 {
   font-size: 0.82rem;
   color: #c9b8d8;
   background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 0.4rem 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Visual Específico: Instagram */
+.glow-ig {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(225, 48, 108, 0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ig-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(225, 48, 108, 0.16);
+  border: 1px solid rgba(225, 48, 108, 0.45);
+  padding: 0.42rem 1.1rem;
+  border-radius: 30px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #ff94b0;
+  box-shadow: 0 0 15px rgba(225, 48, 108, 0.25);
+}
+
+.ig-avatar-ring {
+  padding: 3px;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-radius: 50%;
+  display: inline-flex;
+  box-shadow: 0 0 18px rgba(225, 48, 108, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.media-card-preview:hover .ig-avatar-ring {
+  transform: scale(1.08);
+}
+
+.ig-avatar-ring .preview-avatar {
+  border: 2px solid #140721;
+}
+
+.ig-metrics-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  color: #dfd2ec;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 0.4rem 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Visual Específico: Threads */
+.glow-threads {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.22) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.threads-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 0.42rem 1.1rem;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #f0edf5;
+}
+
+.threads-thread-preview {
+  background: rgba(12, 4, 18, 0.8);
+  border: 1px solid rgba(229, 195, 101, 0.22);
+  border-radius: 12px;
+  padding: 0.85rem 1.1rem;
+  margin: 0.2rem 0 1.2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.threads-quote {
+  font-size: 0.88rem;
+  color: #e9e0f3;
+  font-style: italic;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.ig-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ig-badge-pill.pill-sub {
+  background: rgba(229, 195, 101, 0.15);
+  border-color: rgba(229, 195, 101, 0.4);
+  color: var(--gold-light);
+  box-shadow: 0 0 15px rgba(229, 195, 101, 0.15);
+}
+
+/* Visual Específico: Facebook */
+.glow-fb {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(24, 119, 242, 0.35) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.fb-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(24, 119, 242, 0.15);
+  border: 1px solid rgba(24, 119, 242, 0.45);
+  padding: 0.42rem 1.1rem;
+  border-radius: 30px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #7ab7ff;
+  box-shadow: 0 0 15px rgba(24, 119, 242, 0.2);
+}
+
+.fb-avatar {
+  border-color: #1877f2;
+  box-shadow: 0 0 15px rgba(24, 119, 242, 0.4);
+}
+
+.fb-metrics-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  color: #dfd2ec;
+  background: rgba(255, 255, 255, 0.06);
   border-radius: 20px;
   padding: 0.4rem 0.9rem;
   margin-bottom: 1.2rem;

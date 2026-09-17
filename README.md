@@ -24,7 +24,11 @@
 - ✉️ **E-mail Oficial**: [astralbuscadora@gmail.com](mailto:astralbuscadora@gmail.com)
 - 🛒 **E-book na Eduzz**: [https://chk.eduzz.com/ah5vey2i?currency=BRL](https://chk.eduzz.com/ah5vey2i?currency=BRL)
 - 🎥 **Canal Oficial no YouTube**: [https://www.youtube.com/@BuscadoraAstral](https://www.youtube.com/@BuscadoraAstral)
+- 📸 **Instagram Oficial**: [https://www.instagram.com/buscadora.astral](https://www.instagram.com/buscadora.astral)
+- 🔮 **Instagram Autora**: [https://www.instagram.com/buskadora](https://www.instagram.com/buskadora)
+- 📘 **Página no Facebook**: [https://www.facebook.com/share/1EnRJUXWRF/?mibextid=wwXIfr](https://www.facebook.com/share/1EnRJUXWRF/?mibextid=wwXIfr)
 - 🎵 **TikTok Oficial**: [https://www.tiktok.com/@buscadora.astral](https://www.tiktok.com/@buscadora.astral)
+- 🧵 **Threads Oficial**: [https://www.threads.net/@buscadora.astral](https://www.threads.net/@buscadora.astral)
 - 🎧 **Perfil no Spotify**: [https://open.spotify.com/user/31qgppuoqwcsnlwxddd2i5maxgmy](https://open.spotify.com/user/31qgppuoqwcsnlwxddd2i5maxgmy)
 - ✍️ **Caderno da Escritora**: [https://buscadoraastral.com.br/admin.html](https://buscadoraastral.com.br/admin.html)
 
