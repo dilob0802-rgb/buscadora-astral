@@ -275,26 +275,31 @@ function initScrollReveal() {
   });
 }
 
-// Alternância de Abas da Seção Canais & Conteúdos (YouTube, Spotify, TikTok)
+// Alternância de Abas da Seção Canais & Conteúdos (Menu Lateral no Quadrado)
 function initMediaTabs() {
-  const tabBtns = document.querySelectorAll('.media-tab-btn');
-  const tabPanels = document.querySelectorAll('.media-tab-panel');
+  const sidebarBtns = document.querySelectorAll('.media-sidebar-btn, .media-tab-btn');
+  const panels = document.querySelectorAll('.media-panel-tab, .media-tab-panel');
 
-  if (!tabBtns.length || !tabPanels.length) return;
+  if (!sidebarBtns.length || !panels.length) return;
 
-  tabBtns.forEach(btn => {
+  sidebarBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const targetTab = btn.getAttribute('data-tab');
+      if (!targetTab) return;
 
       // Atualiza botões ativos
-      tabBtns.forEach(b => b.classList.remove('active'));
+      sidebarBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
 
       // Atualiza painéis ativos
-      tabPanels.forEach(panel => {
+      panels.forEach(panel => {
         if (panel.id === `tab-${targetTab}`) {
           panel.classList.add('active');
-          // Força revelação dos elementos com reveal-on-scroll internos
+          // Força revelação dos elementos com reveal-on-scroll internos se houver
           panel.querySelectorAll('.reveal-on-scroll').forEach(el => {
             el.classList.add('revealed');
           });

@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Marcellus&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20260922_6">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="icon" type="image/jpeg" href="assets/logo_buscadora.jpg">
 </head>
@@ -288,10 +288,11 @@
     <section class="oracle-section" id="oraculo">
       <div class="container oracle-container">
         <div class="coral-badge" style="display: inline-block;">
-          <svg class="icon-svg"><use href="#icon-sparkles"></use></svg> Pausa de Bem-Estar
+          <svg class="icon-svg"><use href="#icon-sparkles"></use></svg> Mesa do Oráculo
         </div>
-        <h2>Tire a sua Carta do Dia</h2>
-        <p class="section-subtitle">Respire fundo, conecte-se com um pensamento bom e toque em uma das cartas para receber um conselho leve e alegre!</p>
+        <h2 class="oracle-title">✦ ESCOLHA UMA CARTA ✦</h2>
+        <p class="section-subtitle oracle-lead-text">Respire fundo, conecte-se com sua intuição e escolha a carta que mais chama a sua atenção. Ela revela uma mensagem especial para você.</p>
+        <p class="oracle-disclaimer">✦ Lembre-se: esta é uma orientação, não uma sentença. ✦</p>
         <div class="mystic-divider"><span>✧</span></div>
 
         <div class="oracle-deck-area">
@@ -299,10 +300,12 @@
             <!-- Cartas com imagens dos arcanos inseridas dinamicamente via JS -->
           </div>
 
-          <div style="margin-top: 1.2rem;">
-            <button class="btn btn-outline" id="btn-shuffle-oracle">
+          <div class="oracle-shuffle-wrapper">
+            <span class="shuffle-star">✦</span>
+            <button class="btn btn-shuffle-pill" id="btn-shuffle-oracle">
               <svg class="icon-svg stroke"><use href="#icon-refresh"></use></svg> Embaralhar Novamente
             </button>
+            <span class="shuffle-star">✦</span>
           </div>
 
           <!-- Caixa com o Resultado da Carta Revelada (Com Imagem do Arcano) -->
@@ -357,10 +360,10 @@
                 Descubra a força dos seus números pessoais para alinhar seus talentos, sua vibração e abrir seus caminhos com assertividade.
               </p>
               <ul class="service-features">
-                <li>Mapa vocacional</li>
-                <li>Correção do nome social e assinatura</li>
-                <li>Alinhamento de vibrações e talentos de vida</li>
-                <li>Clareza sobre seus ciclos e propósitos</li>
+                <li>Mapa da Alma</li>
+                <li>Mapa Vocacional</li>
+                <li>Correção do Nome Social e Assinatura</li>
+                <li>Mapa Anual 2027</li>
               </ul>
             </div>
             <div class="service-action">
@@ -429,17 +432,19 @@
     <section class="ebooks-section" id="ebooks">
       <div class="container">
         <div class="coral-badge" style="display: block; width: fit-content; margin: 0 auto 0.5rem;">
-          <svg class="icon-svg stroke"><use href="#icon-book"></use></svg> Infoprodutos & Conhecimento Prático
+          <svg class="icon-svg stroke"><use href="#icon-book"></use></svg> Livro Digital Prático (PDF)
         </div>
-        <h2>Biblioteca Astral & E-books</h2>
-        <p class="section-subtitle">Aprenda a decifrar seus próprios ciclos e números com os guias práticos da Buscadora Astral</p>
+        <h2>CRIE SEU <span class="gold-text">PLANNER ESOTÉRICO</span></h2>
+        <p class="section-subtitle" style="max-width: 820px; margin: 0 auto 1.5rem; line-height: 1.7;">
+          &ldquo;Crie Seu Planner Esotérico&rdquo; é um guia completo e prático para quem deseja planejar os dias com mais leveza, propósito e conexão. Aqui, astrologia, numerologia e os ritmos cósmicos se unem para te mostrar quando agir, quando descansar e como manter o foco sem se perder de si.
+        </p>
         <div class="mystic-divider"><span>✧</span></div>
 
         <div class="ebook-showcase reveal-on-scroll">
           <!-- Coluna 1: Mockup Visual 3D do Livro Digital -->
           <div class="ebook-visual-col">
             <div class="ebook-frame">
-              <img src="assets/foto_ebook.jpg" alt="E-book Numerologia do Destino e Calendário Astral" class="ebook-cover-img">
+              <img src="assets/foto_ebook.jpg" alt="E-book Crie Seu Planner Esotérico" class="ebook-cover-img">
               <div class="ebook-badge-tag">Livro Digital Prático (PDF)</div>
               <div class="ebook-glow"></div>
             </div>
@@ -451,30 +456,34 @@
               ★★★★★ <span>(Guia Completo de Autoconhecimento)</span>
             </div>
             <h3 class="ebook-main-title">
-              Numerologia do Destino & <span class="gold-text">Calendário Astral</span>
+              CRIE SEU <span class="gold-text">PLANNER ESOTÉRICO</span>
             </h3>
             <p class="ebook-lead">
-              O mapa prático e definitivo para você calcular sua própria assinatura cósmica, dominar seus números de poder e montar seu calendário astrológico e numerológico para o ano inteiro.
+              &ldquo;Crie Seu Planner Esotérico&rdquo; é um guia completo e prático para quem deseja planejar os dias com mais leveza, propósito e conexão. Aqui, astrologia, numerologia e os ritmos cósmicos se unem para te mostrar quando agir, quando descansar e como manter o foco sem se perder de si.
             </p>
 
             <div class="ebook-highlights">
-              <h4>O que você vai aprender e aplicar:</h4>
+              <h4>O que você vai encontrar:</h4>
               <ul class="ebook-checklist">
                 <li>
                   <span class="check-icon">✦</span>
-                  <div><strong>Cálculo da sua Numerologia de Destino:</strong> Descubra a missão oculta da sua data de nascimento e os talentos que regem sua trajetória.</div>
+                  <div><strong>PARTE 1 –</strong> Trânsitos lunares em cada signo + Numerologia: dia, mês e ano pessoal</div>
                 </li>
                 <li>
                   <span class="check-icon">✦</span>
-                  <div><strong>Montagem do seu Calendário Numerológico:</strong> Como prever os dias e meses favoráveis para contratos, amores, viagens e inícios de projetos.</div>
+                  <div><strong>PARTE 2 –</strong> Trimestre Pessoal</div>
                 </li>
                 <li>
                   <span class="check-icon">✦</span>
-                  <div><strong>Calendário Astrológico & Lunações:</strong> Sintonize suas intenções e ações com as quatro fases da Lua para não remar contra a maré.</div>
+                  <div><strong>PARTE 3 –</strong> Astrologia aplicada à rotina, ELEMENTOS E CASA 6;</div>
                 </li>
                 <li>
                   <span class="check-icon">✦</span>
-                  <div><strong>Tabelas Prontas para Consulta Imediata:</strong> Material didático e direto ao ponto, perfeito para consultar no celular ou imprimir.</div>
+                  <div><strong>PARTE 4 –</strong> Horas Planetárias</div>
+                </li>
+                <li>
+                  <span class="check-icon">✦</span>
+                  <div><strong>PARTE 5 –</strong> Vênus, Lua e Marte: os Pilares da Rotina com Propósito</div>
                 </li>
               </ul>
             </div>
@@ -503,7 +512,7 @@
                 <a href="https://chk.eduzz.com/ah5vey2i?currency=BRL" target="_blank" rel="noopener noreferrer" class="btn btn-eduzz" id="btn-buy-ebook-eduzz">
                   <svg class="icon-svg stroke"><use href="#icon-cart"></use></svg> Garantir Meu E-book por R$ 47 na Eduzz
                 </a>
-                <a href="#" class="btn btn-outline whatsapp-general-link" data-msg="Olá, Patrícia! Gostaria de tirar algumas dúvidas sobre o seu e-book de Numerologia do Destino e Calendário Astral.">
+                <a href="#" class="btn btn-outline whatsapp-general-link" data-msg="Olá, Patrícia! Gostaria de tirar algumas dúvidas sobre o seu e-book Crie Seu Planner Esotérico.">
                   <svg class="icon-svg"><use href="#icon-whatsapp"></use></svg> Dúvidas no WhatsApp
                 </a>
               </div>
@@ -554,203 +563,583 @@
       <div class="container">
         <div class="media-header reveal-on-scroll">
           <div class="coral-badge" style="display: inline-block; margin-bottom: 0.5rem;">
-            ✦ Conexão & Redes Oficiais
+            ✦ Canais &amp; Conteúdos Oficiais
           </div>
           <h2>Acompanhe a <span class="gold-text">Buscadora Astral</span></h2>
-          <p class="section-subtitle">
-            Previsões dos signos, mensagens diárias, astrologia consciente e saberes místicos em todas as plataformas
-          </p>
+          <div class="channels-official-list">
+            <div class="channel-desc-line"><em>YouTube</em> · Previsões &amp; autoconhecimento</div>
+            <div class="channel-desc-line"><em>Instagram</em> · Mensagens &amp; previsões</div>
+            <div class="channel-desc-line"><em>TikTok</em> · Astrologia &amp; bastidores</div>
+            <div class="channel-desc-line"><em>Facebook</em> · Mensagens &amp; previsões</div>
+            <div class="channel-desc-line"><em>Threads</em> · Reflexões &amp; autoconhecimento</div>
+            <div class="channel-desc-line"><em>Spotify</em> · Playlists, mantras &amp; pontos de Orixás</div>
+          </div>
           <div class="mystic-divider"><span>✧</span></div>
         </div>
 
-        <!-- GRID DE CANAIS E REDES SOCIAIS -->
-        <div class="social-channels-grid">
-          
-          <!-- CARD 1: YOUTUBE -->
-          <div class="channel-card card-youtube reveal-on-scroll">
-            <div class="channel-card-glow glow-yt"></div>
-            <div>
-              <div class="channel-card-header">
-                <div class="channel-icon-wrapper icon-yt">
-                  <svg class="icon-svg"><use href="#icon-youtube"></use></svg>
-                </div>
-                <div class="channel-meta">
-                  <span class="channel-badge badge-yt">Canal Oficial</span>
-                  <h4>YouTube</h4>
+        <!-- QUADRADO UNIFICADO DE REDES SOCIAIS COM MENU LATERAL -->
+        <div class="media-box-container reveal-on-scroll">
+          <div class="media-box-glow-top"></div>
+          <div class="media-box-inner">
+            
+            <!-- MENU LATERAL ESQUERDO (DENTRO DO QUADRADO) -->
+            <aside class="media-sidebar" aria-label="Menu de Redes Sociais">
+              <div class="media-sidebar-header">
+                <span class="media-sidebar-tag">✦ REDES OFICIAIS</span>
+                <h4 class="media-sidebar-title">Selecione o Canal</h4>
+              </div>
+              
+              <nav class="media-sidebar-nav">
+                <!-- 1: YouTube -->
+                <button type="button" class="media-sidebar-btn media-tab-btn active" data-tab="youtube" onclick="selectMediaChannel('youtube')">
+                  <div class="media-nav-icon icon-yt">
+                    <svg class="icon-svg"><use href="#icon-youtube"></use></svg>
+                  </div>
+                  <div class="media-nav-info">
+                    <span class="media-nav-name">YouTube</span>
+                    <span class="media-nav-sub">Previsões &amp; autoconhecimento</span>
+                  </div>
+                  <div class="media-nav-indicator"></div>
+                </button>
+
+                <!-- 2: Instagram Oficial -->
+                <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="instagram-oficial" onclick="selectMediaChannel('instagram-oficial')">
+                  <div class="media-nav-icon icon-ig">
+                    <svg class="icon-svg"><use href="#icon-instagram"></use></svg>
+                  </div>
+                  <div class="media-nav-info">
+                    <span class="media-nav-name">@buscadora.astral</span>
+                    <span class="media-nav-sub">Mensagens &amp; previsões</span>
+                  </div>
+                  <div class="media-nav-indicator"></div>
+                </button>
+
+                <!-- 3: Instagram Autora -->
+                <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="instagram-autora" onclick="selectMediaChannel('instagram-autora')">
+                  <div class="media-nav-icon icon-ig">
+                    <svg class="icon-svg"><use href="#icon-instagram"></use></svg>
+                  </div>
+                  <div class="media-nav-info">
+                    <span class="media-nav-name">@buskadora</span>
+                    <span class="media-nav-sub">Mensagens &amp; previsões</span>
+                  </div>
+                  <div class="media-nav-indicator"></div>
+                </button>
+
+                <!-- 4: TikTok -->
+                <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="tiktok" onclick="selectMediaChannel('tiktok')">
+                  <div class="media-nav-icon icon-tt">
+                    <svg class="icon-svg"><use href="#icon-tiktok"></use></svg>
+                  </div>
+                  <div class="media-nav-info">
+                    <span class="media-nav-name">TikTok</span>
+                    <span class="media-nav-sub">Astrologia &amp; bastidores</span>
+                  </div>
+                  <div class="media-nav-indicator"></div>
+                </button>
+
+                <!-- 5: Facebook -->
+                <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="facebook" onclick="selectMediaChannel('facebook')">
+                  <div class="media-nav-icon icon-fb">
+                    <svg class="icon-svg"><use href="#icon-facebook"></use></svg>
+                  </div>
+                  <div class="media-nav-info">
+                    <span class="media-nav-name">Facebook</span>
+                    <span class="media-nav-sub">Mensagens &amp; previsões</span>
+                  </div>
+                  <div class="media-nav-indicator"></div>
+                </button>
+
+                <!-- 6: Threads -->
+                <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="threads" onclick="selectMediaChannel('threads')">
+                  <div class="media-nav-icon icon-threads">
+                    <svg class="icon-svg"><use href="#icon-threads"></use></svg>
+                  </div>
+                  <div class="media-nav-info">
+                    <span class="media-nav-name">Threads</span>
+                    <span class="media-nav-sub">Reflexões &amp; autoconhecimento</span>
+                  </div>
+                  <div class="media-nav-indicator"></div>
+                </button>
+
+                <!-- 7: Spotify -->
+                <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="spotify" onclick="selectMediaChannel('spotify')">
+                  <div class="media-nav-icon icon-sp">
+                    <svg class="icon-svg"><use href="#icon-spotify"></use></svg>
+                  </div>
+                  <div class="media-nav-info">
+                    <span class="media-nav-name">Spotify</span>
+                    <span class="media-nav-sub">Playlists, mantras &amp; pontos de Orixás</span>
+                  </div>
+                  <div class="media-nav-indicator"></div>
+                </button>
+              </nav>
+            </aside>
+
+            <!-- ÁREA DE CONTEÚDO PRINCIPAL (DIREITA DO QUADRADO) -->
+            <main class="media-content-display">
+              
+              <!-- PAINEL 1: YOUTUBE -->
+              <div class="media-panel-tab media-tab-panel active" id="tab-youtube">
+                <div class="media-panel-grid">
+                  <div class="media-panel-info">
+                    <div class="media-pill-badge badge-yt">
+                      <svg class="icon-svg"><use href="#icon-youtube"></use></svg> CANAL OFICIAL NO YOUTUBE
+                    </div>
+                    <h3 class="media-content-title">PREVISÕES &amp; AUTOCONHECIMENTO</h3>
+                    <p class="media-content-desc">
+                      Previsões mensais para os signos com Tarot e Baralho Cigano, além de conteúdos sobre astrologia, numerologia e autoconhecimento no universo esotérico.
+                    </p>
+                    <ul class="media-highlights-list">
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Previsões Mensais:</strong> Mensagens guiadas para os 12 signos com Tarot e Baralho Cigano.
+                        </div>
+                      </li>
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Saberes Esotéricos:</strong> Conteúdos práticos sobre astrologia e numerologia.
+                        </div>
+                      </li>
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Conteúdo 100% Gratuito:</strong> Novos vídeos para iluminar e orientar seus caminhos.
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="media-actions-group">
+                      <a href="https://www.youtube.com/@BuscadoraAstral" target="_blank" rel="noopener noreferrer" class="btn btn-action-main btn-action-yt">
+                        <svg class="icon-svg"><use href="#icon-youtube"></use></svg> Acessar Canal &amp; Inscrever-se
+                      </a>
+                      <a href="#catalogo" class="btn btn-action-outline">
+                        <svg class="icon-svg"><use href="#icon-book"></use></svg> Ver Consultas Online
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div class="media-panel-preview">
+                    <a href="https://www.youtube.com/@BuscadoraAstral" target="_blank" rel="noopener noreferrer" class="media-preview-card preview-yt">
+                      <div class="preview-glow-halo halo-yt"></div>
+                      <div class="preview-play-icon icon-glow-yt">
+                        <svg viewBox="0 0 24 24" class="svg-play-triangle"><polygon points="6 3 20 12 6 21 6 3" fill="#ffffff"/></svg>
+                      </div>
+                      <div class="preview-brand-logo">
+                        <img src="assets/logo_buscadora.jpg" alt="Logo Buscadora Astral" />
+                      </div>
+                      <h4 class="preview-handle">@BUSCADORAASTRAL</h4>
+                      <p class="preview-tagline">Previsões &amp; autoconhecimento</p>
+                      <div class="preview-divider"></div>
+                      <span class="preview-cta-link">CLIQUE PARA ASSISTIR NO YOUTUBE ↗</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <h3 class="channel-card-title">Previsões, cartas e autoconhecimento</h3>
-              <p class="channel-card-desc">
-                Previsões mensais para os 12 signos com Tarot e Baralho Cigano, além de conteúdos completos sobre astrologia, numerologia e autoconhecimento no universo esotérico.
-              </p>
-            </div>
-            <div class="channel-card-footer">
-              <a href="https://www.youtube.com/@BuscadoraAstral" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-youtube">
-                <svg class="icon-svg"><use href="#icon-youtube"></use></svg> Acessar Canal
-              </a>
-              <span class="channel-handle">@BuscadoraAstral</span>
-            </div>
-          </div>
 
-          <!-- CARD 2: INSTAGRAM OFICIAL -->
-          <div class="channel-card card-instagram reveal-on-scroll">
-            <div class="channel-card-glow glow-ig"></div>
-            <div>
-              <div class="channel-card-header">
-                <div class="channel-icon-wrapper icon-ig">
-                  <svg class="icon-svg"><use href="#icon-instagram"></use></svg>
-                </div>
-                <div class="channel-meta">
-                  <span class="channel-badge badge-ig">Instagram Oficial</span>
-                  <h4>@buscadora.astral</h4>
+              <!-- PAINEL 2: INSTAGRAM OFICIAL -->
+              <div class="media-panel-tab media-tab-panel" id="tab-instagram-oficial">
+                <div class="media-panel-grid">
+                  <div class="media-panel-info">
+                    <div class="media-pill-badge badge-ig">
+                      <svg class="icon-svg"><use href="#icon-instagram"></use></svg> INSTAGRAM OFICIAL
+                    </div>
+                    <h3 class="media-content-title">MENSAGENS &amp; PREVISÕES</h3>
+                    <p class="media-content-desc">
+                      Previsões para o seu signo, mensagens do dia, energia da semana e do fim de semana, além de conteúdos para interagir com as cartas e receber seus recados. Um espaço para começar o dia, a semana e o mês com mais clareza, direção e consciência.
+                    </p>
+                    <ul class="media-highlights-list">
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Mensagens Diárias:</strong> Recados das cartas para inspirar e direcionar sua rotina.
+                        </div>
+                      </li>
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Energias da Semana:</strong> Panorama completo do céu e dos oráculos para suas decisões.
+                        </div>
+                      </li>
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Interação com Cartas:</strong> Escolha seu monte e receba aconselhamentos em tempo real.
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="media-actions-group">
+                      <a href="https://www.instagram.com/buscadora.astral" target="_blank" rel="noopener noreferrer" class="btn btn-action-main btn-action-ig">
+                        <svg class="icon-svg"><use href="#icon-instagram"></use></svg> Seguir Perfil no Instagram
+                      </a>
+                      <a href="#catalogo" class="btn btn-action-outline">
+                        <svg class="icon-svg"><use href="#icon-book"></use></svg> Ver Consultas Online
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div class="media-panel-preview">
+                    <a href="https://www.instagram.com/buscadora.astral" target="_blank" rel="noopener noreferrer" class="media-preview-card preview-ig">
+                      <div class="preview-glow-halo halo-ig"></div>
+                      <div class="preview-play-icon icon-glow-ig">
+                        <svg class="icon-svg"><use href="#icon-instagram"></use></svg>
+                      </div>
+                      <div class="preview-brand-logo">
+                        <img src="assets/logo_buscadora.jpg" alt="Logo Buscadora Astral" />
+                      </div>
+                      <h4 class="preview-handle">@BUSCADORA.ASTRAL</h4>
+                      <p class="preview-tagline">Mensagens &amp; previsões</p>
+                      <div class="preview-divider"></div>
+                      <span class="preview-cta-link">CLIQUE PARA VER NO INSTAGRAM ↗</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <h3 class="channel-card-title">Previsões para acompanhar sua jornada</h3>
-              <p class="channel-card-desc">
-                Previsões para o seu signo, mensagens do dia, energia da semana e do fim de semana, além de conteúdos para interagir com as cartas e receber seus recados. Um espaço para começar o dia, a semana e o mês com mais clareza, direção e consciência.
-              </p>
-            </div>
-            <div class="channel-card-footer">
-              <a href="https://www.instagram.com/buscadora.astral" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-instagram">
-                <svg class="icon-svg"><use href="#icon-instagram"></use></svg> Seguir Perfil
-              </a>
-              <span class="channel-handle">@buscadora.astral</span>
-            </div>
-          </div>
 
-          <!-- CARD 3: INSTAGRAM BÙSKADORA -->
-          <div class="channel-card card-buskadora reveal-on-scroll">
-            <div class="channel-card-glow glow-ig"></div>
-            <div>
-              <div class="channel-card-header">
-                <div class="channel-icon-wrapper icon-ig">
-                  <svg class="icon-svg"><use href="#icon-instagram"></use></svg>
-                </div>
-                <div class="channel-meta">
-                  <span class="channel-badge badge-ig">Instagram da Autora</span>
-                  <h4>@buskadora</h4>
+              <!-- PAINEL 3: INSTAGRAM AUTORA -->
+              <div class="media-panel-tab media-tab-panel" id="tab-instagram-autora">
+                <div class="media-panel-grid">
+                  <div class="media-panel-info">
+                    <div class="media-pill-badge badge-ig">
+                      <svg class="icon-svg"><use href="#icon-instagram"></use></svg> INSTAGRAM DA AUTORA
+                    </div>
+                    <h3 class="media-content-title">MENSAGENS &amp; PREVISÕES</h3>
+                    <p class="media-content-desc">
+                      Um espaço para compreender melhor a astrologia, os movimentos dos astros e como eles podem refletir nos diferentes momentos da vida. Conteúdos de autoconhecimento, previsões astrológicas e reflexões para acompanhar o céu com mais consciência.
+                    </p>
+                    <ul class="media-highlights-list">
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Movimentos Astrais:</strong> Trânsitos, lunações e influência dos astros no dia a dia.
+                        </div>
+                      </li>
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Visão da Escritora:</strong> Reflexões intimistas sobre oráculos, escrita e propósito.
+                        </div>
+                      </li>
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Consciência Cósmica:</strong> Práticas para alinhar sua rotina aos ritmos celestes.
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="media-actions-group">
+                      <a href="https://www.instagram.com/buskadora" target="_blank" rel="noopener noreferrer" class="btn btn-action-main btn-action-ig">
+                        <svg class="icon-svg"><use href="#icon-instagram"></use></svg> Seguir Bùskadora no Instagram
+                      </a>
+                      <a href="#catalogo" class="btn btn-action-outline">
+                        <svg class="icon-svg"><use href="#icon-book"></use></svg> Ver Consultas Online
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div class="media-panel-preview">
+                    <a href="https://www.instagram.com/buskadora" target="_blank" rel="noopener noreferrer" class="media-preview-card preview-ig">
+                      <div class="preview-glow-halo halo-ig"></div>
+                      <div class="preview-play-icon icon-glow-ig">
+                        <svg class="icon-svg"><use href="#icon-instagram"></use></svg>
+                      </div>
+                      <div class="preview-brand-logo">
+                        <img src="assets/logo_buscadora.jpg" alt="Logo Bùskadora" />
+                      </div>
+                      <h4 class="preview-handle">@BUSKADORA</h4>
+                      <p class="preview-tagline">Mensagens &amp; previsões</p>
+                      <div class="preview-divider"></div>
+                      <span class="preview-cta-link">CLIQUE PARA VER NO INSTAGRAM ↗</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <h3 class="channel-card-title">Astrologia, autoconhecimento e previsões</h3>
-              <p class="channel-card-desc">
-                Um espaço para compreender melhor a astrologia, os movimentos dos astros e como eles podem refletir nos diferentes momentos da vida. Conteúdos de autoconhecimento, previsões astrológicas e reflexões para acompanhar o céu com mais consciência.
-              </p>
-            </div>
-            <div class="channel-card-footer">
-              <a href="https://www.instagram.com/buskadora" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-instagram">
-                <svg class="icon-svg"><use href="#icon-instagram"></use></svg> Seguir Bùskadora
-              </a>
-              <span class="channel-handle">@buskadora</span>
-            </div>
-          </div>
 
-          <!-- CARD 4: FACEBOOK -->
-          <div class="channel-card card-facebook reveal-on-scroll">
-            <div class="channel-card-glow glow-fb"></div>
-            <div>
-              <div class="channel-card-header">
-                <div class="channel-icon-wrapper icon-fb">
-                  <svg class="icon-svg"><use href="#icon-facebook"></use></svg>
-                </div>
-                <div class="channel-meta">
-                  <span class="channel-badge badge-fb">Página no Facebook</span>
-                  <h4>Buscadora Astral</h4>
+              <!-- PAINEL 4: TIKTOK -->
+              <div class="media-panel-tab media-tab-panel" id="tab-tiktok">
+                <div class="media-panel-grid">
+                  <div class="media-panel-info">
+                    <div class="media-pill-badge badge-tt">
+                      <svg class="icon-svg"><use href="#icon-tiktok"></use></svg> TIKTOK OFICIAL
+                    </div>
+                    <h3 class="media-content-title">ASTROLOGIA &amp; BASTIDORES</h3>
+                    <p class="media-content-desc">
+                      Previsões astrológicas dinâmicas, leituras rápidas com as cartas, curiosidades sobre os signos e os bastidores das consultas da Buscadora Astral.
+                    </p>
+                    <ul class="media-highlights-list">
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Tiragens Rápidas:</strong> Respostas diretas e mensagens instantâneas do Tarot.
+                        </div>
+                      </li>
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Curiosidades dos Signos:</strong> Traços de personalidade, combinações e arquétipos.
+                        </div>
+                      </li>
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Bastidores &amp; Mística:</strong> A energia dos atendimentos e da preparação dos oráculos.
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="media-actions-group">
+                      <a href="https://www.tiktok.com/@buscadora.astral?_r=1&_t=ZS-99cZCq4mDjx" target="_blank" rel="noopener noreferrer" class="btn btn-action-main btn-action-tt">
+                        <svg class="icon-svg"><use href="#icon-tiktok"></use></svg> Seguir no TikTok
+                      </a>
+                      <a href="#catalogo" class="btn btn-action-outline">
+                        <svg class="icon-svg"><use href="#icon-book"></use></svg> Ver Consultas Online
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div class="media-panel-preview">
+                    <a href="https://www.tiktok.com/@buscadora.astral?_r=1&_t=ZS-99cZCq4mDjx" target="_blank" rel="noopener noreferrer" class="media-preview-card preview-tt">
+                      <div class="preview-glow-halo halo-tt"></div>
+                      <div class="preview-play-icon icon-glow-tt">
+                        <svg class="icon-svg"><use href="#icon-tiktok"></use></svg>
+                      </div>
+                      <div class="preview-brand-logo">
+                        <img src="assets/logo_buscadora.jpg" alt="Logo Buscadora Astral" />
+                      </div>
+                      <h4 class="preview-handle">@BUSCADORA.ASTRAL</h4>
+                      <p class="preview-tagline">Astrologia &amp; bastidores</p>
+                      <div class="preview-divider"></div>
+                      <span class="preview-cta-link">CLIQUE PARA ASSISTIR NO TIKTOK ↗</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <h3 class="channel-card-title">Astrologia, cartas e previsões</h3>
-              <p class="channel-card-desc">
-                Acompanhe previsões para o seu signo, mensagens do dia, energias da semana e do fim de semana, além de conteúdos com cartas, astrologia e muito mais para ajudar você a compreender os momentos e se direcionar melhor.
-              </p>
-            </div>
-            <div class="channel-card-footer">
-              <a href="https://www.facebook.com/share/1EnRJUXWRF/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-facebook">
-                <svg class="icon-svg"><use href="#icon-facebook"></use></svg> Acompanhar Página
-              </a>
-              <span class="channel-handle">Facebook Oficial</span>
-            </div>
-          </div>
 
-          <!-- CARD 5: THREADS -->
-          <div class="channel-card card-threads reveal-on-scroll">
-            <div class="channel-card-glow glow-threads"></div>
-            <div>
-              <div class="channel-card-header">
-                <div class="channel-icon-wrapper icon-threads">
-                  <svg class="icon-svg"><use href="#icon-threads"></use></svg>
-                </div>
-                <div class="channel-meta">
-                  <span class="channel-badge badge-threads">Comunidade em Tempo Real</span>
-                  <h4>Threads</h4>
+              <!-- PAINEL 5: FACEBOOK -->
+              <div class="media-panel-tab media-tab-panel" id="tab-facebook">
+                <div class="media-panel-grid">
+                  <div class="media-panel-info">
+                    <div class="media-pill-badge badge-fb">
+                      <svg class="icon-svg"><use href="#icon-facebook"></use></svg> PÁGINA NO FACEBOOK
+                    </div>
+                    <h3 class="media-content-title">MENSAGENS &amp; PREVISÕES</h3>
+                    <p class="media-content-desc">
+                      Acompanhe previsões para o seu signo, mensagens do dia, energias da semana e do fim de semana, além de conteúdos com cartas e astrologia para ajudar você a compreender os momentos e se direcionar melhor.
+                    </p>
+                    <ul class="media-highlights-list">
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Previsões &amp; Mensagens:</strong> Leituras para o seu signo e energias da semana.
+                        </div>
+                      </li>
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Textos Aprofundados:</strong> Análises completas dos ciclos lunares e trânsitos celestes.
+                        </div>
+                      </li>
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Atualizações Contínuas:</strong> Todas as previsões reunidas de forma acessível.
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="media-actions-group">
+                      <a href="https://www.facebook.com/share/1EnRJUXWRF/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn btn-action-main btn-action-fb">
+                        <svg class="icon-svg"><use href="#icon-facebook"></use></svg> Acompanhar Página no Facebook
+                      </a>
+                      <a href="#catalogo" class="btn btn-action-outline">
+                        <svg class="icon-svg"><use href="#icon-book"></use></svg> Ver Consultas Online
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div class="media-panel-preview">
+                    <a href="https://www.facebook.com/share/1EnRJUXWRF/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="media-preview-card preview-fb">
+                      <div class="preview-glow-halo halo-fb"></div>
+                      <div class="preview-play-icon icon-glow-fb">
+                        <svg class="icon-svg"><use href="#icon-facebook"></use></svg>
+                      </div>
+                      <div class="preview-brand-logo">
+                        <img src="assets/logo_buscadora.jpg" alt="Logo Buscadora Astral" />
+                      </div>
+                      <h4 class="preview-handle">BUSCADORA ASTRAL</h4>
+                      <p class="preview-tagline">Mensagens &amp; previsões</p>
+                      <div class="preview-divider"></div>
+                      <span class="preview-cta-link">CLIQUE PARA VER NO FACEBOOK ↗</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <h3 class="channel-card-title">Previsões e muito mais</h3>
-              <p class="channel-card-desc">
-                Um espaço para acompanhar previsões, reflexões, astrologia, cartas, espiritualidade e conteúdos rápidos sobre as energias do momento — com aquele conteúdo que vai além das previsões.
-              </p>
-            </div>
-            <div class="channel-card-footer">
-              <a href="https://www.threads.net/@buscadora.astral" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-threads">
-                <svg class="icon-svg"><use href="#icon-threads"></use></svg> Seguir no Threads
-              </a>
-              <span class="channel-handle">@buscadora.astral</span>
-            </div>
-          </div>
 
-          <!-- CARD 6: TIKTOK -->
-          <div class="channel-card card-tiktok reveal-on-scroll">
-            <div class="channel-card-glow glow-tt"></div>
-            <div>
-              <div class="channel-card-header">
-                <div class="channel-icon-wrapper icon-tt">
-                  <svg class="icon-svg"><use href="#icon-tiktok"></use></svg>
-                </div>
-                <div class="channel-meta">
-                  <span class="channel-badge badge-tt">Vídeos & Bastidores</span>
-                  <h4>TikTok</h4>
+              <!-- PAINEL 6: THREADS -->
+              <div class="media-panel-tab media-tab-panel" id="tab-threads">
+                <div class="media-panel-grid">
+                  <div class="media-panel-info">
+                    <div class="media-pill-badge badge-threads">
+                      <svg class="icon-svg"><use href="#icon-threads"></use></svg> REFLEXÕES EM TEMPO REAL
+                    </div>
+                    <h3 class="media-content-title">REFLEXÕES &amp; AUTOCONHECIMENTO</h3>
+                    <p class="media-content-desc">
+                      Um espaço para acompanhar reflexões, astrologia, cartas, espiritualidade e conteúdos rápidos sobre as energias do momento — com aquele conteúdo que vai além das previsões.
+                    </p>
+                    <ul class="media-highlights-list">
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Conexão Instantânea:</strong> Reflexões no calor das sincronicidades cósmicas do momento.
+                        </div>
+                      </li>
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Conversas Diretas:</strong> Espaço dinâmico para interagir e tirar dúvidas pontuais.
+                        </div>
+                      </li>
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Além das Previsões:</strong> Fragmentos sobre a vida, intuição e práticas diárias.
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="media-actions-group">
+                      <a href="https://www.threads.net/@buscadora.astral" target="_blank" rel="noopener noreferrer" class="btn btn-action-main btn-action-threads">
+                        <svg class="icon-svg"><use href="#icon-threads"></use></svg> Seguir no Threads
+                      </a>
+                      <a href="#catalogo" class="btn btn-action-outline">
+                        <svg class="icon-svg"><use href="#icon-book"></use></svg> Ver Consultas Online
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div class="media-panel-preview">
+                    <a href="https://www.threads.net/@buscadora.astral" target="_blank" rel="noopener noreferrer" class="media-preview-card preview-threads">
+                      <div class="preview-glow-halo halo-threads"></div>
+                      <div class="preview-play-icon icon-glow-threads">
+                        <svg class="icon-svg"><use href="#icon-threads"></use></svg>
+                      </div>
+                      <div class="preview-brand-logo">
+                        <img src="assets/logo_buscadora.jpg" alt="Logo Buscadora Astral" />
+                      </div>
+                      <h4 class="preview-handle">@BUSCADORA.ASTRAL</h4>
+                      <p class="preview-tagline">Reflexões &amp; autoconhecimento</p>
+                      <div class="preview-divider"></div>
+                      <span class="preview-cta-link">CLIQUE PARA LER NO THREADS ↗</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <h3 class="channel-card-title">Previsões, astrologia e bastidores</h3>
-              <p class="channel-card-desc">
-                Previsões astrológicas dinâmicas, leituras rápidas com as cartas, curiosidades sobre os signos e os bastidores das consultas da Buscadora Astral.
-              </p>
-            </div>
-            <div class="channel-card-footer">
-              <a href="https://www.tiktok.com/@buscadora.astral?_r=1&_t=ZS-99cZCq4mDjx" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-tiktok">
-                <svg class="icon-svg"><use href="#icon-tiktok"></use></svg> Seguir no TikTok
-              </a>
-              <span class="channel-handle">@buscadora.astral</span>
-            </div>
-          </div>
 
-          <!-- CARD 7: SPOTIFY -->
-          <div class="channel-card card-spotify reveal-on-scroll">
-            <div class="channel-card-glow glow-sp"></div>
-            <div>
-              <div class="channel-card-header">
-                <div class="channel-icon-wrapper icon-sp">
-                  <svg class="icon-svg"><use href="#icon-spotify"></use></svg>
-                </div>
-                <div class="channel-meta">
-                  <span class="channel-badge badge-sp">Perfil & Playlists</span>
-                  <h4>Spotify</h4>
+              <!-- PAINEL 7: SPOTIFY -->
+              <div class="media-panel-tab media-tab-panel" id="tab-spotify">
+                <div class="media-panel-grid">
+                  <div class="media-panel-info">
+                    <div class="media-pill-badge badge-sp">
+                      <svg class="icon-svg"><use href="#icon-spotify"></use></svg> PERFIL &amp; PLAYLISTS
+                    </div>
+                    <h3 class="media-content-title">PLAYLISTS, MANTRAS &amp; PONTOS DE ORIXÁS</h3>
+                    <p class="media-content-desc">
+                      Playlists musicais para cada signo, mantras para acalmar a mente e elevar a vibração, e pontos sagrados de Orixás para momentos de fé, força e conexão.
+                    </p>
+                    <ul class="media-highlights-list">
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Playlists dos 12 Signos:</strong> A frequência sonora que sintoniza com a sua energia nata.
+                        </div>
+                      </li>
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Mantras &amp; Meditações:</strong> Áudios harmônicos para limpar o campo áurico e focar a mente.
+                        </div>
+                      </li>
+                      <li>
+                        <span class="highlight-star">✦</span>
+                        <div class="highlight-text">
+                          <strong>Pontos Sagrados:</strong> Músicas sagradas para momentos de devoção, firmeza e fé.
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="media-actions-group">
+                      <a href="https://open.spotify.com/user/31qgppuoqwcsnlwxddd2i5maxgmy?si=hXJttdGvTJyCaPHKV1Mhbg&amp;utm_source=copy-link" target="_blank" rel="noopener noreferrer" class="btn btn-action-main btn-action-sp">
+                        <svg class="icon-svg"><use href="#icon-spotify"></use></svg> Ouvir no Spotify
+                      </a>
+                      <a href="#catalogo" class="btn btn-action-outline">
+                        <svg class="icon-svg"><use href="#icon-book"></use></svg> Ver Consultas Online
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div class="media-panel-preview">
+                    <a href="https://open.spotify.com/user/31qgppuoqwcsnlwxddd2i5maxgmy?si=hXJttdGvTJyCaPHKV1Mhbg&amp;utm_source=copy-link" target="_blank" rel="noopener noreferrer" class="media-preview-card preview-sp">
+                      <div class="preview-glow-halo halo-sp"></div>
+                      <div class="preview-play-icon icon-glow-sp">
+                        <svg class="icon-svg"><use href="#icon-spotify"></use></svg>
+                      </div>
+                      <div class="preview-brand-logo">
+                        <img src="assets/logo_buscadora.jpg" alt="Logo Buscadora Astral" />
+                      </div>
+                      <h4 class="preview-handle">BUSCADORA ASTRAL</h4>
+                      <p class="preview-tagline">Playlists, mantras &amp; pontos de Orixás</p>
+                      <div class="preview-divider"></div>
+                      <span class="preview-cta-link">CLIQUE PARA OUVIR NO SPOTIFY ↗</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <h3 class="channel-card-title">Signos, músicas e conexão</h3>
-              <p class="channel-card-desc">
-                Playlists musicais para cada signo, mantras para acalmar a mente e elevar a vibração, e pontos sagrados de Orixás para momentos de fé, força e conexão.
-              </p>
-            </div>
-            <div class="channel-card-footer">
-              <a href="https://open.spotify.com/user/31qgppuoqwcsnlwxddd2i5maxgmy?si=hXJttdGvTJyCaPHKV1Mhbg&utm_source=copy-link" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-spotify">
-                <svg class="icon-svg"><use href="#icon-spotify"></use></svg> Ouvir no Spotify
-              </a>
-              <span class="channel-handle">Spotify Oficial</span>
-            </div>
-          </div>
 
+            </main>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- SCRIPT INFALÍVEL PARA ALTERNÂNCIA DE CANAIS (EXECUÇÃO IMEDIATA) -->
+    <script>
+      function selectMediaChannel(targetTab) {
+        if (!targetTab) return;
+        
+        // 1. Atualiza os botões do menu lateral
+        var allBtns = document.querySelectorAll('.media-sidebar-btn, .media-tab-btn');
+        allBtns.forEach(function(btn) {
+          if (btn.getAttribute('data-tab') === targetTab) {
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+          } else {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+          }
+        });
+
+        // 2. Atualiza os painéis correspondentes
+        var allPanels = document.querySelectorAll('.media-panel-tab, .media-tab-panel');
+        allPanels.forEach(function(panel) {
+          if (panel.id === 'tab-' + targetTab) {
+            panel.classList.add('active');
+            panel.querySelectorAll('.reveal-on-scroll').forEach(function(el) {
+              el.classList.add('revealed');
+            });
+          } else {
+            panel.classList.remove('active');
+          }
+        });
+      }
+
+      // Delegação global de cliques para suporte total
+      document.addEventListener('click', function(e) {
+        var btn = e.target.closest('.media-sidebar-btn, .media-tab-btn');
+        if (btn) {
+          var tab = btn.getAttribute('data-tab');
+          if (tab) {
+            selectMediaChannel(tab);
+          }
+        }
+      });
+    </script>
 
     <!-- ==================== SEÇÃO SOBRE A PATRÍCIA ==================== -->
     <section class="about-section" id="sobre">
@@ -940,7 +1329,7 @@
   <script src="js/stars.js"></script>
   <script src="js/lunar-data.js"></script>
   <script src="js/oracle.js"></script>
-  <script src="js/blog.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/blog.js?v=20260922_3"></script>
+  <script src="js/app.js?v=20260922_1"></script>
 </body>
 </html>

@@ -96,13 +96,13 @@ function initOracle() {
       cardEl.setAttribute('data-index', index);
       cardEl.innerHTML = `
         <div class="tarot-card-face card-back">
-          <div class="card-back-pattern">
-            <span class="card-back-star">✧</span>
-            <small class="card-back-brand">Buscadora Astral</small>
+          <div class="card-back-ornament-frame">
+            <span class="card-back-star top-star">✦</span>
+            <span class="card-back-brand">BUSCADORA ASTRAL</span>
             <div class="card-back-logo-wrapper">
               <img src="assets/logo_buscadora.jpg" alt="Logo Buscadora Astral" class="card-back-logo-img" />
             </div>
-            <small class="card-back-hint">✦ Toque para tirar ✦</small>
+            <span class="card-back-star bottom-star">✦</span>
           </div>
         </div>
         <div class="tarot-card-face card-front">

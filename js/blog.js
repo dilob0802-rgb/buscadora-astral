@@ -44,12 +44,37 @@ const defaultBlogArticles = [
 
       <h3>As 4 Fases e seus Poderes:</h3>
       <ul>
-        <li><strong>Lua Nova:</strong> Plantio de intenções, novos começos e planejamento silencioso.</li>
-        <li><strong>Lua Crescente:</strong> Ação, superação de obstáculos e impulsionamento prático.</li>
-        <li><strong>Lua Cheia:</strong> Ápice do magnetismo, clareza total e celebração de resultados.</li>
-        <li><strong>Lua Minguante:</strong> Desapego, limpeza de pendências, descanso e discernimento.</li>
+        <li><strong>Lua Nova:</strong> Plantio de intenções, novos começos e planejamento silencioso. Momento ideal para traçar metas.</li>
+        <li><strong>Lua Crescente:</strong> Ação focada, superação de obstáculos e impulsionamento prático de ideias.</li>
+        <li><strong>Lua Cheia:</strong> Ápice do magnetismo, clareza total, colheita e celebração de resultados.</li>
+        <li><strong>Lua Minguante:</strong> Desapego, limpeza de pendências, descanso, revisão e discernimento.</li>
       </ul>
-      <p>Acompanhe o widget de Céu do Dia em nossa página inicial para saber o trânsito da Lua a cada momento!</p>
+
+      <!-- CHAMADA DE AÇÃO PARA O E-BOOK -->
+      <div class="article-cta-box">
+        <div class="article-cta-header">
+          <span class="cta-mini-badge">✦ GUIA PRÁTICO PASSO A PASSO</span>
+          <h4>Quer aprender a aplicar cada ciclo da Lua e a sua numerologia a seu favor?</h4>
+        </div>
+        <div class="article-cta-content">
+          <div class="article-cta-img-col">
+            <img src="assets/foto_ebook.jpg" alt="E-book Crie Seu Planner Esotérico" class="article-cta-book-img">
+          </div>
+          <div class="article-cta-text-col">
+            <p>
+              No e-book oficial <strong>&ldquo;Crie Seu Planner Esotérico&rdquo;</strong>, você encontra o método prático para unir os <strong>trânsitos lunares em cada signo</strong> aos seus números pessoais (dia, mês e ano pessoal). Descubra os momentos exatos para agir, pausar e tomar decisões com segurança e assertividade.
+            </p>
+            <div class="article-cta-actions">
+              <a href="https://chk.eduzz.com/ah5vey2i?currency=BRL" target="_blank" rel="noopener noreferrer" class="btn-cta-eduzz">
+                <svg class="icon-svg stroke" style="width: 1.1em; height: 1.1em;"><use href="#icon-cart"></use></svg> Comprar E-book por R$ 47 na Eduzz
+              </a>
+              <a href="#ebooks" class="btn-cta-details" onclick="document.getElementById('modal-close-btn').click();">
+                Conhecer conteúdo completo no site ↓
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     `
   },
   {
@@ -109,18 +134,69 @@ const defaultBlogArticles = [
     authorRole: "Cartomancia",
     image: "assets/oracle_cards.jpg",
     date: "22 Ago",
-    title: "MANDALA ANUAL E PREVISÕES: COMO PLANEJAR SEU ANO COM SEGURANÇA",
-    excerpt: "Entenda o poder da leitura de 12 casas para antecipar oportunidades em cada mês do ano e agir na hora certa.",
+    title: "MANDALA ANUAL E PREVISÕES: UM OLHAR PARA O SEU ANO COM CLAREZA E DIREÇÃO",
+    excerpt: "A Mandala Anual é uma leitura completa para visualizar as principais energias e tendências dos próximos 12 meses, com clareza e direção para fazer suas escolhas com consciência.",
     content: `
-      <p>A Mandala Anual é uma das tiragens mais completas e procuradas na Cartomancia. Nela, abrimos uma lâmina para cada um dos doze meses do seu ciclo, mapeando saúde, finanças, amor, família e realizações.</p>
-      
-      <h3>Benefícios de fazer sua Mandala:</h3>
-      <ul>
-        <li>Saber em quais meses investir e em quais ter mais cautela</li>
-        <li>Prever momentos favoráveis para viagens, concursos e acordos</li>
-        <li>Orientação precisa para não remar contra a maré</li>
+      <p class="article-lead" style="font-family: var(--font-serif-sub); font-size: 1.35rem; font-style: italic; color: #4a1538; margin-bottom: 1.5rem; line-height: 1.4;">
+        🌙 Um olhar para o seu ano com clareza e direção
+      </p>
+
+      <p>
+        A <strong>Mandala Anual</strong> é uma leitura completa para quem deseja visualizar as principais energias e tendências dos próximos 12 meses, entendendo quais áreas da vida podem ganhar movimento, apresentar oportunidades, pedir atenção ou passar por transformações.
+      </p>
+
+      <p>
+        A proposta não é determinar o que vai acontecer, mas oferecer um mapa de possibilidades para você atravessar o ciclo com mais consciência e fazer suas escolhas com maior clareza.
+      </p>
+
+      <div class="mystic-divider" style="margin: 2rem 0;"><span style="color: var(--gold-dark);">✦ ✦ ✦</span></div>
+
+      <h3>✨ O que você recebe:</h3>
+      <ul class="mandala-checklist">
+        <li>Energia geral do ano</li>
+        <li>Você e seu momento pessoal</li>
+        <li>Finanças</li>
+        <li>Moradia e família</li>
+        <li>Projetos futuros</li>
+        <li>Caminho amoroso</li>
+        <li>Lazer e vida social</li>
+        <li>Área profissional</li>
+        <li>Espiritualidade</li>
+        <li>Energia de cada trimestre do ano</li>
+        <li>Área da vida com potencial de prosperidade</li>
+        <li>Área que pode trazer finalizações e encerramentos</li>
+        <li>Área que pode apresentar desafios e obstáculos</li>
+        <li>Pontos que pedem atenção, inclusive situações de inveja ou interferências externas</li>
+        <li>Possibilidades de desenvolvimento e transformação</li>
+        <li>Conselho para o seu ciclo</li>
+        <li>Afirmação para acompanhar o ano</li>
       </ul>
-      <p>É uma ferramenta maravilhosa de planejamento estratégico pessoal para viver o ano com total tranquilidade!</p>
+
+      <h3>🌟 Para quem é?</h3>
+      <p>
+        Para quem está começando um novo ciclo e quer ter uma visão mais ampla do ano, compreender onde pode haver movimento, oportunidades, desafios e encerramentos, além de receber orientações para lidar melhor com cada período.
+      </p>
+      <p>
+        É uma leitura para se preparar, observar tendências e tomar decisões — não para ficar preso a uma previsão.
+      </p>
+
+      <h3>🔮 O objetivo da Mandala</h3>
+      <p>
+        Ter uma visão panorâmica do seu ano para entender onde colocar energia, o que merece atenção, quais áreas podem se movimentar e quais ciclos podem estar chegando ao fim.
+      </p>
+
+      <blockquote>"As cartas mostram tendências e possibilidades. Quem decide os próximos passos é você."</blockquote>
+
+      <!-- BOX DE CONTATO DIRETO WHATSAPP -->
+      <div class="article-whatsapp-box">
+        <div class="article-whatsapp-text">
+          <h4>Quer olhar para o seu próximo ciclo com mais clareza?</h4>
+          <p>Conheça a <strong>Mandala Anual</strong> e descubra quais energias podem acompanhar o seu ano.</p>
+        </div>
+        <a href="https://wa.me/5521969689509?text=Ol%C3%A1%2C%20Patr%C3%ADcia!%20Li%20o%20artigo%20sobre%20a%20Mandala%20Anual%20e%20Previs%C3%B5es%20e%20gostaria%20de%20agendar%20a%20minha%20leitura." target="_blank" rel="noopener noreferrer" class="btn-article-whatsapp">
+          <svg class="icon-svg" style="width: 1.2em; height: 1.2em;"><use href="#icon-whatsapp"></use></svg> Falar no WhatsApp &amp; Agendar Mandala
+        </a>
+      </div>
     `
   },
   {
@@ -131,15 +207,111 @@ const defaultBlogArticles = [
     authorRole: "Numerologia",
     image: "assets/cartomancia.jpg",
     date: "19 Ago",
-    title: "NÚMERO DE DESTINO: A MISSÃO OCULTA NA SUA DATA DE NASCIMENTO",
-    excerpt: "Aprenda o que a soma da sua data de nascimento revela sobre o seu propósito maior e os aprendizados desta existência.",
+    title: "ANO, MÊS E DIA PESSOAL: ENTENDA E ACOMPANHE SEUS CICLOS",
+    excerpt: "Descubra como o Ano, Mês e Dia Pessoal funcionam como níveis de aproximação para você organizar sua rotina e fazer escolhas com mais consciência.",
     content: `
-      <p>O Número de Destino é a soma reduzida do dia, mês e ano em que você veio ao mundo. Ele representa a estrada principal por onde você caminha e as lições mestras que sua alma escolheu aprender.</p>
-      
-      <blockquote>"Quando você compreende seu Número de Destino, a sensação de estar perdida dá lugar à clareza e ao propósito."</blockquote>
+      <p>
+        O <strong>Ano Pessoal</strong> mostra a energia predominante do seu ciclo e ajuda a compreender os principais temas que podem ganhar força ao longo daquele ano.
+      </p>
 
-      <h3>O que a Numerologia do Destino esclarece:</h3>
-      <p>Em nossa consulta e no E-book oficial da Buscadora Astral, decodificamos a vibração de cada número (de 1 a 9, além dos números mestres 11 e 22), oferecendo um mapa direto para suas realizações.</p>
+      <p>
+        Mas, para trazer essa visão para a vida cotidiana, podemos acompanhar também o <strong>Mês Pessoal e o Dia Pessoal</strong>. Eles funcionam como níveis de aproximação: o ano mostra o panorama, o mês mostra o momento e o dia ajuda a observar a energia do cotidiano.
+      </p>
+
+      <div class="example-box" style="background: rgba(229, 195, 101, 0.12); border-left: 3px solid var(--gold-dark); padding: 1.2rem 1.4rem; border-radius: var(--radius-sm); margin: 1.8rem 0;">
+        <h4 style="font-family: var(--font-serif-title); color: #4a1538; margin-top: 0; margin-bottom: 0.8rem; font-size: 1.15rem;">
+          Por exemplo:
+        </h4>
+        <p style="margin-bottom: 0.8rem;">
+          Imagine uma pessoa que esteja vivendo um <strong>Ano Pessoal 1</strong>, associado a iniciativa, recomeços, autonomia e abertura de novos caminhos.
+        </p>
+        <p style="margin-bottom: 0.8rem;">
+          Em determinado momento, ela entra em um <strong>Mês Pessoal 5</strong>, trazendo uma dinâmica mais voltada para movimento, mudanças, novidades e flexibilidade.
+        </p>
+        <p style="margin-bottom: 0.8rem;">
+          E, dentro desse mês, chega a um <strong>Dia Pessoal 8</strong>, que pode ser utilizado como um momento para dar mais atenção a questões práticas, decisões, organização financeira, resultados e objetivos.
+        </p>
+        <div style="border-top: 1px dashed rgba(170, 133, 43, 0.35); padding-top: 0.8rem; margin-top: 0.8rem;">
+          <p style="margin-bottom: 0.4rem; font-weight: 600; color: #3b092b;">👉 Perceba como as três informações se complementam:</p>
+          <ul style="list-style: none; padding-left: 0.5rem; margin: 0;">
+            <li style="margin-bottom: 0.4rem;"><strong>Ano 1:</strong> <em>&ldquo;Estou em um ciclo de novos começos.&rdquo;</em></li>
+            <li style="margin-bottom: 0.4rem;"><strong>Mês 5:</strong> <em>&ldquo;Neste período, mudanças e movimento ganham destaque.&rdquo;</em></li>
+            <li style="margin-bottom: 0.4rem;"><strong>Dia 8:</strong> <em>&ldquo;Hoje, posso direcionar minha energia para questões práticas e resultados.&rdquo;</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <p>
+        Isso não significa que a pessoa <em>deva</em> começar algo naquele dia ou que determinado acontecimento necessariamente irá ocorrer. A Numerologia funciona como uma <strong>ferramenta de orientação e autoconhecimento</strong>: você observa a energia do período e decide como pode utilizá-la de maneira consciente.
+      </p>
+
+      <div class="mystic-divider" style="margin: 2rem 0;"><span style="color: var(--gold-dark);">✧ ✧ ✧</span></div>
+
+      <h3>✨ Do macro ao cotidiano</h3>
+      <ul class="macro-cycles-list" style="list-style: none; padding: 0; margin: 1.5rem 0;">
+        <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
+          <span style="position: absolute; left: 0; color: var(--gold-dark);">✦</span>
+          <strong>Ano Pessoal →</strong> compreenda o grande ciclo.
+        </li>
+        <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
+          <span style="position: absolute; left: 0; color: var(--gold-dark);">✦</span>
+          <strong>Mês Pessoal →</strong> organize suas prioridades dentro desse ciclo.
+        </li>
+        <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
+          <span style="position: absolute; left: 0; color: var(--gold-dark);">✦</span>
+          <strong>Dia Pessoal →</strong> observe como trabalhar aquela energia no seu dia a dia.
+        </li>
+      </ul>
+
+      <blockquote>
+        "Quanto mais você acompanha essas camadas, mais consegue transformar a Numerologia de uma simples interpretação de números em uma ferramenta prática para compreender seus ciclos, organizar sua rotina e fazer escolhas com mais consciência."
+      </blockquote>
+
+      <!-- BOX DE CHAMADA DUAL: E-BOOK OU MAPA ANUAL PERSONALIZADO -->
+      <div class="article-cta-box" style="margin-top: 2.5rem;">
+        <div class="article-cta-header">
+          <span class="cta-mini-badge">🔮 AUTOCONHECIMENTO PRÁTICO</span>
+          <h4>Quer acompanhar seus ciclos com mais clareza?</h4>
+          <p style="color: #ede2f5; font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0;">Você pode escolher a forma que combina mais com o que procura:</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; margin: 1.5rem 0; position: relative; z-index: 1;">
+          <!-- Opção 1: E-book -->
+          <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(229, 195, 101, 0.25); border-radius: var(--radius-sm); padding: 1.2rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="font-size: 1.05rem; color: var(--gold-light); font-weight: 700; display: block; margin-bottom: 0.4rem;">📖 Quer aprender por conta própria?</span>
+              <p style="font-size: 0.9rem; color: #f1e4fa !important; margin-bottom: 1rem !important; line-height: 1.5;">
+                Conheça o <strong>e-book de Numerologia &amp; Planner Esotérico</strong>, onde você aprende a calcular e interpretar seus ciclos para acompanhar não apenas este ano, mas também os próximos.
+              </p>
+            </div>
+            <a href="https://chk.eduzz.com/ah5vey2i?currency=BRL" target="_blank" rel="noopener noreferrer" class="btn-cta-eduzz" style="justify-content: center; width: 100%;">
+              <svg class="icon-svg stroke" style="width: 1.1em; height: 1.1em;"><use href="#icon-cart"></use></svg> Comprar E-book (Eduzz R$ 47)
+            </a>
+          </div>
+
+          <!-- Opção 2: Mapa Anual Personalizado WhatsApp -->
+          <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(229, 195, 101, 0.25); border-radius: var(--radius-sm); padding: 1.2rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="font-size: 1.05rem; color: var(--gold-light); font-weight: 700; display: block; margin-bottom: 0.4rem;">✨ Prefere tudo pronto e personalizado?</span>
+              <p style="font-size: 0.9rem; color: #f1e4fa !important; margin-bottom: 1rem !important; line-height: 1.5;">
+                Adquira seu <strong>Mapa Anual Personalizado</strong>, com uma análise completa feita sob medida de acordo com seus números, temas, potenciais e desafios do novo ciclo.
+              </p>
+            </div>
+            <a href="https://wa.me/5521969689509?text=Ol%C3%A1%2C%20Patr%C3%ADcia!%20Li%20o%20artigo%20sobre%20Ano%2C%20M%C3%AAs%20e%20Dia%20Pessoal%20e%20gostaria%20de%20solicitar%20meu%20Mapa%20Anual%20Personalizado." target="_blank" rel="noopener noreferrer" class="btn btn-article-whatsapp" style="justify-content: center; width: 100%; padding: 0.75rem 1rem;">
+              <svg class="icon-svg" style="width: 1.1em; height: 1.1em;"><use href="#icon-whatsapp"></use></svg> Pedir Mapa no WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div style="text-align: center; border-top: 1px dashed rgba(229, 195, 101, 0.25); padding-top: 1rem; position: relative; z-index: 1;">
+          <p style="font-size: 0.88rem; color: #d8c8e6 !important; margin: 0 !important;">
+            📲 Para tirar dúvidas sobre o e-book ou solicitar seu Mapa Anual, 
+            <a href="https://wa.me/5521969689509?text=Ol%C3%A1%2C%20Patr%C3%ADcia!%20Gostaria%20de%20saber%20mais%20sobre%20o%20e-book%20e%20o%20Mapa%20Anual%20de%20Numerologia." target="_blank" rel="noopener noreferrer" style="color: var(--gold-primary); text-decoration: underline; font-weight: 600;">
+              fale diretamente comigo no WhatsApp
+            </a>.
+          </p>
+        </div>
+      </div>
     `
   }
 ];
