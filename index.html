@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Marcellus&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="css/style.css?v=20260922_6">
+  <link rel="stylesheet" href="css/style.css?v=20260922_7">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="icon" type="image/jpeg" href="assets/logo_buscadora.jpg">
 </head>
@@ -589,91 +589,111 @@
                 <h4 class="media-sidebar-title">Selecione o Canal</h4>
               </div>
               
-              <nav class="media-sidebar-nav">
-                <!-- 1: YouTube -->
-                <button type="button" class="media-sidebar-btn media-tab-btn active" data-tab="youtube" onclick="selectMediaChannel('youtube')">
-                  <div class="media-nav-icon icon-yt">
-                    <svg class="icon-svg"><use href="#icon-youtube"></use></svg>
+              <!-- CONTAINER DO MENU DROPDOWN ELEGANTE (MOBILE) / NAVEGAÇÃO LATERAL (DESKTOP) -->
+              <div class="media-dropdown-wrapper">
+                <!-- BOTÃO GATILHO QUE APARECE NO CELULAR -->
+                <button type="button" class="media-dropdown-trigger" id="media-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false" onclick="toggleMediaDropdown(event)">
+                  <div class="media-dropdown-current">
+                    <div class="media-nav-icon icon-yt" id="mobile-trigger-icon">
+                      <svg class="icon-svg"><use href="#icon-youtube"></use></svg>
+                    </div>
+                    <div class="media-nav-info">
+                      <span class="media-nav-name" id="mobile-trigger-name">YouTube</span>
+                      <span class="media-nav-sub" id="mobile-trigger-sub">Previsões &amp; autoconhecimento</span>
+                    </div>
                   </div>
-                  <div class="media-nav-info">
-                    <span class="media-nav-name">YouTube</span>
-                    <span class="media-nav-sub">Previsões &amp; autoconhecimento</span>
+                  <div class="media-dropdown-chevron">
+                    <span class="chevron-hint">Trocar</span>
+                    <span class="chevron-icon">▾</span>
                   </div>
-                  <div class="media-nav-indicator"></div>
                 </button>
 
-                <!-- 2: Instagram Oficial -->
-                <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="instagram-oficial" onclick="selectMediaChannel('instagram-oficial')">
-                  <div class="media-nav-icon icon-ig">
-                    <svg class="icon-svg"><use href="#icon-instagram"></use></svg>
-                  </div>
-                  <div class="media-nav-info">
-                    <span class="media-nav-name">@buscadora.astral</span>
-                    <span class="media-nav-sub">Mensagens &amp; previsões</span>
-                  </div>
-                  <div class="media-nav-indicator"></div>
-                </button>
+                <nav class="media-sidebar-nav" id="media-sidebar-nav">
+                  <!-- 1: YouTube -->
+                  <button type="button" class="media-sidebar-btn media-tab-btn active" data-tab="youtube" onclick="selectMediaChannel('youtube')">
+                    <div class="media-nav-icon icon-yt">
+                      <svg class="icon-svg"><use href="#icon-youtube"></use></svg>
+                    </div>
+                    <div class="media-nav-info">
+                      <span class="media-nav-name">YouTube</span>
+                      <span class="media-nav-sub">Previsões &amp; autoconhecimento</span>
+                    </div>
+                    <div class="media-nav-indicator"></div>
+                  </button>
 
-                <!-- 3: Instagram Autora -->
-                <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="instagram-autora" onclick="selectMediaChannel('instagram-autora')">
-                  <div class="media-nav-icon icon-ig">
-                    <svg class="icon-svg"><use href="#icon-instagram"></use></svg>
-                  </div>
-                  <div class="media-nav-info">
-                    <span class="media-nav-name">@buskadora</span>
-                    <span class="media-nav-sub">Mensagens &amp; previsões</span>
-                  </div>
-                  <div class="media-nav-indicator"></div>
-                </button>
+                  <!-- 2: Instagram Oficial -->
+                  <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="instagram-oficial" onclick="selectMediaChannel('instagram-oficial')">
+                    <div class="media-nav-icon icon-ig">
+                      <svg class="icon-svg"><use href="#icon-instagram"></use></svg>
+                    </div>
+                    <div class="media-nav-info">
+                      <span class="media-nav-name">@buscadora.astral</span>
+                      <span class="media-nav-sub">Mensagens &amp; previsões</span>
+                    </div>
+                    <div class="media-nav-indicator"></div>
+                  </button>
 
-                <!-- 4: TikTok -->
-                <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="tiktok" onclick="selectMediaChannel('tiktok')">
-                  <div class="media-nav-icon icon-tt">
-                    <svg class="icon-svg"><use href="#icon-tiktok"></use></svg>
-                  </div>
-                  <div class="media-nav-info">
-                    <span class="media-nav-name">TikTok</span>
-                    <span class="media-nav-sub">Astrologia &amp; bastidores</span>
-                  </div>
-                  <div class="media-nav-indicator"></div>
-                </button>
+                  <!-- 3: Instagram Autora -->
+                  <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="instagram-autora" onclick="selectMediaChannel('instagram-autora')">
+                    <div class="media-nav-icon icon-ig">
+                      <svg class="icon-svg"><use href="#icon-instagram"></use></svg>
+                    </div>
+                    <div class="media-nav-info">
+                      <span class="media-nav-name">@buskadora</span>
+                      <span class="media-nav-sub">Mensagens &amp; previsões</span>
+                    </div>
+                    <div class="media-nav-indicator"></div>
+                  </button>
 
-                <!-- 5: Facebook -->
-                <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="facebook" onclick="selectMediaChannel('facebook')">
-                  <div class="media-nav-icon icon-fb">
-                    <svg class="icon-svg"><use href="#icon-facebook"></use></svg>
-                  </div>
-                  <div class="media-nav-info">
-                    <span class="media-nav-name">Facebook</span>
-                    <span class="media-nav-sub">Mensagens &amp; previsões</span>
-                  </div>
-                  <div class="media-nav-indicator"></div>
-                </button>
+                  <!-- 4: TikTok -->
+                  <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="tiktok" onclick="selectMediaChannel('tiktok')">
+                    <div class="media-nav-icon icon-tt">
+                      <svg class="icon-svg"><use href="#icon-tiktok"></use></svg>
+                    </div>
+                    <div class="media-nav-info">
+                      <span class="media-nav-name">TikTok</span>
+                      <span class="media-nav-sub">Astrologia &amp; bastidores</span>
+                    </div>
+                    <div class="media-nav-indicator"></div>
+                  </button>
 
-                <!-- 6: Threads -->
-                <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="threads" onclick="selectMediaChannel('threads')">
-                  <div class="media-nav-icon icon-threads">
-                    <svg class="icon-svg"><use href="#icon-threads"></use></svg>
-                  </div>
-                  <div class="media-nav-info">
-                    <span class="media-nav-name">Threads</span>
-                    <span class="media-nav-sub">Reflexões &amp; autoconhecimento</span>
-                  </div>
-                  <div class="media-nav-indicator"></div>
-                </button>
+                  <!-- 5: Facebook -->
+                  <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="facebook" onclick="selectMediaChannel('facebook')">
+                    <div class="media-nav-icon icon-fb">
+                      <svg class="icon-svg"><use href="#icon-facebook"></use></svg>
+                    </div>
+                    <div class="media-nav-info">
+                      <span class="media-nav-name">Facebook</span>
+                      <span class="media-nav-sub">Mensagens &amp; previsões</span>
+                    </div>
+                    <div class="media-nav-indicator"></div>
+                  </button>
 
-                <!-- 7: Spotify -->
-                <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="spotify" onclick="selectMediaChannel('spotify')">
-                  <div class="media-nav-icon icon-sp">
-                    <svg class="icon-svg"><use href="#icon-spotify"></use></svg>
-                  </div>
-                  <div class="media-nav-info">
-                    <span class="media-nav-name">Spotify</span>
-                    <span class="media-nav-sub">Playlists, mantras &amp; pontos de Orixás</span>
-                  </div>
-                  <div class="media-nav-indicator"></div>
-                </button>
-              </nav>
+                  <!-- 6: Threads -->
+                  <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="threads" onclick="selectMediaChannel('threads')">
+                    <div class="media-nav-icon icon-threads">
+                      <svg class="icon-svg"><use href="#icon-threads"></use></svg>
+                    </div>
+                    <div class="media-nav-info">
+                      <span class="media-nav-name">Threads</span>
+                      <span class="media-nav-sub">Reflexões &amp; autoconhecimento</span>
+                    </div>
+                    <div class="media-nav-indicator"></div>
+                  </button>
+
+                  <!-- 7: Spotify -->
+                  <button type="button" class="media-sidebar-btn media-tab-btn" data-tab="spotify" onclick="selectMediaChannel('spotify')">
+                    <div class="media-nav-icon icon-sp">
+                      <svg class="icon-svg"><use href="#icon-spotify"></use></svg>
+                    </div>
+                    <div class="media-nav-info">
+                      <span class="media-nav-name">Spotify</span>
+                      <span class="media-nav-sub">Playlists, mantras &amp; pontos de Orixás</span>
+                    </div>
+                    <div class="media-nav-indicator"></div>
+                  </button>
+                </nav>
+              </div>
             </aside>
 
             <!-- ÁREA DE CONTEÚDO PRINCIPAL (DIREITA DO QUADRADO) -->
@@ -1098,8 +1118,27 @@
       </div>
     </section>
 
-    <!-- SCRIPT INFALÍVEL PARA ALTERNÂNCIA DE CANAIS (EXECUÇÃO IMEDIATA) -->
+    <!-- SCRIPT INFALÍVEL PARA ALTERNÂNCIA DE CANAIS & DROPDOWN MÓVEL (EXECUÇÃO IMEDIATA) -->
     <script>
+      function toggleMediaDropdown(e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        var wrapper = document.querySelector('.media-dropdown-wrapper');
+        var trigger = document.getElementById('media-dropdown-trigger');
+        if (!wrapper || !trigger) return;
+        var isOpen = wrapper.classList.toggle('dropdown-open');
+        trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      }
+
+      function closeMediaDropdown() {
+        var wrapper = document.querySelector('.media-dropdown-wrapper');
+        var trigger = document.getElementById('media-dropdown-trigger');
+        if (wrapper) wrapper.classList.remove('dropdown-open');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      }
+
       function selectMediaChannel(targetTab) {
         if (!targetTab) return;
         
@@ -1127,16 +1166,35 @@
             panel.classList.remove('active');
           }
         });
+
+        // 3. Atualiza o visual do botão gatilho no mobile
+        var activeBtn = document.querySelector('.media-sidebar-btn[data-tab="' + targetTab + '"]');
+        if (activeBtn) {
+          var nameEl = activeBtn.querySelector('.media-nav-name');
+          var subEl = activeBtn.querySelector('.media-nav-sub');
+          var iconEl = activeBtn.querySelector('.media-nav-icon');
+          
+          var triggerName = document.getElementById('mobile-trigger-name');
+          var triggerSub = document.getElementById('mobile-trigger-sub');
+          var triggerIcon = document.getElementById('mobile-trigger-icon');
+
+          if (triggerName && nameEl) triggerName.textContent = nameEl.textContent;
+          if (triggerSub && subEl) triggerSub.textContent = subEl.textContent;
+          if (triggerIcon && iconEl) {
+            triggerIcon.className = iconEl.className;
+            triggerIcon.innerHTML = iconEl.innerHTML;
+          }
+        }
+
+        // 4. Fecha o dropdown após escolher o canal
+        closeMediaDropdown();
       }
 
-      // Delegação global de cliques para suporte total
+      // Fecha o dropdown se clicar fora
       document.addEventListener('click', function(e) {
-        var btn = e.target.closest('.media-sidebar-btn, .media-tab-btn');
-        if (btn) {
-          var tab = btn.getAttribute('data-tab');
-          if (tab) {
-            selectMediaChannel(tab);
-          }
+        var wrapper = document.querySelector('.media-dropdown-wrapper');
+        if (wrapper && wrapper.classList.contains('dropdown-open') && !wrapper.contains(e.target)) {
+          closeMediaDropdown();
         }
       });
     </script>
