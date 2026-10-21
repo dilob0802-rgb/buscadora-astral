@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Marcellus&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="css/style.css?v=20260922_7">
+  <link rel="stylesheet" href="css/style.css?v=20261021_1">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="icon" type="image/jpeg" href="assets/logo_buscadora.jpg">
 </head>
@@ -177,6 +177,16 @@
         <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       </symbol>
+
+      <!-- Aspas Místicas / Quote -->
+      <symbol id="icon-quote" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+      </symbol>
+
+      <!-- Marcador de Localização / Pin -->
+      <symbol id="icon-map-pin" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+      </symbol>
     </defs>
   </svg>
 
@@ -213,6 +223,7 @@
           </li>
           <li><a href="#canais" class="nav-link">Canais</a></li>
           <li><a href="#sobre" class="nav-link">Sobre Mim</a></li>
+          <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
         </ul>
       </nav>
 
@@ -1251,6 +1262,94 @@
       </div>
     </section>
 
+    <!-- ==================== DEPOIMENTOS / RELATOS DE BUSCADORES ==================== -->
+    <section class="testimonials-section" id="depoimentos">
+      <div class="container">
+        <div class="coral-badge" style="display: block; width: fit-content; margin: 0 auto 0.5rem;">
+          <svg class="icon-svg"><use href="#icon-sparkles"></use></svg> Experiências & Acolhimento
+        </div>
+        <h2>Vozes Que Encontraram a <span class="gold-text">Clareza</span></h2>
+        <p class="section-subtitle">Relatos reais de quem transformou dúvidas em serenidade através das cartas e oráculos com a Patrícia</p>
+        <div class="mystic-divider"><span>✦</span></div>
+
+        <div class="testimonials-grid">
+          <!-- Depoimento 1: Eduardo (São Paulo) -->
+          <article class="testimonial-card reveal-on-scroll">
+            <div class="testimonial-card-inner">
+              <div class="testimonial-card-header">
+                <div class="testimonial-stars" aria-label="Avaliação: 5 de 5 estrelas">
+                  <svg class="icon-svg star"><use href="#icon-star"></use></svg>
+                  <svg class="icon-svg star"><use href="#icon-star"></use></svg>
+                  <svg class="icon-svg star"><use href="#icon-star"></use></svg>
+                  <svg class="icon-svg star"><use href="#icon-star"></use></svg>
+                  <svg class="icon-svg star"><use href="#icon-star"></use></svg>
+                </div>
+                <div class="testimonial-quote-icon" aria-hidden="true">
+                  <svg class="icon-svg"><use href="#icon-quote"></use></svg>
+                </div>
+              </div>
+
+              <blockquote class="testimonial-quote">
+                “Fazer uma leitura com a Patrícia é muito mais do que tirar cartas, é um verdadeiro acolhimento. A precisão dela sempre me impressiona, mas o carinho e a sensibilidade com que ela conduz a consulta que são o verdadeiro diferencial. Saí com a alma leve e muita clareza para os meus próximos passos. Recomendo de olhos fechados!!”
+              </blockquote>
+
+              <footer class="testimonial-author">
+                <div class="testimonial-avatar" aria-hidden="true">
+                  <span>E</span>
+                </div>
+                <div class="testimonial-meta">
+                  <cite class="testimonial-name">Eduardo</cite>
+                  <span class="testimonial-location">
+                    <svg class="icon-svg location-icon"><use href="#icon-map-pin"></use></svg> São Paulo, SP
+                  </span>
+                </div>
+                <div class="testimonial-badge">
+                  <svg class="icon-svg"><use href="#icon-heart"></use></svg> Leitura de Cartas
+                </div>
+              </footer>
+            </div>
+          </article>
+
+          <!-- Depoimento 2: Caio (Itália) -->
+          <article class="testimonial-card reveal-on-scroll">
+            <div class="testimonial-card-inner">
+              <div class="testimonial-card-header">
+                <div class="testimonial-stars" aria-label="Avaliação: 5 de 5 estrelas">
+                  <svg class="icon-svg star"><use href="#icon-star"></use></svg>
+                  <svg class="icon-svg star"><use href="#icon-star"></use></svg>
+                  <svg class="icon-svg star"><use href="#icon-star"></use></svg>
+                  <svg class="icon-svg star"><use href="#icon-star"></use></svg>
+                  <svg class="icon-svg star"><use href="#icon-star"></use></svg>
+                </div>
+                <div class="testimonial-quote-icon" aria-hidden="true">
+                  <svg class="icon-svg"><use href="#icon-quote"></use></svg>
+                </div>
+              </div>
+
+              <blockquote class="testimonial-quote">
+                “Eu acompanho o trabalho da Patrícia a muitos anos e foi pra mim um verdadeiro suporte diversas vezes. É uma leitura feita com muito amor pelo que faz e muito respeito à gente, que muitas vezes não estamos preparados pra ouvir certas coisas, ela tem muita sensibilidade com o próximo. Tenho muita confiança no trabalho dela, dá pra ver que tem muito estudo e um caráter valioso.”
+              </blockquote>
+
+              <footer class="testimonial-author">
+                <div class="testimonial-avatar alt" aria-hidden="true">
+                  <span>C</span>
+                </div>
+                <div class="testimonial-meta">
+                  <cite class="testimonial-name">Caio</cite>
+                  <span class="testimonial-location">
+                    <svg class="icon-svg location-icon"><use href="#icon-map-pin"></use></svg> Itália
+                  </span>
+                </div>
+                <div class="testimonial-badge">
+                  <svg class="icon-svg"><use href="#icon-heart"></use></svg> Consulente de Longa Data
+                </div>
+              </footer>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ==================== CTA FINAL ==================== -->
     <section class="cta-section">
       <div class="container">
@@ -1320,6 +1419,7 @@
             <li><a href="#autoconhecimento">Autoconhecimento</a></li>
             <li><a href="#canais">Canais & Mídias</a></li>
             <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#depoimentos"><svg class="icon-svg"><use href="#icon-heart"></use></svg> Depoimentos</a></li>
           </ul>
         </div>
 
