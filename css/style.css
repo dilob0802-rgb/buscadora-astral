@@ -3817,26 +3817,43 @@ h2 {
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2.4rem;
+  gap: 2.6rem;
   align-items: stretch;
   margin-top: 3.5rem;
 }
 
-.testimonial-card {
+/* ============================================================
+   ESTILO CITAÇÃO DE LIVRO / PERGAMINHO EDITORIAL
+   ============================================================ */
+.book-quote-card {
   position: relative;
-  background: linear-gradient(160deg, rgba(38, 14, 61, 0.72) 0%, rgba(18, 5, 29, 0.88) 100%);
+  background: linear-gradient(160deg, rgba(34, 12, 53, 0.78) 0%, rgba(18, 5, 29, 0.92) 100%);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1.5px solid rgba(229, 195, 101, 0.35);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 25px rgba(186, 104, 255, 0.08);
+  border: 1.5px solid rgba(229, 195, 101, 0.4);
+  border-radius: var(--radius-md);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(186, 104, 255, 0.08);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-.testimonial-card::before {
+/* Moldura interna clássica de página de livro / pergaminho */
+.book-quote-card::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 1px solid rgba(229, 195, 101, 0.2);
+  border-radius: calc(var(--radius-md) - 4px);
+  pointer-events: none;
+  transition: border-color 0.3s ease;
+}
+
+.book-quote-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -3844,22 +3861,26 @@ h2 {
   right: 0;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
-  opacity: 0.7;
+  opacity: 0.75;
   transition: opacity 0.3s ease;
 }
 
-.testimonial-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(229, 195, 101, 0.75);
+.book-quote-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(229, 195, 101, 0.8);
   box-shadow: 0 24px 55px rgba(0, 0, 0, 0.65), 0 0 35px rgba(229, 195, 101, 0.22);
 }
 
-.testimonial-card:hover::before {
+.book-quote-card:hover::after {
+  border-color: rgba(229, 195, 101, 0.4);
+}
+
+.book-quote-card:hover::before {
   opacity: 1;
 }
 
-.testimonial-card-inner {
-  padding: 2.6rem 2.4rem;
+.book-quote-card .testimonial-card-inner {
+  padding: 2.8rem 2.5rem;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -3867,30 +3888,40 @@ h2 {
   z-index: 2;
 }
 
-.testimonial-card-header {
+.book-quote-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.6rem;
+  margin-bottom: 0.8rem;
 }
 
-.testimonial-stars {
+.book-quote-symbol {
+  font-family: var(--font-serif-title);
+  font-size: 3.8rem;
+  line-height: 0.8;
+  color: var(--gold-primary);
+  opacity: 0.75;
+  display: block;
+  user-select: none;
+}
+
+.book-quote-stars {
   display: flex;
   gap: 5px;
   color: var(--gold-primary);
 }
 
-.testimonial-stars .icon-svg.star {
-  width: 1.2rem;
-  height: 1.2rem;
+.book-quote-stars .icon-svg.star {
+  width: 1.15rem;
+  height: 1.15rem;
   filter: drop-shadow(0 0 6px rgba(229, 195, 101, 0.6));
   animation: pulseStar 4s ease-in-out infinite;
 }
 
-.testimonial-stars .icon-svg.star:nth-child(2) { animation-delay: 0.3s; }
-.testimonial-stars .icon-svg.star:nth-child(3) { animation-delay: 0.6s; }
-.testimonial-stars .icon-svg.star:nth-child(4) { animation-delay: 0.9s; }
-.testimonial-stars .icon-svg.star:nth-child(5) { animation-delay: 1.2s; }
+.book-quote-stars .icon-svg.star:nth-child(2) { animation-delay: 0.3s; }
+.book-quote-stars .icon-svg.star:nth-child(3) { animation-delay: 0.6s; }
+.book-quote-stars .icon-svg.star:nth-child(4) { animation-delay: 0.9s; }
+.book-quote-stars .icon-svg.star:nth-child(5) { animation-delay: 1.2s; }
 
 @keyframes pulseStar {
   0%, 100% {
@@ -3904,102 +3935,72 @@ h2 {
   }
 }
 
-.testimonial-quote-icon {
-  color: var(--gold-primary);
-  opacity: 0.4;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.testimonial-quote-icon .icon-svg {
-  width: 2.4rem;
-  height: 2.4rem;
-}
-
-.testimonial-card:hover .testimonial-quote-icon {
-  opacity: 0.85;
-  transform: scale(1.08) rotate(-4deg);
-}
-
-.testimonial-quote {
+.book-quote-text {
   font-family: var(--font-serif-sub);
-  font-size: 1.22rem;
+  font-size: 1.3rem;
   font-style: italic;
-  line-height: 1.85;
-  color: var(--white-muted);
-  margin: 0 0 2.2rem 0;
+  line-height: 1.95;
+  color: #f7f1e8;
+  border-left: 2px solid rgba(229, 195, 101, 0.45);
+  padding-left: 1.4rem;
+  margin: 0.8rem 0 2.2rem 0;
   flex-grow: 1;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.3px;
   position: relative;
+  transition: border-color 0.3s ease;
 }
 
-.testimonial-author {
+.book-quote-card:hover .book-quote-text {
+  border-left-color: var(--gold-primary);
+}
+
+.book-quote-footer {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 1.1rem;
   border-top: 1px solid rgba(229, 195, 101, 0.2);
-  padding-top: 1.5rem;
+  padding-top: 1.3rem;
   margin-top: auto;
+  flex-wrap: wrap;
+  gap: 0.8rem;
 }
 
-.testimonial-avatar {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #e5c365 0%, #aa852b 55%, #2a093b 100%);
-  border: 2px solid var(--gold-light);
+.book-quote-author {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.book-quote-dash {
+  color: var(--gold-primary);
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 600;
+  margin-right: 0.25rem;
+}
+
+.book-quote-name {
   font-family: var(--font-serif-title);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #ffffff;
-  box-shadow: 0 0 16px rgba(229, 195, 101, 0.45);
-  transition: transform 0.3s ease;
-}
-
-.testimonial-avatar.alt {
-  background: linear-gradient(135deg, #ff6f59 0%, #b8337a 50%, #1f0b33 100%);
-  border-color: var(--coral-light);
-  box-shadow: 0 0 16px rgba(255, 111, 89, 0.45);
-}
-
-.testimonial-card:hover .testimonial-avatar {
-  transform: scale(1.08);
-}
-
-.testimonial-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.testimonial-name {
-  font-family: var(--font-serif-title);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--gold-light);
   font-style: normal;
   letter-spacing: 0.5px;
 }
 
-.testimonial-location {
-  font-size: 0.88rem;
+.book-quote-comma {
+  color: var(--gold-dark);
+  font-size: 1.15rem;
+}
+
+.book-quote-location {
+  font-family: var(--font-serif-sub);
+  font-size: 1.18rem;
+  font-style: italic;
   color: var(--text-muted);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
 }
 
-.testimonial-location .location-icon {
-  width: 0.95em;
-  height: 0.95em;
-  color: var(--gold-primary);
-}
-
-.testimonial-badge {
-  margin-left: auto;
+.book-quote-tag {
   font-size: 0.78rem;
   font-weight: 500;
   padding: 0.35rem 0.85rem;
@@ -4013,39 +4014,38 @@ h2 {
   white-space: nowrap;
 }
 
-.testimonial-badge .icon-svg {
+.book-quote-tag .icon-svg {
   width: 0.95em;
   height: 0.95em;
   color: var(--coral-light);
 }
 
-/* Responsividade dos Depoimentos */
+/* Responsividade dos Depoimentos / Citações de Livro */
 @media (max-width: 920px) {
   .testimonials-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.2rem;
   }
 
-  .testimonial-author {
-    flex-wrap: wrap;
-  }
-
-  .testimonial-badge {
-    margin-left: 0;
-    width: 100%;
-    margin-top: 0.4rem;
-    justify-content: flex-start;
+  .book-quote-footer {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
 @media (max-width: 600px) {
-  .testimonial-card-inner {
-    padding: 2rem 1.5rem;
+  .book-quote-card .testimonial-card-inner {
+    padding: 2.2rem 1.6rem;
   }
 
-  .testimonial-quote {
-    font-size: 1.12rem;
-    line-height: 1.75;
+  .book-quote-text {
+    font-size: 1.18rem;
+    line-height: 1.8;
+    padding-left: 1.1rem;
     margin-bottom: 1.8rem;
+  }
+
+  .book-quote-symbol {
+    font-size: 3.2rem;
   }
 }
